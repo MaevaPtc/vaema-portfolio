@@ -1,0 +1,168 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="SOS Villages Enfants — VAEMA">
+
+  <!-- NAV -->
+  <nav>
+    <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
+    <ul>
+      <li><a href="/home#projets">Projets</a></li>
+      <li><a href="/home#l-artiste">À propos</a></li>
+      <li><a href="/home#on-se-capte">Contact</a></li>
+      <li><a href="#" class="nav-fr">FR</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO PROJET -->
+  <section class="projet-hero">
+    <div class="projet-meta">
+      <span class="projet-cat">Campagne 360</span>
+      <span class="projet-concours">Concours Mlle Pitch 2026</span>
+      <span class="projet-annee">2026</span>
+    </div>
+    <h1 class="projet-titre">SOS VILLAGES ENFANTS</h1>
+    <p class="projet-sous-titre">Ensemble, on reste ensemble</p>
+  </section>
+
+  <!-- BRIEF -->
+  <section class="projet-brief">
+    <div class="brief-gauche">
+      <span class="brief-label">Brief</span>
+    </div>
+    <div class="brief-droite">
+      <p class="brief-marque">SOS Villages Enfants — association qui accueille les fratries confiées à l'aide à l'enfance sans les séparer.</p>
+      <p>Méconnue du grand public, l'association a besoin de visibilité. La campagne doit faire comprendre que les villages d'enfants permettent aux frères et sœurs de rester ensemble lorsqu'ils sont placés — une évidence qui ne l'est pas encore pour tout le monde.</p>
+      <p>Contrainte forte : aucune image triste, aucun enfant qui pleure. La campagne doit inspirer, pas apitoyer.</p>
+      <div class="brief-infos">
+        <div class="brief-info-bloc">
+          <span class="brief-info-label">Objectif</span>
+          <span class="brief-info-val">Faire connaître · Sensibiliser sans apitoyer</span>
+        </div>
+        <div class="brief-info-bloc">
+          <span class="brief-info-label">Message clé</span>
+          <span class="brief-info-val">Les fratries ne se séparent pas</span>
+        </div>
+        <div class="brief-info-bloc">
+          <span class="brief-info-label">Supports</span>
+          <span class="brief-info-val">Affichage · Print</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFICHES -->
+  <section class="projet-visuels">
+    <div class="visuels-titre">
+      <span>LES <em>AFFICHES</em></span>
+      <div class="visuels-ligne"></div>
+    </div>
+    <div class="visuels-grille">
+      <img src="/projects/sos/dalton-396x300mm.jpg" alt="SOS — Les Dalton" />
+      <img src="/projects/sos/super-nanas-396x300mm.jpg" alt="SOS — Super Nanas" />
+      <img src="/projects/sos/tortue-ninjas-396x300mm.jpg" alt="SOS — Tortues Ninjas" />
+    </div>
+  </section>
+
+  <!-- FORMAT PORTRAIT -->
+  <section class="projet-visuels">
+    <div class="visuels-titre">
+      <span>FORMAT <em>PORTRAIT</em></span>
+      <div class="visuels-ligne"></div>
+    </div>
+    <div class="visuels-grille">
+      <img src="/projects/sos/dalton-230x336mm.jpg" alt="SOS — Dalton portrait" />
+      <img src="/projects/sos/super-nanas-300x770mm.jpg" alt="SOS — Super Nanas grand format" />
+      <img src="/projects/sos/tortue-ninjas-560x770mm.jpg" alt="SOS — Tortues Ninjas grand format" />
+    </div>
+  </section>
+
+  <!-- MOCKUPS -->
+  <section class="projet-visuels">
+    <div class="visuels-titre">
+      <span>LES <em>MOCKUPS</em></span>
+      <div class="visuels-ligne"></div>
+    </div>
+    <div class="visuels-grille">
+      <img src="/projects/sos/mockup-super-nanas.jpg" alt="SOS — Mockup Super Nanas" />
+      <img src="/projects/sos/mockup-2.jpg" alt="SOS — Mockup 2" />
+    </div>
+  </section>
+
+  <!-- NAVIGATION PROJETS -->
+  <nav class="projet-nav">
+    <a href="/portfolio/after-all-fest" class="projet-nav-retour">← After All Fest</a>
+    <a href="/home#projets" class="projet-nav-suivant">Tous les projets →</a>
+  </nav>
+
+  <!-- CURSEUR -->
+  <div id="curseur"></div>
+
+</Layout>
+
+<style is:global>
+
+  * { cursor: none !important; }
+
+  #curseur {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7B2FFF;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  #curseur.jaune { background: #FFE600; transform: translate(-50%, -50%) scale(1.4); }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; background: rgba(10,10,10,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
+  nav ul { display: flex; gap: 2.5rem; list-style: none; }
+  nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+  nav ul a:hover { color: #FFE600; }
+  .nav-fr { border-bottom: 1px solid #7B2FFF; padding-bottom: 2px; color: #fff !important; }
+
+  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #FFE600; }
+  .projet-meta { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
+  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; border: 1px solid #7B2FFF; padding: 0.3rem 0.8rem; }
+  .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.3); display: flex; align-items: center; }
+  .projet-concours { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #FFE600; border: 1px solid #FFE600; padding: 0.3rem 0.8rem; }
+  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 9vw, 9rem); line-height: 0.85; color: #fff; letter-spacing: 0.02em; }
+  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #FFE600; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
+
+  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #FFE600; }
+  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #FFE600; }
+  .brief-droite { display: flex; flex-direction: column; gap: 1.5rem; }
+  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 0.05em; line-height: 1.3; }
+  .brief-droite p { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
+  .brief-infos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .brief-info-bloc { display: flex; flex-direction: column; gap: 0.5rem; }
+  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; }
+  .brief-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+  .projet-visuels { padding: 3rem 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .visuels-titre { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; }
+  .visuels-titre span { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #fff; letter-spacing: 0.1em; white-space: nowrap; }
+  .visuels-titre span em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px #7B2FFF; }
+  .visuels-ligne { flex: 1; height: 1px; background: #FFE600; }
+  .visuels-grille { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .visuels-grille img { max-height: 70vh; max-width: 100%; width: auto; display: block; }
+
+  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #FFE600; position: static; background: none; backdrop-filter: none; border-bottom: none; }
+  .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #FFE600; }
+
+</style>
+
+<script is:inline>
+  var curseur = document.getElementById('curseur');
+  document.addEventListener('mousemove', function(e) {
+    curseur.style.left = e.clientX + 'px';
+    curseur.style.top  = e.clientY + 'px';
+  });
+</script>
+

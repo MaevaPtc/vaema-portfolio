@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+
+  <div id="splash">
+
+    <video id="video" autoplay muted playsinline>
+      <source src="/videos/intro.mp4" type="video/mp4" />
+    </video>
+
+    <div id="logo"><img src="/logo-vaema.svg" alt="VAEMA" /></div>
+
+    <a id="btn-decouvrir" href="/home">DÉCOUVRIR</a>
+
+  </div>
+
+</Layout>
+
+<style is:global>
+
+  body {
+    background: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  #splash {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  #video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+
+  #logo {
+    position: absolute;
+    top: 2rem;
+    left: 2.5rem;
+    z-index: 2;
+  }
+
+  #logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+
+  #btn-decouvrir {
+    position: relative;
+    z-index: 2;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #FFE600;
+    border: 1px solid #FFE600;
+    padding: 1.2rem 3.5rem;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s ease, transform 0.8s ease, background 0.2s, border-color 0.2s, color 0.2s;
+    pointer-events: none;
+  }
+
+  #btn-decouvrir.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  #btn-decouvrir:hover {
+    background: #7B2FFF;
+    border-color: #7B2FFF;
+    color: #fff;
+  }
+
+</style>
+
+<script is:inline>
+  var video = document.getElementById('video');
+  var btn   = document.getElementById('btn-decouvrir');
+
+  function montrerBouton() {
+    btn.classList.add('visible');
+  }
+
+  // Bouton apparaît à la fin de la vidéo
+  video.addEventListener('ended', montrerBouton);
+
+  // Si pas de vidéo encore → bouton apparaît après 1 seconde
+  video.addEventListener('error', function() {
+    setTimeout(montrerBouton, 1000);
+  });
+
+  // Sécurité : si la vidéo ne se lance pas du tout
+  setTimeout(function() {
+    if (btn.classList.contains('visible') === false) {
+      montrerBouton();
+    }
+  }, 2000);
+</script>

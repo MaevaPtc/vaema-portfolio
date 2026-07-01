@@ -1,0 +1,613 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
+    <ul>
+      <li><a href="#projets">Projets</a></li>
+      <li><a href="#l-artiste">À propos</a></li>
+      <li><a href="#on-se-capte">Contact</a></li>
+      <li><a href="#" class="nav-fr">FR</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Remplace par <img src="/photos/hero.jpg" /> quand ta photo est prête -->
+    <div class="photo-placeholder">
+      <span>TA PHOTO ICI</span>
+    </div>
+  </section>
+
+  <!-- BANDEAU DÉFILANT -->
+  <div class="bandeau">
+    <div class="bandeau-track" id="bandeauTrack">
+      <div class="bandeau-inner" id="bandeauContent">
+        <span>Direction Artistique</span><span class="sep"> ✦ </span><span>Design Graphique</span><span class="sep"> ✦ </span><span>Print & Digital</span><span class="sep"> ✦ </span><span>Identité Visuelle</span><span class="sep"> ✦ </span><span>Signalétique</span><span class="sep"> ✦ </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TITRE SECTION -->
+  <div class="section-titre">
+    <span class="section-label">MES <span class="section-outline">CRÉAS</span></span>
+    <div class="section-line"></div>
+    <span class="section-num">05</span>
+  </div>
+
+  <!-- PROJETS -->
+  <section class="projets" id="projets">
+
+    <div class="grille-grandes">
+
+      <a href="/portfolio/lego" class="carte">
+        <img src="/projects/lego.JPG" alt="LEGO" />
+        <div class="overlay">
+          <span class="cat">Affichage</span>
+          <h3 class="titre">LEGO</h3>
+          <span class="lien">Voir le projet →</span>
+        </div>
+      </a>
+
+      <a href="/portfolio/sea-shepherd" class="carte carte-naturelle">
+        <img src="/projects/seasheperd.JPG" alt="Sea Shepherd" />
+        <div class="overlay">
+          <span class="cat">Campagne 360</span>
+          <h3 class="titre">SEA SHEPHERD</h3>
+          <span class="lien">Voir le projet →</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="grille-petites">
+
+      <a href="/portfolio/duralex" class="carte">
+        <img src="/projects/duralex.PNG" alt="Duralex" />
+        <div class="overlay">
+          <span class="cat">Campagne 360</span>
+          <h3 class="titre">DURALEX</h3>
+          <span class="lien">Voir le projet →</span>
+        </div>
+      </a>
+
+      <a href="/portfolio/floyd" class="carte">
+        <img src="/projects/floyd.png" alt="Floyd" />
+        <div class="overlay">
+          <span class="cat">Campagne 360</span>
+          <h3 class="titre">FLOYD</h3>
+          <span class="lien">Voir le projet →</span>
+        </div>
+      </a>
+
+      <a href="/portfolio/after-all-fest" class="carte">
+        <img src="/projects/after-all-fest.JPG" alt="After All Fest" />
+        <div class="overlay">
+          <span class="cat">Identité Visuelle · Campagne 360</span>
+          <h3 class="titre">AFTER ALL FEST</h3>
+          <span class="lien">Voir le projet →</span>
+        </div>
+      </a>
+
+      <a href="/portfolio/sos-villages-enfants" class="carte">
+        <img src="/projects/sos.JPG" alt="SOS Villages d'Enfants" />
+        <div class="overlay">
+          <span class="cat">Campagne 360</span>
+          <h3 class="titre">SOS VILLAGES</h3>
+          <span class="lien">Voir le projet →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- À PROPOS + CONTACT -->
+  <section class="apropos-contact">
+
+    <div class="apropos" id="l-artiste">
+      <div class="apropos-titre">
+        <span>L'<span class="section-outline">ARTISTE</span></span>
+      </div>
+
+      <div class="apropos-corps">
+        <div class="apropos-photo-placeholder">
+          <span>TA PHOTO ICI</span>
+        </div>
+
+        <div class="apropos-texte">
+          <p>Directrice Artistique freelance en formation à SUP DE PUB Bordeaux, je navigue entre deux univers en apparence opposés : le brutalisme streetwear — brut, affirmé, sans compromis — et l'univers enfantin — coloré, poétique, plein de douceur.</p>
+          <p>Cette dualité, c'est ma signature. Chaque projet est une nouvelle façon d'explorer ces deux territoires.</p>
+
+          <div class="outils">
+            <span class="outil-label">Outils</span>
+            <div class="outil-liste">
+              <span>Illustrator</span>
+              <span>Photoshop</span>
+              <span>Première Pro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="on-se-capte">
+      <div class="apropos-titre">
+        <span>ON SE <span class="section-outline">CAPTE ?</span></span>
+      </div>
+
+      <div class="contact-corps">
+        <a href="mailto:maeva.maecrea@gmail.com" class="contact-ligne">
+          <span class="contact-label">Mail</span>
+          <span class="contact-val">maeva.maecrea@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/maeva-petit" target="_blank" class="contact-ligne">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-val">maeva petit →</span>
+        </a>
+        <a href="https://instagram.com/maecrea_" target="_blank" class="contact-ligne">
+          <span class="contact-label">Instagram</span>
+          <span class="contact-val">@maecrea_ →</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CURSEUR CUSTOM -->
+  <div id="curseur"></div>
+
+  <!-- BOUTON RETOUR EN HAUT -->
+  <button id="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+</Layout>
+
+<style is:global>
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-logo img {
+    height: 36px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+
+  nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  nav ul a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.2s;
+  }
+
+  nav ul a:hover { color: #FFE600; }
+
+  .nav-fr {
+    border-bottom: 1px solid #7B2FFF;
+    padding-bottom: 2px;
+    color: #fff !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  .photo-placeholder {
+    width: 100%;
+    min-height: calc(100vh - 80px - 48px);
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: repeating-linear-gradient(
+      -45deg, transparent, transparent 20px,
+      rgba(255,45,135,0.03) 20px, rgba(255,45,135,0.03) 21px
+    );
+  }
+
+  .photo-placeholder span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.15);
+    border: 1px dashed rgba(255,255,255,0.1);
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* ── BANDEAU ── */
+  .bandeau {
+    overflow: hidden;
+    padding: 0.9rem 0;
+    background: #7B2FFF;
+  }
+
+  .bandeau-track {
+    display: flex;
+    will-change: transform;
+  }
+
+  .bandeau-inner {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .bandeau-inner span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #FFE600;
+    padding: 0 1.2rem;
+  }
+
+  .bandeau-inner .sep {
+    color: #000;
+    padding: 0;
+  }
+
+  @keyframes defiler {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ── TITRE SECTION ── */
+  .section-titre {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem 2.5rem 0;
+  }
+
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .section-outline {
+    -webkit-text-stroke: 1.5px #7B2FFF;
+    color: transparent;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: #FFE600;
+  }
+
+  .section-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: #FFE600;
+  }
+
+  /* ── PROJETS ── */
+  .projets {
+    padding: 0.3rem 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .carte {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+  }
+
+  .carte img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+
+  .carte:hover img { transform: scale(1.04); }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .carte:hover .overlay { opacity: 1; }
+
+  .cat {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #7B2FFF;
+    margin-bottom: 0.4rem;
+  }
+
+  .titre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  .lien {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFE600;
+    border-bottom: 1px solid #FFE600;
+    padding-bottom: 2px;
+    width: fit-content;
+  }
+
+  .grille-grandes {
+    display: flex;
+    gap: 1rem;
+    height: 70vh;
+  }
+
+  .grille-grandes .carte { flex: 1; height: 100%; }
+  .grille-grandes .carte-naturelle { flex: none; width: auto; }
+  .grille-grandes .carte-naturelle img { height: 100%; width: auto; object-fit: unset; display: block; }
+  .grille-grandes .titre { font-size: 4rem; }
+
+  .grille-petites {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .grille-petites .titre { font-size: 4rem; }
+
+  /* ── CURSEUR ── */
+  * { cursor: none !important; }
+
+  #curseur {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7B2FFF;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  #curseur.jaune {
+    background: #FFE600;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  /* ── BOUTON TOP ── */
+  #btn-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: #000;
+    background: #FFE600;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  #btn-top:hover {
+    background: #7B2FFF;
+    color: #FFE600;
+  }
+
+  /* ── À PROPOS + CONTACT ── */
+  .apropos-contact {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    border-top: 1px solid #FFE600;
+    margin-top: 4rem;
+  }
+
+  .apropos {
+    padding: 3rem 2.5rem;
+    border-right: 1px solid #FFE600;
+  }
+
+  .contact {
+    padding: 3rem 2.5rem;
+  }
+
+  .apropos-titre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+
+  .apropos-corps {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .apropos-photo-placeholder {
+    width: 160px;
+    min-height: 200px;
+    flex-shrink: 0;
+    background: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: repeating-linear-gradient(
+      -45deg, transparent, transparent 14px,
+      rgba(255,45,135,0.04) 14px, rgba(255,45,135,0.04) 15px
+    );
+  }
+
+  .apropos-photo-placeholder span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.45rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.15);
+    border: 1px dashed rgba(255,255,255,0.1);
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+  }
+
+  .apropos-texte {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .apropos-texte p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .outils {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .outil-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #7B2FFF;
+  }
+
+  .outil-liste {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .outil-liste span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 0.3rem 0.8rem;
+    transition: color 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+
+  .outil-liste span:hover {
+    color: #FFE600;
+    border-color: #FFE600;
+  }
+
+  .contact-corps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-ligne {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #FFE600;
+    transition: padding-left 0.3s;
+  }
+
+  .contact-ligne:hover { padding-left: 0.5rem; }
+  .contact-ligne:hover .contact-val { color: #FFE600; }
+
+  .contact-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #7B2FFF;
+  }
+
+  .contact-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+
+</style>
+
+<script is:inline>
+  // Curseur custom
+  var curseur = document.getElementById('curseur');
+  document.addEventListener('mousemove', function(e) {
+    curseur.style.left = e.clientX + 'px';
+    curseur.style.top  = e.clientY + 'px';
+  });
+  var ciblesViolet = document.querySelectorAll('nav, .section-outline, .section-num, .cat, .outil-label, .contact-label, #btn-top, .bandeau');
+  ciblesViolet.forEach(function(el) {
+    el.addEventListener('mouseenter', function() { curseur.classList.add('jaune'); });
+    el.addEventListener('mouseleave', function() { curseur.classList.remove('jaune'); });
+  });
+
+  var content = document.getElementById('bandeauContent');
+  var track   = document.getElementById('bandeauTrack');
+  if (content && track) {
+    track.appendChild(content.cloneNode(true));
+    track.appendChild(content.cloneNode(true));
+    track.appendChild(content.cloneNode(true));
+    var w = content.getBoundingClientRect().width;
+    var x = 0;
+    function loop() {
+      x -= 0.8;
+      if (x <= -w) x += w;
+      track.style.transform = 'translateX(' + x + 'px)';
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  }
+</script>
