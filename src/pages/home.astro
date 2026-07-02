@@ -17,10 +17,7 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="hero">
-    <!-- Remplace par <img src="/photos/hero.jpg" /> quand ta photo est prête -->
-    <div class="photo-placeholder">
-      <span>TA PHOTO ICI</span>
-    </div>
+    <img src="/IMAGE-HOME.jpg" alt="VAEMA — Maëva Petit" class="hero-img" />
   </section>
 
   <!-- BANDEAU DÉFILANT -->
@@ -218,26 +215,11 @@ import Layout from '../layouts/Layout.astro';
     padding-top: 80px;
   }
 
-  .photo-placeholder {
+  .hero-img {
     width: 100%;
-    min-height: calc(100vh - 80px - 48px);
-    background: #141414;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: repeating-linear-gradient(
-      -45deg, transparent, transparent 20px,
-      rgba(255,45,135,0.03) 20px, rgba(255,45,135,0.03) 21px
-    );
-  }
-
-  .photo-placeholder span {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 0.25em;
-    color: rgba(255,255,255,0.15);
-    border: 1px dashed rgba(255,255,255,0.1);
-    padding: 0.8rem 1.5rem;
+    height: calc(100vh - 80px - 48px);
+    object-fit: cover;
+    display: block;
   }
 
   /* ── BANDEAU ── */
