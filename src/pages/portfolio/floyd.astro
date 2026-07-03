@@ -7,7 +7,8 @@ import Layout from '../../layouts/Layout.astro';
   <!-- NAV -->
   <nav>
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
-    <ul>
+    <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+    <ul id="navMenu">
       <li><a href="/home#projets">Projets</a></li>
       <li><a href="/home#l-artiste">À propos</a></li>
       <li><a href="/home#on-se-capte">Contact</a></li>
@@ -160,9 +161,42 @@ import Layout from '../../layouts/Layout.astro';
   .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
   .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #FFE600; }
 
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; z-index: 200; }
+  .nav-burger span { display: block; width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
+  .nav-burger.ouvert span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.ouvert span:nth-child(2) { opacity: 0; }
+  .nav-burger.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 768px) {
+    * { cursor: auto !important; }
+    #curseur { display: none; }
+    nav { padding: 1.2rem 1.5rem; }
+    .nav-burger { display: flex; }
+    nav ul { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0A0A0A; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 150; }
+    nav ul.ouvert { display: flex; }
+    nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
+    .projet-hero { padding: 120px 1.2rem 2.5rem; }
+    .projet-titre { font-size: clamp(3rem, 15vw, 6rem); }
+    .projet-sous-titre { font-size: clamp(1.5rem, 8vw, 3rem); }
+    .projet-brief { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 1.2rem; }
+    .brief-infos { grid-template-columns: 1fr; gap: 1rem; }
+    .projet-visuels { padding: 2rem 1.2rem; }
+    .visuels-titre span { font-size: 2rem; }
+    .visuels-grille { flex-direction: column; }
+    .visuels-grille img { max-height: none; width: 100%; }
+    .tshirt-duo { flex-direction: column; }
+    .tshirt-duo img { width: 100%; }
+    .projet-nav { padding: 1.5rem 1.2rem; }
+  }
+
 </style>
 
 <script is:inline>
+  var burger = document.getElementById('navBurger');
+  var menu = document.getElementById('navMenu');
+  burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
+  menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
+
   var curseur = document.getElementById('curseur');
   document.addEventListener('mousemove', function(e) {
     curseur.style.left = e.clientX + 'px';
