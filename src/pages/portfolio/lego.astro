@@ -128,8 +128,8 @@ import Layout from '../../layouts/Layout.astro';
     #curseur { display: none; }
     nav { padding: 1.2rem 1.5rem; }
     .nav-burger { display: flex; }
-    nav ul { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0A0A0A; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; z-index: 150; }
-    nav ul.ouvert { display: flex; }
+    nav ul { display: flex; position: fixed; top: 0; right: 0; bottom: 0; width: 75vw; max-width: 320px; background: #0A0A0A; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2.5rem; z-index: 150; padding: 2rem 2.5rem; border-left: 1px solid #FFE600; transform: translateX(100%); transition: transform 0.35s ease; }
+    nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
     .projet-hero { padding: 120px 1.2rem 2.5rem; }
     .projet-titre { font-size: clamp(3rem, 15vw, 6rem); }
