@@ -9,21 +9,21 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
     <ul id="navMenu">
-      <li><a href="/home#projets">Projets</a></li>
-      <li><a href="/home#l-artiste">À propos</a></li>
-      <li><a href="/home#on-se-capte">Contact</a></li>
-      <li><a href="#" class="nav-fr">FR</a></li>
+      <li><a href="/home#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="/home#l-artiste" data-i18n="nav.about">À propos</a></li>
+      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Contact</a></li>
+      <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
   </nav>
 
   <!-- HERO PROJET -->
   <section class="projet-hero">
     <div class="projet-meta">
-      <span class="projet-cat">Affichage</span>
+      <span class="projet-cat" data-i18n="cat.display">Affichage</span>
       <span class="projet-annee">2026</span>
     </div>
     <h1 class="projet-titre">LEGO</h1>
-    <p class="projet-sous-titre">Rêvez Autrement</p>
+    <p class="projet-sous-titre" data-i18n="lego.tagline">Rêvez Autrement</p>
   </section>
 
   <!-- BRIEF -->
@@ -32,20 +32,20 @@ import Layout from '../../layouts/Layout.astro';
       <span class="brief-label">Brief</span>
     </div>
     <div class="brief-droite">
-      <p class="brief-marque">LEGO — marque mondialement connue, associée à l'enfance, à la créativité et à l'imagination.</p>
-      <p>Dans un monde dominé par les écrans et l'intelligence artificielle, la créativité devient souvent instantanée et passive. Cette campagne repositionne LEGO comme un outil de créativité libre et physique, capable de reconnecter les jeunes générations à l'imagination réelle.</p>
+      <p class="brief-marque" data-i18n="lego.brand">LEGO — marque mondialement connue, associée à l'enfance, à la créativité et à l'imagination.</p>
+      <p data-i18n="lego.desc">Dans un monde dominé par les écrans et l'intelligence artificielle, la créativité devient souvent instantanée et passive. Cette campagne repositionne LEGO comme un outil de créativité libre et physique, capable de reconnecter les jeunes générations à l'imagination réelle.</p>
       <div class="brief-infos">
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Cible</span>
-          <span class="brief-info-val">15–30 ans · Gen Z & jeunes millennials</span>
+          <span class="brief-info-label" data-i18n="brief.target">Cible</span>
+          <span class="brief-info-val" data-i18n="lego.target">15–30 ans · Gen Z & jeunes millennials</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Supports</span>
-          <span class="brief-info-val">Affichage urbain · Print</span>
+          <span class="brief-info-label" data-i18n="brief.supports">Supports</span>
+          <span class="brief-info-val" data-i18n="lego.supports">Affichage urbain · Print</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Objectif</span>
-          <span class="brief-info-val">Moderniser l'image LEGO · Rendre la marque désirable au-delà de l'enfance</span>
+          <span class="brief-info-label" data-i18n="brief.goal">Objectif</span>
+          <span class="brief-info-val" data-i18n="lego.goal">Moderniser l'image LEGO · Rendre la marque désirable au-delà de l'enfance</span>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- NAVIGATION PROJETS -->
   <nav class="projet-nav">
-    <a href="/home#projets" class="projet-nav-retour">← Tous les projets</a>
+    <a href="/home#projets" class="projet-nav-retour" data-i18n="nav.allprojects">← Tous les projets</a>
     <a href="/portfolio/sea-shepherd" class="projet-nav-suivant">Sea Shepherd →</a>
   </nav>
 
@@ -91,7 +91,8 @@ import Layout from '../../layouts/Layout.astro';
   nav ul { display: flex; gap: 2.5rem; list-style: none; }
   nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
   nav ul a:hover { color: #FFE600; }
-  .nav-fr { border-bottom: 1px solid #7B2FFF; padding-bottom: 2px; color: #fff !important; }
+  .nav-fr { background: none; border: none; border-bottom: 1px solid #7B2FFF; padding-bottom: 2px; color: #fff; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
+  .nav-fr:hover { color: #FFE600; }
 
   .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #FFE600; }
   .projet-meta { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
@@ -142,6 +143,57 @@ import Layout from '../../layouts/Layout.astro';
   }
 
 </style>
+
+<script is:inline>
+  var translations = {
+    fr: {
+      'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact',
+      'nav.allprojects': '← Tous les projets',
+      'cat.display': 'Affichage',
+      'lego.tagline': 'Rêvez Autrement',
+      'lego.brand': "LEGO — marque mondialement connue, associée à l'enfance, à la créativité et à l'imagination.",
+      'lego.desc': "Dans un monde dominé par les écrans et l'intelligence artificielle, la créativité devient souvent instantanée et passive. Cette campagne repositionne LEGO comme un outil de créativité libre et physique, capable de reconnecter les jeunes générations à l'imagination réelle.",
+      'brief.target': 'Cible', 'brief.supports': 'Supports', 'brief.goal': 'Objectif',
+      'lego.target': '15–30 ans · Gen Z & jeunes millennials',
+      'lego.supports': 'Affichage urbain · Print',
+      'lego.goal': "Moderniser l'image LEGO · Rendre la marque désirable au-delà de l'enfance",
+    },
+    en: {
+      'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact',
+      'nav.allprojects': '← All projects',
+      'cat.display': 'Advertising',
+      'lego.tagline': 'Dream Differently',
+      'lego.brand': 'LEGO — a globally recognized brand, associated with childhood, creativity and imagination.',
+      'lego.desc': 'In a world dominated by screens and artificial intelligence, creativity has often become instant and passive. This campaign repositions LEGO as a tool for free, physical creativity — capable of reconnecting younger generations with real imagination.',
+      'brief.target': 'Target', 'brief.supports': 'Supports', 'brief.goal': 'Goal',
+      'lego.target': '15–30 · Gen Z & young millennials',
+      'lego.supports': 'Urban advertising · Print',
+      'lego.goal': 'Modernize LEGO\'s image · Make the brand desirable beyond childhood',
+    }
+  };
+
+  function applyLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    var toggle = document.getElementById('langToggle');
+    if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+    localStorage.setItem('vaema-lang', lang);
+  }
+
+  var currentLang = localStorage.getItem('vaema-lang') || 'fr';
+  if (currentLang === 'en') applyLang('en');
+
+  var toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+    toggle.addEventListener('click', function() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      applyLang(currentLang);
+    });
+  }
+</script>
 
 <script is:inline>
   var burger = document.getElementById('navBurger');
