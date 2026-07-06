@@ -8,9 +8,9 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
     <ul id="navMenu">
-      <li><a href="/home#projets" data-i18n="nav.projects">Projets</a></li>
-      <li><a href="/home#l-artiste" data-i18n="nav.about">À propos</a></li>
-      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="/home#projets" data-i18n="nav.projects">Tracklist</a></li>
+      <li><a href="/home#l-artiste" data-i18n="nav.about">Crédits</a></li>
+      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Booking</a></li>
       <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
   </nav>
@@ -26,19 +26,12 @@ import Layout from '../../layouts/Layout.astro';
         <p class="aside-tagline" data-i18n="floyd.tagline">Exprimez votre style</p>
         <div class="aside-brief">
           <p data-i18n="floyd.desc">Avec Floyd, changez vos roues, vos couleurs, votre mood et voyagez à votre image. La campagne invite à exprimer son style jusque dans les moindres détails.</p>
-          <div class="aside-infos">
-            <div class="aside-info-bloc">
-              <span class="aside-info-label" data-i18n="brief.target">Cible</span>
-              <span class="aside-info-val" data-i18n="floyd.target">25–45 ans · Voyageurs urbains, créatifs et indépendants</span>
-            </div>
-            <div class="aside-info-bloc">
-              <span class="aside-info-label" data-i18n="brief.insight">Insight</span>
-              <span class="aside-info-val" data-i18n="floyd.insight">Ils privilégient les marques à forte identité visuelle et à dimension émotionnelle</span>
-            </div>
-            <div class="aside-info-bloc">
-              <span class="aside-info-label" data-i18n="brief.supports">Supports</span>
-              <span class="aside-info-val" data-i18n="floyd.supports">Affichage · Street marketing · Motion</span>
-            </div>
+          <div class="catalog-card">
+            <div class="catalog-header">CATALOG</div>
+            <div class="catalog-field"><span class="catalog-label">Artist</span><span class="catalog-val">Maëva PETIT</span></div>
+            <div class="catalog-field"><span class="catalog-label">Genre</span><span class="catalog-val">Campagne 360</span></div>
+            <div class="catalog-field"><span class="catalog-label">Release</span><span class="catalog-val">2025</span></div>
+            <div class="catalog-field"><span class="catalog-label">Format</span><span class="catalog-val">Print · Digital</span></div>
           </div>
         </div>
         <div class="aside-progress"><div class="progress-bar" id="progressBar"></div></div>
@@ -155,5 +148,6 @@ import Layout from '../../layouts/Layout.astro';
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
+
 
 

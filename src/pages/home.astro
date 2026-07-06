@@ -11,9 +11,9 @@ import Layout from '../layouts/Layout.astro';
       <span></span><span></span><span></span>
     </button>
     <ul id="navMenu">
-      <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
-      <li><a href="#l-artiste" data-i18n="nav.about">À propos</a></li>
-      <li><a href="#on-se-capte" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="#projets" data-i18n="nav.projects">Tracklist</a></li>
+      <li><a href="#l-artiste" data-i18n="nav.about">Crédits</a></li>
+      <li><a href="#on-se-capte" data-i18n="nav.contact">Booking</a></li>
       <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
   </nav>
@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- TITRE SECTION -->
   <div class="section-titre">
-    <span class="section-label"><span data-i18n="section.my">MA</span> <span class="section-outline" data-i18n="section.work">COLLECTION</span></span>
+    <span class="section-label"><span data-i18n="section.my">MA</span> <span class="section-outline" data-i18n="section.work">TRACKLIST</span></span>
     <div class="section-line"></div>
     <span class="section-num">05</span>
   </div>
@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="etiquette-titre">LEGO</span>
             <span class="etiquette-cat" data-i18n="cat.display">Affichage</span>
           </div>
-          <span class="etiquette-lien" data-i18n="see">Voir →</span>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
         <a href="/portfolio/lego" class="carte">
           <div class="carte-image">
@@ -75,7 +75,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="etiquette-titre">SEA SHEPHERD</span>
             <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
           </div>
-          <span class="etiquette-lien" data-i18n="see">Voir →</span>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
         <a href="/portfolio/sea-shepherd" class="carte">
           <div class="carte-image">
@@ -104,7 +104,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="etiquette-titre">DURALEX</span>
             <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
           </div>
-          <span class="etiquette-lien" data-i18n="see">Voir →</span>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
         <a href="/portfolio/duralex" class="carte">
           <div class="carte-image">
@@ -129,7 +129,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="etiquette-titre">FLOYD</span>
             <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
           </div>
-          <span class="etiquette-lien" data-i18n="see">Voir →</span>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
         <a href="/portfolio/floyd" class="carte">
           <div class="carte-image">
@@ -154,7 +154,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="etiquette-titre">AFTER ALL FEST</span>
             <span class="etiquette-cat" data-i18n="cat.identity">Identité · Campagne</span>
           </div>
-          <span class="etiquette-lien" data-i18n="see">Voir →</span>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
         <a href="/portfolio/after-all-fest" class="carte">
           <div class="carte-image">
@@ -179,7 +179,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="etiquette-titre">SOS VILLAGES</span>
             <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
           </div>
-          <span class="etiquette-lien" data-i18n="see">Voir →</span>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
         <a href="/portfolio/sos-villages-enfants" class="carte">
           <div class="carte-image">
@@ -253,7 +253,7 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="contact" id="on-se-capte">
       <div class="apropos-titre">
-        <span data-i18n="contact.pre">ON SE </span><span class="section-outline" data-i18n="contact.title">CAPTE ?</span>
+        <span data-i18n="contact.pre">ON SE </span><span class="section-outline" data-i18n="contact.title">BOOK ?</span>
       </div>
 
       <div class="contact-corps">
@@ -284,7 +284,7 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Afficheur LCD -->
     <div class="console-display">
-      <span class="console-display-text" id="consoleDisplay">MAEVA — DA PORTFOLIO — SIDE B — 2026</span>
+      <span class="console-display-text" id="consoleDisplay">MAEVA PETIT — FACE B — VOL. I — 2026</span>
     </div>
 
     <!-- VU mètre décoratif gauche -->
@@ -1145,9 +1145,9 @@ import Layout from '../layouts/Layout.astro';
   // ── TRADUCTIONS ──
   var translations = {
     fr: {
-      'nav.projects': 'Projets',
-      'nav.about': 'À propos',
-      'nav.contact': 'Contact',
+      'nav.projects': 'Tracklist',
+      'nav.about': 'Crédits',
+      'nav.contact': 'Booking',
       'band.da': 'Direction Artistique',
       'band.design': 'Design Graphique',
       'band.print': 'Print & Digital',
@@ -1158,19 +1158,19 @@ import Layout from '../layouts/Layout.astro';
       'cat.display': 'Affichage',
       'cat.campaign': 'Campagne 360',
       'cat.identity': 'Identité Visuelle · Campagne 360',
-      'see': 'Voir le projet →',
+      'see': '▶ Play',
       'about.pre': "L'",
       'about.title': 'ARTISTE',
       'about.p1': "Directrice Artistique freelance en formation à SUP DE PUB Bordeaux, je navigue entre deux univers en apparence opposés : le brutalisme streetwear — brut, affirmé, sans compromis — et l'univers enfantin — coloré, poétique, plein de douceur.",
       'about.p2': "Cette dualité, c'est ma signature. Chaque projet est une nouvelle façon d'explorer ces deux territoires.",
       'about.tools': 'Outils',
       'contact.pre': 'ON SE ',
-      'contact.title': 'CAPTE ?'
+      'contact.title': 'BOOK ?'
     },
     en: {
-      'nav.projects': 'Projects',
-      'nav.about': 'About',
-      'nav.contact': 'Contact',
+      'nav.projects': 'Tracklist',
+      'nav.about': 'Credits',
+      'nav.contact': 'Booking',
       'band.da': 'Art Direction',
       'band.design': 'Graphic Design',
       'band.print': 'Print & Digital',
@@ -1181,7 +1181,7 @@ import Layout from '../layouts/Layout.astro';
       'cat.display': 'Advertising',
       'cat.campaign': '360 Campaign',
       'cat.identity': 'Visual Identity · 360 Campaign',
-      'see': 'See project →',
+      'see': '▶ Play',
       'about.pre': 'THE ',
       'about.title': 'ARTIST',
       'about.p1': 'Freelance Art Director in training at SUP DE PUB Bordeaux, I navigate between two seemingly opposite worlds: streetwear brutalism — raw, bold, uncompromising — and the world of childhood — colorful, poetic, full of softness.',

@@ -84,3 +84,42 @@ img {
   display: block;
 }
 
+/* ── CATALOG CARD (fiches techniques pages projet) ── */
+.catalog-card {
+  border: 1px solid rgba(212,153,58,0.3);
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+.catalog-header {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.42rem;
+  letter-spacing: 0.5em;
+  color: #D4993A;
+  text-transform: uppercase;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(212,153,58,0.2);
+}
+.catalog-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.catalog-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(242,228,196,0.35);
+  flex-shrink: 0;
+}
+.catalog-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.78rem;
+  color: #F2E4C4;
+  text-align: right;
+}
+
