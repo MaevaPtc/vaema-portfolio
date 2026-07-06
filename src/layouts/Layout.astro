@@ -1,4 +1,4 @@
----
+﻿---
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 const { title = 'Maëva PETIT — Book' } = Astro.props;
@@ -17,26 +17,119 @@ const { title = 'Maëva PETIT — Book' } = Astro.props;
   </head>
   <body>
     <slot />
-    <div id="curseur" transition:persist></div>
+    <!-- OVERLAY SCANNER global -->
+    <div id="scanner-overlay" transition:persist>
+      <div id="scanner-grain"></div>
+      <svg id="scanner-artifacts" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:absolute;inset:0;">
+        <defs>
+          <filter id="soft"><feGaussianBlur stdDeviation="0.5"/></filter>
+        </defs>
+        <line x1="23%" y1="0" x2="23.3%" y2="100%" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" filter="url(#soft)"/>
+        <line x1="67%" y1="0" x2="66.8%" y2="100%" stroke="rgba(255,255,255,0.12)" stroke-width="0.8" filter="url(#soft)"/>
+        <line x1="88%" y1="0" x2="87.9%" y2="100%" stroke="rgba(255,255,255,0.13)" stroke-width="1.2" filter="url(#soft)"/>
+        <line x1="44%" y1="20%" x2="44.1%" y2="90%" stroke="rgba(255,255,255,0.10)" stroke-width="0.6" filter="url(#soft)"/>
+        <line x1="0"   y1="34%"  x2="18%"  y2="34.1%"  stroke="rgba(255,255,255,0.18)" stroke-width="0.8" filter="url(#soft)"/>
+        <line x1="55%" y1="71%"  x2="90%"  y2="70.9%"  stroke="rgba(255,255,255,0.15)" stroke-width="0.6" filter="url(#soft)"/>
+        <line x1="30%" y1="18%"  x2="52%"  y2="18.1%"  stroke="rgba(255,255,255,0.12)" stroke-width="0.5" filter="url(#soft)"/>
+        <line x1="10%" y1="58%"  x2="35%"  y2="57.9%"  stroke="rgba(255,255,255,0.10)" stroke-width="0.7" filter="url(#soft)"/>
+        <path d="M 12% 8%  Q 15% 25%,  11% 45%"  stroke="rgba(200,190,170,0.32)" stroke-width="0.9" fill="none" filter="url(#soft)"/>
+        <path d="M 78% 55% Q 82% 65%,  79% 82%"  stroke="rgba(200,190,170,0.26)" stroke-width="0.7" fill="none" filter="url(#soft)"/>
+        <path d="M 45% 88% Q 51% 94%,  56% 91%"  stroke="rgba(200,190,170,0.24)" stroke-width="0.6" fill="none" filter="url(#soft)"/>
+        <path d="M 60% 10% Q 58% 22%,  62% 30%"  stroke="rgba(200,190,170,0.20)" stroke-width="0.5" fill="none" filter="url(#soft)"/>
+        <path d="M 3%  40% Q 6%  48%,  4%  60%"  stroke="rgba(200,190,170,0.22)" stroke-width="0.8" fill="none" filter="url(#soft)"/>
+        <path d="M 92% 70% Q 95% 78%,  91% 85%"  stroke="rgba(200,190,170,0.18)" stroke-width="0.6" fill="none" filter="url(#soft)"/>
+        <circle cx="8%"  cy="22%" r="1.8" fill="rgba(220,210,190,0.45)"/>
+        <circle cx="31%" cy="5%"  r="1.2" fill="rgba(220,210,190,0.40)"/>
+        <circle cx="54%" cy="38%" r="2.2" fill="rgba(220,210,190,0.35)"/>
+        <circle cx="72%" cy="61%" r="1.4" fill="rgba(220,210,190,0.42)"/>
+        <circle cx="19%" cy="77%" r="1.6" fill="rgba(220,210,190,0.38)"/>
+        <circle cx="91%" cy="14%" r="1.0" fill="rgba(220,210,190,0.40)"/>
+        <circle cx="63%" cy="89%" r="1.9" fill="rgba(220,210,190,0.33)"/>
+        <circle cx="41%" cy="52%" r="1.1" fill="rgba(220,210,190,0.36)"/>
+        <circle cx="85%" cy="43%" r="1.5" fill="rgba(220,210,190,0.40)"/>
+        <circle cx="7%"  cy="65%" r="1.3" fill="rgba(220,210,190,0.42)"/>
+        <circle cx="25%" cy="48%" r="2.8" fill="rgba(210,200,180,0.22)"/>
+        <circle cx="49%" cy="82%" r="3.2" fill="rgba(210,200,180,0.18)"/>
+        <circle cx="77%" cy="30%" r="2.5" fill="rgba(210,200,180,0.20)"/>
+        <circle cx="15%" cy="92%" r="3.0" fill="rgba(210,200,180,0.16)"/>
+      </svg>
+    </div>
+
+    <div id="curseur" transition:persist>
+      <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+        <!-- Corps principal : cercle crème -->
+        <circle class="adapter-body" cx="14" cy="14" r="13" fill="#F2E4C4" stroke="#0E0906" stroke-width="0.8"/>
+        <!-- Grand trou central -->
+        <circle cx="14" cy="14" r="4.5" fill="#0E0906"/>
+        <!-- 3 petits trous caractéristiques de l'adaptateur 45t -->
+        <circle cx="14"   cy="5.5" r="1.6" fill="#0E0906"/>
+        <circle cx="6.2"  cy="19"  r="1.6" fill="#0E0906"/>
+        <circle cx="21.8" cy="19"  r="1.6" fill="#0E0906"/>
+        <!-- Fine ligne bordeaux décorative -->
+        <circle class="adapter-border" cx="14" cy="14" r="9" fill="none" stroke="#8C2D3F" stroke-width="0.6" stroke-dasharray="2 3"/>
+      </svg>
+    </div>
   </body>
 </html>
 
 <style is:global>
   * { cursor: none !important; }
 
+  /* ── OVERLAY SCANNER global ── */
+  #scanner-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  #scanner-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+    mix-blend-mode: screen;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+    background-repeat: repeat;
+  }
+  #scanner-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.35) 100%);
+  }
+  #scanner-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px);
+    pointer-events: none;
+  }
+  #scanner-artifacts { position: absolute; inset: 0; }
+
   #curseur {
     position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #8C2D3F;
+    width: 28px;
+    height: 28px;
     pointer-events: none;
     z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background 0.15s, transform 0.15s;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.15s, opacity 0.15s;
   }
 
-  #curseur.jaune { background: #D4993A; transform: translate(-50%, -50%) scale(1.4); }
+  #curseur svg {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.15s;
+  }
+
+  /* Au survol d'un élément interactif : tourne + grossit */
+  #curseur.jaune {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.3);
+  }
+
+  #curseur.jaune .adapter-body { fill: #D4993A; }
+  #curseur.jaune .adapter-border { stroke: #D4993A; }
 
   @media (max-width: 768px) {
     * { cursor: auto !important; }
@@ -68,3 +161,4 @@ const { title = 'Maëva PETIT — Book' } = Astro.props;
   initCurseur();
   document.addEventListener('astro:page-load', initCurseur);
 </script>
+

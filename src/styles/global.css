@@ -1,8 +1,9 @@
-:root {
-  --noir: #0E0906;
-  --blanc: #F2E4C4;
-  --fuchsia: #8C2D3F;
-  --creme: #F0EDE8;
+﻿:root {
+  --noir:     #0E0906;   /* noir charbon */
+  --creme:    #F2E4C4;   /* crème papier jauni */
+  --ambre:    #D4993A;   /* jaune ambré — couleur signature */
+  --cuivre:   #B87333;   /* cuivre */
+  --bordeaux: #8C2D3F;   /* rouge bordeaux */
 }
 
 *, *::before, *::after {
@@ -38,7 +39,48 @@ a {
   text-decoration: none;
 }
 
+/* ── VU METER (barre de progression pages projet) ── */
+.aside-progress {
+  position: relative;
+  height: 16px;
+  background: rgba(242,228,196,0.04);
+  border: 1px solid rgba(212,174,88,0.18);
+  overflow: hidden;
+  margin-top: 0.4rem;
+}
+.aside-progress::before {
+  content: 'VU';
+  position: absolute;
+  top: -1.3rem;
+  left: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.42rem;
+  letter-spacing: 0.45em;
+  color: rgba(212,174,88,0.45);
+}
+.aside-progress::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 8px,
+    rgba(14,9,6,0.85) 8px,
+    rgba(14,9,6,0.85) 10px
+  );
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #F2E4C4 0%, #D4993A 65%, #8C2D3F 100%);
+  transition: width 0.1s linear;
+}
+
 img {
   max-width: 100%;
   display: block;
 }
+

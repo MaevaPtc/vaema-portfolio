@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -27,80 +27,176 @@ import Layout from '../layouts/Layout.astro';
   <div class="bandeau">
     <div class="bandeau-track" id="bandeauTrack">
       <div class="bandeau-inner" id="bandeauContent">
-        <span data-i18n="band.da">Direction Artistique</span><span class="sep"> ✦ </span><span data-i18n="band.design">Design Graphique</span><span class="sep"> ✦ </span><span data-i18n="band.print">Print & Digital</span><span class="sep"> ✦ </span><span data-i18n="band.identity">Identité Visuelle</span><span class="sep"> ✦ </span><span data-i18n="band.sign">Signalétique</span><span class="sep"> ✦ </span>
+        <span data-i18n="band.da">Direction Artistique</span><span class="sep"> ●</span><span data-i18n="band.design">Design Graphique</span><span class="sep"> ●</span><span data-i18n="band.print">Print & Digital</span><span class="sep"> ●</span><span data-i18n="band.identity">Identité Visuelle</span><span class="sep"> ●</span><span data-i18n="band.sign">Signalétique</span><span class="sep"> ●</span>
       </div>
     </div>
   </div>
 
   <!-- TITRE SECTION -->
   <div class="section-titre">
-    <span class="section-label"><span data-i18n="section.my">MES</span> <span class="section-outline" data-i18n="section.work">CRÉAS</span></span>
+    <span class="section-label"><span data-i18n="section.my">MA</span> <span class="section-outline" data-i18n="section.work">COLLECTION</span></span>
     <div class="section-line"></div>
     <span class="section-num">05</span>
   </div>
 
-  <!-- PROJETS -->
-  <section class="projets" id="projets">
+  <!-- DISCOGRAPHIE -->
+  <section class="discographie" id="projets">
 
-    <div class="grille-grandes">
+    <div class="disco-ligne disco-ligne--grande">
 
-      <a href="/portfolio/lego" class="carte">
-        <img src="/projects/lego.JPG" alt="LEGO" />
-        <div class="overlay">
-          <span class="cat" data-i18n="cat.display">Affichage</span>
-          <h3 class="titre">LEGO</h3>
-          <span class="lien" data-i18n="see">Voir le projet →</span>
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">LEGO</span>
+            <span class="etiquette-cat" data-i18n="cat.display">Affichage</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">Voir →</span>
         </div>
-      </a>
+        <a href="/portfolio/lego" class="carte">
+          <div class="carte-image">
+            <img src="/projects/lego.JPG" alt="LEGO" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 01</span>
+            <h3 class="track-titre">LEGO</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.display">Affichage</span>
+              <span class="track-annee">2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-      <a href="/portfolio/sea-shepherd" class="carte carte-naturelle">
-        <img src="/projects/seasheperd.JPG" alt="Sea Shepherd" />
-        <div class="overlay">
-          <span class="cat" data-i18n="cat.campaign">Campagne 360</span>
-          <h3 class="titre">SEA SHEPHERD</h3>
-          <span class="lien" data-i18n="see">Voir le projet →</span>
+      <div class="carte-wrap carte-wrap--sm">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">SEA SHEPHERD</span>
+            <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">Voir →</span>
         </div>
-      </a>
+        <a href="/portfolio/sea-shepherd" class="carte">
+          <div class="carte-image">
+            <img src="/projects/seasheperd.JPG" alt="Sea Shepherd" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 02</span>
+            <h3 class="track-titre">SEA SHEPHERD</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
+              <span class="track-annee">2025</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
     </div>
 
-    <div class="grille-petites">
+    <div class="disco-ligne disco-ligne--petite">
 
-      <a href="/portfolio/duralex" class="carte">
-        <img src="/projects/duralex.PNG" alt="Duralex" />
-        <div class="overlay">
-          <span class="cat" data-i18n="cat.campaign">Campagne 360</span>
-          <h3 class="titre">DURALEX</h3>
-          <span class="lien" data-i18n="see">Voir le projet →</span>
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">DURALEX</span>
+            <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">Voir →</span>
         </div>
-      </a>
+        <a href="/portfolio/duralex" class="carte">
+          <div class="carte-image">
+            <img src="/projects/duralex.PNG" alt="Duralex" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 03</span>
+            <h3 class="track-titre">DURALEX</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
+              <span class="track-annee">2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-      <a href="/portfolio/floyd" class="carte">
-        <img src="/projects/floyd.png" alt="Floyd" />
-        <div class="overlay">
-          <span class="cat" data-i18n="cat.campaign">Campagne 360</span>
-          <h3 class="titre">FLOYD</h3>
-          <span class="lien" data-i18n="see">Voir le projet →</span>
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">FLOYD</span>
+            <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">Voir →</span>
         </div>
-      </a>
+        <a href="/portfolio/floyd" class="carte">
+          <div class="carte-image">
+            <img src="/projects/floyd.png" alt="Floyd" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 04</span>
+            <h3 class="track-titre">FLOYD</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
+              <span class="track-annee">2025</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-      <a href="/portfolio/after-all-fest" class="carte">
-        <img src="/projects/after-all-fest.JPG" alt="After All Fest" />
-        <div class="overlay">
-          <span class="cat" data-i18n="cat.identity">Identité Visuelle · Campagne 360</span>
-          <h3 class="titre">AFTER ALL FEST</h3>
-          <span class="lien" data-i18n="see">Voir le projet →</span>
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">AFTER ALL FEST</span>
+            <span class="etiquette-cat" data-i18n="cat.identity">Identité · Campagne</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">Voir →</span>
         </div>
-      </a>
+        <a href="/portfolio/after-all-fest" class="carte">
+          <div class="carte-image">
+            <img src="/projects/after-all-fest.JPG" alt="After All Fest" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 05</span>
+            <h3 class="track-titre">AFTER ALL FEST</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.identity">Identité · Campagne</span>
+              <span class="track-annee">2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
-      <a href="/portfolio/sos-villages-enfants" class="carte">
-        <img src="/projects/sos.JPG" alt="SOS Villages d'Enfants" />
-        <div class="overlay">
-          <span class="cat" data-i18n="cat.campaign">Campagne 360</span>
-          <h3 class="titre">SOS VILLAGES</h3>
-          <span class="lien" data-i18n="see">Voir le projet →</span>
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">SOS VILLAGES</span>
+            <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">Voir →</span>
         </div>
-      </a>
+        <a href="/portfolio/sos-villages-enfants" class="carte">
+          <div class="carte-image">
+            <img src="/projects/sos.JPG" alt="SOS Villages d'Enfants" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 06</span>
+            <h3 class="track-titre">SOS VILLAGES</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
+              <span class="track-annee">2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
 
     </div>
 
@@ -110,31 +206,48 @@ import Layout from '../layouts/Layout.astro';
   <section class="apropos-contact">
 
     <div class="apropos" id="l-artiste">
-      <div class="vinyle-wrap" aria-hidden="true">
-        <img class="vinyle" src="/vinyle.png" alt="" />
-      </div>
+
       <div class="apropos-titre">
         <span data-i18n="about.pre">L'</span><span class="section-outline" data-i18n="about.title">ARTISTE</span>
       </div>
 
-      <div class="apropos-corps">
-        <div class="apropos-photo-placeholder">
-          <span>TA PHOTO ICI</span>
+      <div class="sleeve-corps">
+
+        <!-- Photo façon "band photo" -->
+        <div class="sleeve-photo">
+          <div class="apropos-photo-placeholder">
+            <span>TA PHOTO ICI</span>
+          </div>
+          <p class="sleeve-photo-legende" data-i18n="about.photo">Maëva PETIT — Bordeaux, 2026</p>
         </div>
 
-        <div class="apropos-texte">
-          <p data-i18n="about.p1">Directrice Artistique freelance en formation à SUP DE PUB Bordeaux, je navigue entre deux univers en apparence opposés : le brutalisme streetwear — brut, affirmé, sans compromis — et l'univers enfantin — coloré, poétique, plein de douceur.</p>
-          <p data-i18n="about.p2">Cette dualité, c'est ma signature. Chaque projet est une nouvelle façon d'explorer ces deux territoires.</p>
+        <!-- Notes d'album -->
+        <div class="sleeve-notes">
+          <h2 class="sleeve-titre" data-i18n="about.title">MAËVA PETIT</h2>
 
-          <div class="outils">
-            <span class="outil-label" data-i18n="about.tools">Outils</span>
-            <div class="outil-liste">
-              <span>Illustrator</span>
-              <span>Photoshop</span>
-              <span>Première Pro</span>
+          <div class="sleeve-bio">
+            <p data-i18n="about.p1">Directrice Artistique freelance en formation à SUP DE PUB Bordeaux. Navigue entre deux univers en apparence opposés : le brutalisme streetwear — brut, affirmé, sans compromis — et l'enfance — colorée, poétique, pleine de douceur.</p>
+            <p data-i18n="about.p2">Cette dualité, c'est la signature. Chaque projet est une nouvelle façon d'explorer ces deux territoires — et de prouver qu'ils n'ont jamais été si loin l'un de l'autre.</p>
+          </div>
+
+          <div class="sleeve-credits">
+            <div class="sleeve-credit-ligne">
+              <span class="sleeve-credit-label" data-i18n="about.recorded">Enregistré avec</span>
+              <span class="sleeve-credit-val">Illustrator · Photoshop · CapCut</span>
+            </div>
+            <div class="sleeve-credit-ligne">
+              <span class="sleeve-credit-label" data-i18n="about.assisted">Assisté par</span>
+              <span class="sleeve-credit-val">Claude.IA · ChatGPT · NotebookLM · Gemini</span>
+            </div>
+            <div class="sleeve-credit-ligne">
+              <span class="sleeve-credit-label" data-i18n="about.produced">Formation</span>
+              <span class="sleeve-credit-val">SUP DE PUB Bordeaux — 2025/2027</span>
             </div>
           </div>
+
+          <p class="sleeve-copyright">℗ & © 2026 VAEMA — Tous droits réservés.<br/>Toute reproduction interdite sans autorisation écrite.</p>
         </div>
+
       </div>
     </div>
 
@@ -165,6 +278,43 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- BOUTON RETOUR EN HAUT -->
   <button id="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <!-- CONSOLE FOOTER -->
+  <footer class="console">
+
+    <!-- Afficheur LCD -->
+    <div class="console-display">
+      <span class="console-display-text" id="consoleDisplay">MAEVA — DA PORTFOLIO — SIDE B — 2026</span>
+    </div>
+
+    <!-- VU mètre décoratif gauche -->
+    <div class="console-vu">
+      <span class="console-vu-label">L</span>
+      <div class="console-vu-bar">
+        <div class="console-vu-fill" id="vuLeft"></div>
+      </div>
+      <span class="console-vu-label">R</span>
+      <div class="console-vu-bar">
+        <div class="console-vu-fill" id="vuRight"></div>
+      </div>
+    </div>
+
+    <!-- Boutons transport -->
+    <div class="console-transport">
+      <button class="console-btn" data-label="REW">⏮</button>
+      <button class="console-btn console-btn--play" data-label="PLAY">▶</button>
+      <button class="console-btn" data-label="PAUSE">⏸</button>
+      <button class="console-btn" data-label="STOP">■</button>
+      <button class="console-btn" data-label="NEXT">⏭</button>
+    </div>
+
+    <!-- Label SIDE B -->
+    <div class="console-side">
+      <span class="console-side-dot"></span>
+      <span class="console-side-label">SIDE B</span>
+    </div>
+
+  </footer>
 
 </Layout>
 
@@ -232,7 +382,7 @@ import Layout from '../layouts/Layout.astro';
   .hero-placeholder {
     width: 100%;
     height: calc(100vh - 80px - 48px);
-    background: #1a1108;
+    background: #0E0906;
     border-bottom: 1px solid rgba(212,153,58,0.15);
     position: relative;
     display: flex;
@@ -341,91 +491,193 @@ import Layout from '../layouts/Layout.astro';
     color: #D4993A;
   }
 
-  /* ── PROJETS ── */
-  .projets {
-    padding: 0.3rem 2.5rem 4rem;
+  /* ── DISCOGRAPHIE ── */
+  .discographie {
+    padding: 80px 2.5rem 6rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 100px;
   }
 
+  .disco-ligne {
+    display: flex;
+    gap: 1.5rem;
+    overflow: visible;
+  }
+
+  .disco-ligne--grande { height: 62vh; }
+  .disco-ligne--grande .carte-wrap { height: 100%; }
+
+  .disco-ligne--petite {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .disco-ligne--petite .carte-wrap { aspect-ratio: 3 / 4; }
+
+  /* ── WRAP ── */
+  .carte-wrap {
+    position: relative;
+    flex: 1;
+    overflow: visible;
+  }
+
+  /* Sea Shepherd : même largeur qu'une petite carte (ratio 3/4 sur 62vh) */
+  .carte-wrap--sm {
+    flex: none;
+    width: calc(62vh * 3 / 4);
+  }
+
+  /* ── CARTE (image pure, rien d'autre visible au repos) ── */
   .carte {
     display: block;
     position: relative;
     overflow: hidden;
-    background: #111;
+    background: #0E0906;
+    border-radius: 0;
+    border: 1px solid rgba(212,174,88,0.08);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: transform 450ms cubic-bezier(.22,.61,.36,1),
+                border-color 450ms cubic-bezier(.22,.61,.36,1);
   }
 
-  .carte img {
+  .carte-wrap:hover .carte {
+    transform: translateY(-8px) scale(1.01);
+    border-color: #D4993A;
+  }
+
+  /* Texture papier */
+  .carte::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.02;
+    transition: opacity 450ms cubic-bezier(.22,.61,.36,1);
+  }
+
+  .carte-wrap:hover .carte::before { opacity: 0.07; }
+
+  /* ── IMAGE ── */
+  .carte-image {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .carte-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s ease;
+    transition: transform 450ms cubic-bezier(.22,.61,.36,1);
   }
 
-  .carte:hover img { transform: scale(1.04); }
+  .carte-wrap:hover .carte-image img { transform: scale(1.02); }
 
-  .overlay {
+  .carte-image::after {
+    content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    background: rgba(0,0,0,0);
+    transition: background 450ms cubic-bezier(.22,.61,.36,1);
+    pointer-events: none;
+  }
+
+  .carte-wrap:hover .carte-image::after { background: rgba(0,0,0,0.18); }
+
+  /* ── REFLET ── */
+  .reflet {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background: linear-gradient(108deg, transparent 30%, rgba(255,255,255,0.09) 45%, rgba(255,255,255,0.04) 52%, transparent 68%);
+    transform: translateX(-160%);
+  }
+
+  .carte-wrap:hover .reflet {
+    animation: refletVinyle 700ms cubic-bezier(.22,.61,.36,1) forwards;
+  }
+
+  @keyframes refletVinyle {
+    from { transform: translateX(-160%); }
+    to   { transform: translateX(160%); }
+  }
+
+  /* ── CARTOUCHE caché ── */
+  .cartouche { display: none; }
+
+  /* ── ÉTIQUETTE : rectangle crème en diagonale, dépasse EN HAUT ── */
+  .carte-etiquette {
+    position: absolute;
+    top: -80px;
+    left: 14px;
+    width: 82%;
+    max-width: 380px;
+    background: #F2E4C4;
+    padding: 0.9rem 1.2rem 6rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    transform: rotate(-2deg) translateY(-20px);
+    opacity: 0;
+    transition: transform 500ms cubic-bezier(.22,.61,.36,1),
+                opacity 400ms cubic-bezier(.22,.61,.36,1);
+    pointer-events: none;
+  }
+
+  .carte-wrap:hover .carte-etiquette {
+    opacity: 1;
+    transform: rotate(-2deg) translateY(0);
+  }
+
+  .etiquette-gauche {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    gap: 0.2rem;
+    min-width: 0;
   }
 
-  .carte:hover .overlay { opacity: 1; }
-
-  .cat {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #8C2D3F;
-    margin-bottom: 0.4rem;
-  }
-
-  .titre {
+  .etiquette-titre {
+    display: block;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    color: #F2E4C4;
+    font-size: 2rem;
+    color: #0E0906;
     line-height: 1;
-    margin-bottom: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .lien {
+  .etiquette-cat {
+    display: block;
     font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
+    font-size: 0.42rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #D4993A;
-    border-bottom: 1px solid #D4993A;
-    padding-bottom: 2px;
-    width: fit-content;
+    color: rgba(14,9,6,0.45);
+    white-space: nowrap;
   }
 
-  .grille-grandes {
-    display: flex;
-    gap: 1rem;
-    height: 70vh;
+  .etiquette-lien {
+    flex-shrink: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8C2D3F;
+    white-space: nowrap;
+    border: 1px solid #8C2D3F;
+    padding: 0.35rem 0.6rem;
   }
-
-  .grille-grandes .carte { flex: 1; height: 100%; }
-  .grille-grandes .carte-naturelle { flex: none; width: auto; }
-  .grille-grandes .carte-naturelle img { height: 100%; width: auto; object-fit: unset; display: block; }
-  .grille-grandes .titre { font-size: 4rem; }
-
-  .grille-petites {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
-  .grille-petites .titre { font-size: 4rem; }
 
   /* ── CURSEUR ── */
 
@@ -466,6 +718,7 @@ import Layout from '../layouts/Layout.astro';
     border-right: 1px solid #D4993A;
     position: relative;
     overflow: hidden;
+    background: #0E0906;
   }
 
   .contact {
@@ -480,84 +733,153 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 2rem;
   }
 
-  .apropos-corps {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .apropos-photo-placeholder {
-    width: 160px;
-    min-height: 200px;
-    flex-shrink: 0;
-    background: #141414;
+  /* ── SLEEVE HEADER ── */
+  .sleeve-header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-image: repeating-linear-gradient(
-      -45deg, transparent, transparent 14px,
-      rgba(255,45,135,0.04) 14px, rgba(255,45,135,0.04) 15px
-    );
-  }
-
-  .apropos-photo-placeholder span {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.45rem;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.15);
-    border: 1px dashed rgba(255,255,255,0.1);
-    padding: 0.5rem 0.8rem;
-    text-align: center;
-  }
-
-  .apropos-texte {
-    display: flex;
-    flex-direction: column;
     gap: 1.2rem;
+    margin-bottom: 2.5rem;
   }
 
-  .apropos-texte p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.85rem;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.55);
+  .sleeve-side {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: #8C2D3F;
+    flex-shrink: 0;
   }
 
-  .outils {
-    margin-top: 0.5rem;
+  .sleeve-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(212,174,88,0.25);
+  }
+
+  .sleeve-cat {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(242,228,196,0.3);
+    flex-shrink: 0;
+  }
+
+  /* ── SLEEVE CORPS ── */
+  .sleeve-corps {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  /* ── PHOTO BAND ── */
+  .sleeve-photo {
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
   }
 
-  .outil-label {
+  .apropos-photo-placeholder {
+    width: 180px;
+    min-height: 230px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212,174,88,0.12);
+    filter: grayscale(0.3) sepia(0.15);
+  }
+
+  .apropos-photo-placeholder span {
     font-family: 'Space Mono', monospace;
-    font-size: 0.5rem;
+    font-size: 0.42rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.12);
+    border: 1px dashed rgba(255,255,255,0.08);
+    padding: 0.5rem 0.8rem;
+    text-align: center;
+  }
+
+  .sleeve-photo-legende {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: rgba(242,228,196,0.25);
+    line-height: 1.6;
+    max-width: 180px;
+  }
+
+  /* ── NOTES D'ALBUM ── */
+  .sleeve-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .sleeve-titre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.5rem;
+    line-height: 0.9;
+    letter-spacing: 0.06em;
+    color: #F2E4C4;
+  }
+
+  .sleeve-bio {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(140,45,63,0.4);
+  }
+
+  .sleeve-bio p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: rgba(242,228,196,0.55);
+  }
+
+  /* ── CRÉDITS STYLE LINER NOTES ── */
+  .sleeve-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .sleeve-credit-ligne {
+    display: flex;
+    gap: 1.2rem;
+    align-items: baseline;
+  }
+
+  .sleeve-credit-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: #8C2D3F;
+    flex-shrink: 0;
+    width: 8.5rem;
   }
 
-  .outil-liste {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
+  .sleeve-credit-val {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: rgba(242,228,196,0.45);
   }
 
-  .outil-liste span {
+  /* ── COPYRIGHT ── */
+  .sleeve-copyright {
     font-family: 'Space Mono', monospace;
     font-size: 0.55rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
-    border: 1px solid rgba(255,255,255,0.12);
-    padding: 0.3rem 0.8rem;
-    transition: color 0.2s, border-color 0.2s;
-    cursor: default;
-  }
-
-  .outil-liste span:hover {
-    color: #D4993A;
-    border-color: #D4993A;
+    letter-spacing: 0.18em;
+    color: rgba(242,228,196,0.18);
+    line-height: 1.8;
+    margin-top: 0.4rem;
   }
 
   .contact-corps {
@@ -641,34 +963,180 @@ import Layout from '../layouts/Layout.astro';
     .section-titre { padding: 1.5rem 1.2rem 0; }
     .section-label { font-size: 2rem; }
 
-    .projets { padding: 0.3rem 1.2rem 3rem; }
+    .discographie { padding: 0 1.2rem 3rem; gap: 1rem; }
 
-    .grille-grandes {
+    .disco-ligne--grande {
       flex-direction: column;
       height: auto;
     }
-    .grille-grandes .carte { height: 50vw; }
-    .grille-grandes .carte-naturelle { width: 100%; }
-    .grille-grandes .carte-naturelle img { width: 100%; height: 50vw; object-fit: cover; }
-    .grille-grandes .titre { font-size: 2.5rem; }
+    .disco-ligne--grande .carte { height: 60vw; }
+    .disco-ligne--grande .track-titre { font-size: 2.5rem; }
 
-    .grille-petites {
+    .disco-ligne--petite {
       grid-template-columns: repeat(2, 1fr);
     }
-    .grille-petites .titre { font-size: 2rem; }
+    .disco-ligne--petite .track-titre { font-size: 2rem; }
 
     .apropos-contact {
       grid-template-columns: 1fr;
       margin-top: 2rem;
     }
     .apropos { border-right: none; border-bottom: 1px solid #D4993A; padding: 2rem 1.2rem; }
-    .contact { padding: 2rem 1.2rem; }
+    .sleeve-corps { flex-direction: column; }
+    .apropos-photo-placeholder { width: 100%; min-height: 180px; }
+    .sleeve-photo-legende { max-width: 100%; }
+  .contact { padding: 2rem 1.2rem; }
     .apropos-titre { font-size: 2.2rem; }
 
     .apropos-corps { flex-direction: column; }
     .apropos-photo-placeholder { width: 100%; min-height: 200px; }
 
     #btn-top { bottom: 1rem; right: 1rem; }
+    .console-transport { gap: 0.6rem; }
+    .console-btn { padding: 0.5rem 0.7rem; font-size: 0.7rem; }
+    .console-display-text { font-size: 0.5rem; }
+  }
+
+  /* ── CONSOLE FOOTER ── */
+  .console {
+    border-top: 1px solid rgba(212,174,88,0.3);
+    background: #0E0906;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Afficheur LCD */
+  .console-display {
+    flex: 1;
+    background: #0a1a0a;
+    border: 1px solid rgba(0,200,80,0.2);
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    min-width: 200px;
+  }
+
+  .console-display-text {
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: #4dff88;
+    text-shadow: 0 0 8px rgba(77,255,136,0.6);
+    white-space: nowrap;
+    animation: defileLCD 32s linear infinite;
+  }
+
+  @keyframes defileLCD {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* VU mètre */
+  .console-vu {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .console-vu-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.45rem;
+    color: rgba(212,174,88,0.5);
+    letter-spacing: 0.1em;
+  }
+
+  .console-vu-bar {
+    width: 60px;
+    height: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .console-vu-fill {
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(to right, #4dff88 0%, #D4993A 70%, #8C2D3F 100%);
+    transition: width 0.1s ease;
+  }
+
+  /* Boutons transport */
+  .console-transport {
+    display: flex;
+    gap: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .console-btn {
+    background: #141414;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(242,228,196,0.6);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+  }
+
+  .console-btn::after {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.35rem;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.2);
+    margin-top: 2px;
+  }
+
+  .console-btn:hover {
+    border-color: #D4993A;
+    color: #D4993A;
+  }
+
+  .console-btn--play {
+    border-color: rgba(77,255,136,0.3);
+    color: #4dff88;
+    text-shadow: 0 0 6px rgba(77,255,136,0.5);
+  }
+
+  .console-btn--play:hover {
+    background: rgba(77,255,136,0.08);
+    border-color: #4dff88;
+  }
+
+  /* Label SIDE B */
+  .console-side {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .console-side-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8C2D3F;
+    box-shadow: 0 0 6px rgba(140,45,63,0.8);
+    animation: pulseLED 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseLED {
+    0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(140,45,63,0.8); }
+    50%       { opacity: 0.4; box-shadow: 0 0 2px rgba(140,45,63,0.3); }
+  }
+
+  .console-side-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.4em;
+    color: rgba(140,45,63,0.8);
+    text-transform: uppercase;
   }
 
 </style>
@@ -810,3 +1278,20 @@ import Layout from '../layouts/Layout.astro';
     requestAnimationFrame(loop);
   }
 </script>
+
+<script is:inline>
+  // VU mètres console — animation aléatoire
+  (function() {
+    var left  = document.getElementById('vuLeft');
+    var right = document.getElementById('vuRight');
+    if (!left || !right) return;
+    function rand(min, max) { return Math.random() * (max - min) + min; }
+    function animate() {
+      left.style.width  = rand(15, 85) + '%';
+      right.style.width = rand(10, 80) + '%';
+      setTimeout(animate, rand(80, 220));
+    }
+    animate();
+  })();
+</script>
+

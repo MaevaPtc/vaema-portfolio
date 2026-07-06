@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -90,8 +90,10 @@ import Layout from '../../layouts/Layout.astro';
   .aside-info-bloc { display: flex; flex-direction: column; gap: 0.3rem; }
   .aside-info-label { font-family: 'Space Mono', monospace; font-size: 0.48rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
   .aside-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; color: rgba(242,228,196,0.6); line-height: 1.5; }
-  .aside-progress { height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; }
-  .progress-bar { height: 100%; width: 0%; background: #D4993A; border-radius: 1px; transition: width 0.1s linear; }
+  .aside-progress { position: relative; height: 16px; background: rgba(242,228,196,0.04); border: 1px solid rgba(212,174,88,0.18); overflow: hidden; margin-top: 0.4rem; }
+  .aside-progress::before { content: 'VU'; position: absolute; top: -1.3rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.42rem; letter-spacing: 0.45em; color: rgba(212,174,88,0.45); }
+  .aside-progress::after { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: repeating-linear-gradient(to right, transparent 0px, transparent 8px, rgba(14,9,6,0.85) 8px, rgba(14,9,6,0.85) 10px); }
+  .progress-bar { height: 100%; width: 0%; background: linear-gradient(to right, #F2E4C4 0%, #D4993A 65%, #8C2D3F 100%); transition: width 0.1s linear; }
   .scroll-main { padding: 4rem 3rem 6rem; display: flex; flex-direction: column; gap: 6rem; }
   .visuel-block { position: relative; }
   .visuel-block::before { content: attr(data-label); position: absolute; top: -1.5rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.4em; color: #D4993A; }
@@ -142,3 +144,4 @@ import Layout from '../../layouts/Layout.astro';
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
+

@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -194,19 +194,6 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   /* Barre de progression */
-  .aside-progress {
-    height: 2px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 1px;
-  }
-
-  .progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #D4993A;
-    border-radius: 1px;
-    transition: width 0.1s linear;
-  }
 
   /* ── VISUELS ── */
   .scroll-main {
@@ -360,3 +347,5 @@ import Layout from '../../layouts/Layout.astro';
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 </script>
+
+

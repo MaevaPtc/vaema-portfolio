@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -105,8 +105,6 @@ import Layout from '../../layouts/Layout.astro';
   .aside-info-bloc { display: flex; flex-direction: column; gap: 0.3rem; }
   .aside-info-label { font-family: 'Space Mono', monospace; font-size: 0.48rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
   .aside-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; color: rgba(242,228,196,0.6); line-height: 1.5; }
-  .aside-progress { height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; }
-  .progress-bar { height: 100%; width: 0%; background: #D4993A; border-radius: 1px; transition: width 0.1s linear; }
   .scroll-main { padding: 4rem 3rem 6rem; display: flex; flex-direction: column; gap: 6rem; }
   .visuel-block { position: relative; }
   .visuel-block::before { content: attr(data-label); position: absolute; top: -1.5rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.4em; color: #D4993A; }
@@ -157,3 +155,5 @@ import Layout from '../../layouts/Layout.astro';
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
+
+
