@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "vaema-portfolio",
-      "cwd": "C:/book/vaema-portfolio",
+      "cwd": "../../../book/vaema-portfolio",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 4321,

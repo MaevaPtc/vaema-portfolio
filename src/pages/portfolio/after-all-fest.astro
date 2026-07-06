@@ -4,7 +4,6 @@ import Layout from '../../layouts/Layout.astro';
 
 <Layout title="After All Fest — VAEMA">
 
-  <!-- NAV -->
   <nav>
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
@@ -16,203 +15,138 @@ import Layout from '../../layouts/Layout.astro';
     </ul>
   </nav>
 
-  <!-- HERO PROJET -->
-  <section class="projet-hero">
-    <div class="projet-meta">
-      <span class="projet-cat" data-i18n="afterall.cat">Identité Visuelle · Campagne 360</span>
-      <span class="projet-annee">2026</span>
-    </div>
-    <h1 class="projet-titre">AFTER ALL FEST</h1>
-    <p class="projet-sous-titre" data-i18n="afterall.tagline">Le post, sans les clichés</p>
-  </section>
+  <div class="scroll-layout">
 
-  <!-- BRIEF -->
-  <section class="projet-brief">
-    <div class="brief-gauche">
-      <span class="brief-label">Brief</span>
-    </div>
-    <div class="brief-droite">
-      <p class="brief-marque" data-i18n="afterall.brand">After All Fest — festival indoor de musiques post au cœur de Bordeaux.</p>
-      <p data-i18n="afterall.desc">Créer une identité visuelle forte et une campagne pour un festival qui casse les codes : interdiction formelle de tomber dans les clichés rock, métal ou hardrock. L'enjeu ? Montrer que la scène post est une culture à part entière, contemporaine, visuelle et sans étiquette.</p>
-      <div class="brief-infos">
-        <div class="brief-info-bloc">
-          <span class="brief-info-label" data-i18n="brief.goal">Objectif</span>
-          <span class="brief-info-val" data-i18n="afterall.goal">Créer l'identité · Lancer la campagne</span>
+    <aside class="scroll-aside">
+      <div class="aside-inner">
+        <div class="aside-meta">
+          <span class="projet-cat" data-i18n="afterall.cat">Identité Visuelle · Campagne 360</span>
+          <span class="projet-annee">2026</span>
         </div>
-        <div class="brief-info-bloc">
-          <span class="brief-info-label" data-i18n="brief.constraint">Contrainte</span>
-          <span class="brief-info-val" data-i18n="afterall.constraint">Zéro cliché rock · Univers contemporain et singulier</span>
+        <h1 class="aside-titre">AFTER<br/>ALL FEST</h1>
+        <p class="aside-tagline" data-i18n="afterall.tagline">Le post, sans les clichés</p>
+        <div class="aside-brief">
+          <p data-i18n="afterall.desc">Créer l'identité d'un festival indoor de musiques post à Bordeaux — sans tomber dans les clichés rock. Montrer que la scène post est une culture contemporaine, visuelle et sans étiquette.</p>
+          <div class="aside-infos">
+            <div class="aside-info-bloc">
+              <span class="aside-info-label" data-i18n="brief.goal">Objectif</span>
+              <span class="aside-info-val" data-i18n="afterall.goal">Créer l'identité · Lancer la campagne</span>
+            </div>
+            <div class="aside-info-bloc">
+              <span class="aside-info-label" data-i18n="brief.constraint">Contrainte</span>
+              <span class="aside-info-val" data-i18n="afterall.constraint">Zéro cliché rock · Univers contemporain et singulier</span>
+            </div>
+            <div class="aside-info-bloc">
+              <span class="aside-info-label" data-i18n="brief.supports">Supports</span>
+              <span class="aside-info-val" data-i18n="afterall.supports">Identité visuelle · Affichage · Goodies</span>
+            </div>
+          </div>
         </div>
-        <div class="brief-info-bloc">
-          <span class="brief-info-label" data-i18n="brief.supports">Supports</span>
-          <span class="brief-info-val" data-i18n="afterall.supports">Identité visuelle · Affichage · Goodies</span>
-        </div>
+        <div class="aside-progress"><div class="progress-bar" id="progressBar"></div></div>
       </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- AFFICHES -->
-  <section class="projet-visuels">
-    <div class="visuels-titre">
-      <span>LES <em>AFFICHES</em></span>
-      <div class="visuels-ligne"></div>
-    </div>
-    <div class="visuels-grille">
-      <img src="/projects/after-all-fest/after-all-fest.JPG" alt="After All Fest — Identité visuelle" />
-      <img src="/projects/after-all-fest/IMG_0405.PNG" alt="After All Fest — Visuel" />
-    </div>
-  </section>
-
-  <!-- MERCH -->
-  <section class="projet-visuels">
-    <div class="visuels-titre">
-      <span>LE <em>MERCH</em></span>
-      <div class="visuels-ligne"></div>
-    </div>
-    <div class="visuels-grille">
-      <div class="tshirt-duo">
+    <main class="scroll-main">
+      <div class="visuel-block reveal" data-label="IDENTITÉ — 01">
+        <img src="/projects/after-all-fest/after-all-fest.JPG" alt="After All Fest — Identité visuelle" />
+      </div>
+      <div class="visuel-block reveal" data-label="IDENTITÉ — 02">
+        <img src="/projects/after-all-fest/IMG_0405.PNG" alt="After All Fest — Visuel" />
+      </div>
+      <div class="visuel-block reveal" data-label="MERCH — T-SHIRT">
         <img src="/projects/after-all-fest/t-shirt.png" alt="After All Fest — T-shirt" />
+      </div>
+      <div class="visuel-block reveal" data-label="MERCH — T-SHIRT AVANT">
         <img src="/projects/after-all-fest/t-shirt avant.png" alt="After All Fest — T-shirt avant" />
       </div>
-      <img src="/projects/after-all-fest/bob.png" alt="After All Fest — Bob" />
-      <img src="/projects/after-all-fest/chaussettes.jpg" alt="After All Fest — Chaussettes" />
-      <img src="/projects/after-all-fest/chaussettes pliees.png" alt="After All Fest — Chaussettes pliées" />
-    </div>
-  </section>
+      <div class="visuel-block reveal" data-label="MERCH — BOB">
+        <img src="/projects/after-all-fest/bob.png" alt="After All Fest — Bob" />
+      </div>
+      <div class="visuel-block reveal" data-label="MERCH — CHAUSSETTES">
+        <img src="/projects/after-all-fest/chaussettes.jpg" alt="After All Fest — Chaussettes" />
+      </div>
+    </main>
 
-  <!-- NAVIGATION PROJETS -->
-  <nav class="projet-nav">
+  </div>
+
+  <div class="projet-nav">
     <a href="/portfolio/floyd" class="projet-nav-retour">← Floyd</a>
     <a href="/portfolio/sos-villages-enfants" class="projet-nav-suivant">SOS Villages →</a>
-  </nav>
-
+  </div>
 
 </Layout>
 
 <style is:global>
-
-
-
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; background: rgba(10,10,10,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  nav:not(.projet-nav) { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; background: rgba(14,9,6,0.9); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
   nav ul { display: flex; gap: 2.5rem; list-style: none; }
   nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
   nav ul a:hover { color: #D4993A; }
   .nav-fr { background: none; border: none; border-bottom: 1px solid #8C2D3F; padding-bottom: 2px; color: #F2E4C4; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
   .nav-fr:hover { color: #D4993A; }
-
-  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #D4993A; }
-  .projet-meta { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
-  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
-  .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.3); display: flex; align-items: center; }
-  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.85; color: #F2E4C4; letter-spacing: 0.02em; }
-  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
-
-  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #D4993A; }
-  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #D4993A; }
-  .brief-droite { display: flex; flex-direction: column; gap: 1.5rem; }
-  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #F2E4C4; letter-spacing: 0.05em; line-height: 1.3; }
-  .brief-droite p { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
-  .brief-infos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
-  .brief-info-bloc { display: flex; flex-direction: column; gap: 0.5rem; }
-  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
-  .brief-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
-
-  .projet-visuels { padding: 3rem 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .visuels-titre { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; }
-  .visuels-titre span { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #F2E4C4; letter-spacing: 0.1em; white-space: nowrap; }
-  .visuels-titre span em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px #8C2D3F; }
-  .visuels-ligne { flex: 1; height: 1px; background: #D4993A; }
-  .visuels-grille { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-  .visuels-grille img { max-height: 70vh; max-width: 100%; width: auto; display: block; }
-  .tshirt-duo { display: flex; gap: 0; justify-content: center; width: 100%; overflow: visible; }
-  .tshirt-duo img { width: 45%; height: auto; object-fit: contain; }
-
-  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #D4993A; position: static; background: none; backdrop-filter: none; border-bottom: none; }
-  .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+  .scroll-layout { display: grid; grid-template-columns: 38% 62%; min-height: 100vh; padding-top: 132px; }
+  .scroll-aside { position: sticky; top: 132px; height: calc(100vh - 132px); border-right: 1px solid rgba(212,153,58,0.25); overflow: hidden; }
+  .aside-inner { height: 100%; padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+  .aside-meta { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; }
+  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
+  .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.25); }
+  .aside-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 5.5vw, 7rem); line-height: 0.85; color: #F2E4C4; letter-spacing: 0.02em; }
+  .aside-tagline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.2rem, 2vw, 2.5rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; }
+  .aside-brief { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .aside-brief p { font-family: 'Space Grotesk', sans-serif; font-size: 0.82rem; line-height: 1.8; color: rgba(242,228,196,0.5); }
+  .aside-infos { display: flex; flex-direction: column; gap: 1rem; }
+  .aside-info-bloc { display: flex; flex-direction: column; gap: 0.3rem; }
+  .aside-info-label { font-family: 'Space Mono', monospace; font-size: 0.48rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
+  .aside-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; color: rgba(242,228,196,0.6); line-height: 1.5; }
+  .aside-progress { height: 2px; background: rgba(255,255,255,0.08); border-radius: 1px; }
+  .progress-bar { height: 100%; width: 0%; background: #D4993A; border-radius: 1px; transition: width 0.1s linear; }
+  .scroll-main { padding: 4rem 3rem 6rem; display: flex; flex-direction: column; gap: 6rem; }
+  .visuel-block { position: relative; }
+  .visuel-block::before { content: attr(data-label); position: absolute; top: -1.5rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.4em; color: #D4993A; }
+  .visuel-block img { width: 100%; height: auto; display: block; }
+  .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .projet-nav { display: flex; justify-content: space-between; position: fixed; top: 72px; left: 0; right: 0; z-index: 999; background: #8C2D3F; padding: 14px 2.5rem; }
+  .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.9); transition: color 0.2s; }
   .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #D4993A; }
-
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; z-index: 200; }
   .nav-burger span { display: block; width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
   .nav-burger.ouvert span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-burger.ouvert span:nth-child(2) { opacity: 0; }
   .nav-burger.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
   @media (max-width: 768px) {
-    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0E0906; }
+    .scroll-layout { grid-template-columns: 1fr; }
+    .scroll-aside { position: static; height: auto; border-right: none; border-bottom: 1px solid rgba(212,153,58,0.25); }
+    .aside-inner { padding: 2rem 1.2rem; }
+    .scroll-main { padding: 2rem 1.2rem 4rem; gap: 3rem; }
+    .aside-progress { display: none; }
+    nav:not(.projet-nav) { padding: 1.2rem 1.5rem; background: #0E0906; }
     .nav-burger { display: flex; }
     nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0E0906; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
     nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
-    .projet-hero { padding: 120px 1.2rem 2.5rem; }
-    .projet-titre { font-size: clamp(3rem, 15vw, 6rem); }
-    .projet-sous-titre { font-size: clamp(1.5rem, 8vw, 3rem); }
-    .projet-brief { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 1.2rem; }
-    .brief-infos { grid-template-columns: 1fr; gap: 1rem; }
-    .projet-visuels { padding: 2rem 1.2rem; }
-    .visuels-titre span { font-size: 2rem; }
-    .visuels-grille { flex-direction: column; }
-    .visuels-grille img { max-height: none; width: 100%; }
-    .tshirt-duo { flex-direction: column; }
-    .tshirt-duo img { width: 100%; }
-    .projet-nav { padding: 1.5rem 1.2rem; }
+    .projet-nav { top: 72px; }
   }
-
 </style>
 
 <script is:inline>
   var translations = {
-    fr: {
-      'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact',
-      'afterall.cat': 'Identité Visuelle · Campagne 360',
-      'afterall.tagline': 'Le post, sans les clichés',
-      'afterall.brand': 'After All Fest — festival indoor de musiques post au cœur de Bordeaux.',
-      'afterall.desc': "Créer une identité visuelle forte et une campagne pour un festival qui casse les codes : interdiction formelle de tomber dans les clichés rock, métal ou hardrock. L'enjeu ? Montrer que la scène post est une culture à part entière, contemporaine, visuelle et sans étiquette.",
-      'brief.goal': 'Objectif', 'brief.constraint': 'Contrainte', 'brief.supports': 'Supports',
-      'afterall.goal': "Créer l'identité · Lancer la campagne",
-      'afterall.constraint': 'Zéro cliché rock · Univers contemporain et singulier',
-      'afterall.supports': 'Identité visuelle · Affichage · Goodies',
-    },
-    en: {
-      'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact',
-      'afterall.cat': 'Visual Identity · 360 Campaign',
-      'afterall.tagline': 'Post music, without the clichés',
-      'afterall.brand': 'After All Fest — an indoor post-music festival in the heart of Bordeaux.',
-      'afterall.desc': "Create a strong visual identity and campaign for a festival that breaks the mould: absolutely no rock, metal or hard rock clichés. The challenge? Show that the post scene is a culture in its own right — contemporary, visual, and label-free.",
-      'brief.goal': 'Goal', 'brief.constraint': 'Constraint', 'brief.supports': 'Supports',
-      'afterall.goal': 'Build the identity · Launch the campaign',
-      'afterall.constraint': 'No rock clichés · Contemporary and singular universe',
-      'afterall.supports': 'Visual identity · Advertising · Goodies',
-    }
+    fr: { 'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact', 'afterall.cat': 'Identité Visuelle · Campagne 360', 'afterall.tagline': 'Le post, sans les clichés', 'afterall.desc': "Créer l'identité d'un festival indoor de musiques post à Bordeaux — sans tomber dans les clichés rock. Montrer que la scène post est une culture contemporaine, visuelle et sans étiquette.", 'brief.goal': 'Objectif', 'brief.constraint': 'Contrainte', 'brief.supports': 'Supports', 'afterall.goal': "Créer l'identité · Lancer la campagne", 'afterall.constraint': 'Zéro cliché rock · Univers contemporain et singulier', 'afterall.supports': 'Identité visuelle · Affichage · Goodies' },
+    en: { 'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact', 'afterall.cat': 'Visual Identity · 360 Campaign', 'afterall.tagline': 'Post music, no clichés', 'afterall.desc': "Create the identity of an indoor post-music festival in Bordeaux — with zero rock clichés. Show that the post scene is a contemporary, visual culture with no labels.", 'brief.goal': 'Goal', 'brief.constraint': 'Constraint', 'brief.supports': 'Supports', 'afterall.goal': 'Create the identity · Launch the campaign', 'afterall.constraint': 'Zero rock clichés · Contemporary and singular universe', 'afterall.supports': 'Visual identity · Advertising · Merch' }
   };
-
-  function applyLang(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      if (translations[lang][key]) el.textContent = translations[lang][key];
-    });
-    var toggle = document.getElementById('langToggle');
-    if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
-    localStorage.setItem('vaema-lang', lang);
-  }
-
+  function applyLang(lang) { document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (translations[lang][k]) el.textContent = translations[lang][k]; }); var t = document.getElementById('langToggle'); if (t) t.textContent = lang === 'fr' ? 'EN' : 'FR'; localStorage.setItem('vaema-lang', lang); }
   var currentLang = localStorage.getItem('vaema-lang') || 'fr';
   if (currentLang === 'en') applyLang('en');
-
   var toggle = document.getElementById('langToggle');
-  if (toggle) {
-    toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR';
-    toggle.addEventListener('click', function() {
-      currentLang = currentLang === 'fr' ? 'en' : 'fr';
-      applyLang(currentLang);
-    });
-  }
+  if (toggle) { toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR'; toggle.addEventListener('click', function() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; applyLang(currentLang); }); }
 </script>
-
 <script is:inline>
-  var burger = document.getElementById('navBurger');
-  var menu = document.getElementById('navMenu');
+  var burger = document.getElementById('navBurger'); var menu = document.getElementById('navMenu');
   burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
-
+  var observer = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  var progressBar = document.getElementById('progressBar'); var scrollMain = document.querySelector('.scroll-main');
+  function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
+  window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
