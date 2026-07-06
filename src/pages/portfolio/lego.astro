@@ -63,60 +63,44 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/portfolio/sea-shepherd" class="projet-nav-suivant">Sea Shepherd →</a>
   </nav>
 
-  <!-- CURSEUR -->
-  <div id="curseur"></div>
 
 </Layout>
 
 <style is:global>
 
-  * { cursor: none !important; }
 
-  #curseur {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7B2FFF;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background 0.15s, transform 0.15s;
-  }
-
-  #curseur.jaune { background: #FFE600; transform: translate(-50%, -50%) scale(1.4); }
 
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; background: rgba(10,10,10,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
   nav ul { display: flex; gap: 2.5rem; list-style: none; }
   nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
-  nav ul a:hover { color: #FFE600; }
-  .nav-fr { background: none; border: none; border-bottom: 1px solid #7B2FFF; padding-bottom: 2px; color: #fff; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
-  .nav-fr:hover { color: #FFE600; }
+  nav ul a:hover { color: #D4993A; }
+  .nav-fr { background: none; border: none; border-bottom: 1px solid #8C2D3F; padding-bottom: 2px; color: #F2E4C4; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
+  .nav-fr:hover { color: #D4993A; }
 
-  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #FFE600; }
+  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #D4993A; }
   .projet-meta { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
-  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; border: 1px solid #7B2FFF; padding: 0.3rem 0.8rem; }
+  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
   .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.3); display: flex; align-items: center; }
-  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 12vw, 12rem); line-height: 0.85; color: #fff; letter-spacing: 0.02em; }
-  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #FFE600; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
+  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 12vw, 12rem); line-height: 0.85; color: #F2E4C4; letter-spacing: 0.02em; }
+  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
 
-  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #FFE600; }
-  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #FFE600; }
+  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #D4993A; }
+  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #D4993A; }
   .brief-droite { display: flex; flex-direction: column; gap: 1.5rem; }
-  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 0.05em; line-height: 1.3; }
+  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #F2E4C4; letter-spacing: 0.05em; line-height: 1.3; }
   .brief-droite p { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
   .brief-infos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
   .brief-info-bloc { display: flex; flex-direction: column; gap: 0.5rem; }
-  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; }
+  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
   .brief-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
 
   .projet-visuels { display: flex; flex-direction: column; align-items: center; gap: 2rem; padding: 2rem 2.5rem; }
   .visuel-plein { max-height: 80vh; max-width: 100%; width: auto; display: block; }
 
-  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #FFE600; position: static; background: none; backdrop-filter: none; border-bottom: none; }
+  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #D4993A; position: static; background: none; backdrop-filter: none; border-bottom: none; }
   .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #FFE600; }
+  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #D4993A; }
 
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; z-index: 200; }
   .nav-burger span { display: block; width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
@@ -125,11 +109,9 @@ import Layout from '../../layouts/Layout.astro';
   .nav-burger.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   @media (max-width: 768px) {
-    * { cursor: auto !important; }
-    #curseur { display: none; }
-    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0A0A0A; }
+    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0E0906; }
     .nav-burger { display: flex; }
-    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0A0A0A; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
+    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0E0906; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
     nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
     .projet-hero { padding: 120px 1.2rem 2.5rem; }
@@ -201,9 +183,4 @@ import Layout from '../../layouts/Layout.astro';
   burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
 
-  var curseur = document.getElementById('curseur');
-  document.addEventListener('mousemove', function(e) {
-    curseur.style.left = e.clientX + 'px';
-    curseur.style.top  = e.clientY + 'px';
-  });
 </script>

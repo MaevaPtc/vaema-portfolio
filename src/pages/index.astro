@@ -66,8 +66,8 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.8rem;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: #FFE600;
-    border: 1px solid #FFE600;
+    color: #F2E4C4;
+    border: 1px solid #8C2D3F;
     padding: 1.2rem 3.5rem;
     opacity: 0;
     transform: translateY(16px);
@@ -82,9 +82,9 @@ import Layout from '../layouts/Layout.astro';
   }
 
   #btn-decouvrir:hover {
-    background: #7B2FFF;
-    border-color: #7B2FFF;
-    color: #fff;
+    background: #8C2D3F;
+    border-color: #8C2D3F;
+    color: #F2E4C4;
   }
 
 </style>
@@ -97,18 +97,20 @@ import Layout from '../layouts/Layout.astro';
     btn.classList.add('visible');
   }
 
-  // Bouton apparaît à la fin de la vidéo
-  video.addEventListener('ended', montrerBouton);
-
-  // Si pas de vidéo encore → bouton apparaît après 1 seconde
-  video.addEventListener('error', function() {
-    setTimeout(montrerBouton, 1000);
+  // Bouton apparaît 1.5s après la fin de la vidéo
+  video.addEventListener('ended', function() {
+    setTimeout(montrerBouton, 1500);
   });
 
-  // Sécurité : si la vidéo ne se lance pas du tout
+  // Si erreur vidéo → bouton apparaît après 3 secondes
+  video.addEventListener('error', function() {
+    setTimeout(montrerBouton, 3000);
+  });
+
+  // Sécurité : si la vidéo ne se lance pas du tout, bouton après 15 secondes
   setTimeout(function() {
     if (btn.classList.contains('visible') === false) {
       montrerBouton();
     }
-  }, 2000);
+  }, 15000);
 </script>

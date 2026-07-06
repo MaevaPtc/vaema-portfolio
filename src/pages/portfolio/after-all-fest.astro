@@ -9,21 +9,21 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
     <ul id="navMenu">
-      <li><a href="/home#projets">Projets</a></li>
-      <li><a href="/home#l-artiste">À propos</a></li>
-      <li><a href="/home#on-se-capte">Contact</a></li>
-      <li><a href="#" class="nav-fr">FR</a></li>
+      <li><a href="/home#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="/home#l-artiste" data-i18n="nav.about">À propos</a></li>
+      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Contact</a></li>
+      <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
   </nav>
 
   <!-- HERO PROJET -->
   <section class="projet-hero">
     <div class="projet-meta">
-      <span class="projet-cat">Identité Visuelle · Campagne 360</span>
+      <span class="projet-cat" data-i18n="afterall.cat">Identité Visuelle · Campagne 360</span>
       <span class="projet-annee">2026</span>
     </div>
     <h1 class="projet-titre">AFTER ALL FEST</h1>
-    <p class="projet-sous-titre">Le post, sans les clichés</p>
+    <p class="projet-sous-titre" data-i18n="afterall.tagline">Le post, sans les clichés</p>
   </section>
 
   <!-- BRIEF -->
@@ -32,20 +32,20 @@ import Layout from '../../layouts/Layout.astro';
       <span class="brief-label">Brief</span>
     </div>
     <div class="brief-droite">
-      <p class="brief-marque">After All Fest — festival indoor de musiques post au cœur de Bordeaux.</p>
-      <p>Créer une identité visuelle forte et une campagne pour un festival qui casse les codes : interdiction formelle de tomber dans les clichés rock, métal ou hardrock. L'enjeu ? Montrer que la scène post est une culture à part entière, contemporaine, visuelle et sans étiquette.</p>
+      <p class="brief-marque" data-i18n="afterall.brand">After All Fest — festival indoor de musiques post au cœur de Bordeaux.</p>
+      <p data-i18n="afterall.desc">Créer une identité visuelle forte et une campagne pour un festival qui casse les codes : interdiction formelle de tomber dans les clichés rock, métal ou hardrock. L'enjeu ? Montrer que la scène post est une culture à part entière, contemporaine, visuelle et sans étiquette.</p>
       <div class="brief-infos">
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Objectif</span>
-          <span class="brief-info-val">Créer l'identité · Lancer la campagne</span>
+          <span class="brief-info-label" data-i18n="brief.goal">Objectif</span>
+          <span class="brief-info-val" data-i18n="afterall.goal">Créer l'identité · Lancer la campagne</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Contrainte</span>
-          <span class="brief-info-val">Zéro cliché rock · Univers contemporain et singulier</span>
+          <span class="brief-info-label" data-i18n="brief.constraint">Contrainte</span>
+          <span class="brief-info-val" data-i18n="afterall.constraint">Zéro cliché rock · Univers contemporain et singulier</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Supports</span>
-          <span class="brief-info-val">Identité visuelle · Affichage · Goodies</span>
+          <span class="brief-info-label" data-i18n="brief.supports">Supports</span>
+          <span class="brief-info-val" data-i18n="afterall.supports">Identité visuelle · Affichage · Goodies</span>
         </div>
       </div>
     </div>
@@ -86,66 +86,51 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/portfolio/sos-villages-enfants" class="projet-nav-suivant">SOS Villages →</a>
   </nav>
 
-  <!-- CURSEUR -->
-  <div id="curseur"></div>
 
 </Layout>
 
 <style is:global>
 
-  * { cursor: none !important; }
 
-  #curseur {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7B2FFF;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background 0.15s, transform 0.15s;
-  }
-
-  #curseur.jaune { background: #FFE600; transform: translate(-50%, -50%) scale(1.4); }
 
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; background: rgba(10,10,10,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
   nav ul { display: flex; gap: 2.5rem; list-style: none; }
   nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
-  nav ul a:hover { color: #FFE600; }
-  .nav-fr { border-bottom: 1px solid #7B2FFF; padding-bottom: 2px; color: #fff !important; }
+  nav ul a:hover { color: #D4993A; }
+  .nav-fr { background: none; border: none; border-bottom: 1px solid #8C2D3F; padding-bottom: 2px; color: #F2E4C4; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
+  .nav-fr:hover { color: #D4993A; }
 
-  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #FFE600; }
+  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #D4993A; }
   .projet-meta { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
-  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; border: 1px solid #7B2FFF; padding: 0.3rem 0.8rem; }
+  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
   .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.3); display: flex; align-items: center; }
-  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.85; color: #fff; letter-spacing: 0.02em; }
-  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #FFE600; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
+  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 10vw, 10rem); line-height: 0.85; color: #F2E4C4; letter-spacing: 0.02em; }
+  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
 
-  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #FFE600; }
-  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #FFE600; }
+  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #D4993A; }
+  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #D4993A; }
   .brief-droite { display: flex; flex-direction: column; gap: 1.5rem; }
-  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 0.05em; line-height: 1.3; }
+  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #F2E4C4; letter-spacing: 0.05em; line-height: 1.3; }
   .brief-droite p { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
   .brief-infos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
   .brief-info-bloc { display: flex; flex-direction: column; gap: 0.5rem; }
-  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; }
+  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
   .brief-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
 
   .projet-visuels { padding: 3rem 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .visuels-titre { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; }
-  .visuels-titre span { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #fff; letter-spacing: 0.1em; white-space: nowrap; }
-  .visuels-titre span em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px #7B2FFF; }
-  .visuels-ligne { flex: 1; height: 1px; background: #FFE600; }
+  .visuels-titre span { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #F2E4C4; letter-spacing: 0.1em; white-space: nowrap; }
+  .visuels-titre span em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px #8C2D3F; }
+  .visuels-ligne { flex: 1; height: 1px; background: #D4993A; }
   .visuels-grille { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
   .visuels-grille img { max-height: 70vh; max-width: 100%; width: auto; display: block; }
   .tshirt-duo { display: flex; gap: 0; justify-content: center; width: 100%; overflow: visible; }
   .tshirt-duo img { width: 45%; height: auto; object-fit: contain; }
 
-  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #FFE600; position: static; background: none; backdrop-filter: none; border-bottom: none; }
+  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #D4993A; position: static; background: none; backdrop-filter: none; border-bottom: none; }
   .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #FFE600; }
+  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #D4993A; }
 
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; z-index: 200; }
   .nav-burger span { display: block; width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
@@ -154,11 +139,9 @@ import Layout from '../../layouts/Layout.astro';
   .nav-burger.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   @media (max-width: 768px) {
-    * { cursor: auto !important; }
-    #curseur { display: none; }
-    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0A0A0A; }
+    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0E0906; }
     .nav-burger { display: flex; }
-    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0A0A0A; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
+    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0E0906; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
     nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
     .projet-hero { padding: 120px 1.2rem 2.5rem; }
@@ -178,14 +161,58 @@ import Layout from '../../layouts/Layout.astro';
 </style>
 
 <script is:inline>
+  var translations = {
+    fr: {
+      'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact',
+      'afterall.cat': 'Identité Visuelle · Campagne 360',
+      'afterall.tagline': 'Le post, sans les clichés',
+      'afterall.brand': 'After All Fest — festival indoor de musiques post au cœur de Bordeaux.',
+      'afterall.desc': "Créer une identité visuelle forte et une campagne pour un festival qui casse les codes : interdiction formelle de tomber dans les clichés rock, métal ou hardrock. L'enjeu ? Montrer que la scène post est une culture à part entière, contemporaine, visuelle et sans étiquette.",
+      'brief.goal': 'Objectif', 'brief.constraint': 'Contrainte', 'brief.supports': 'Supports',
+      'afterall.goal': "Créer l'identité · Lancer la campagne",
+      'afterall.constraint': 'Zéro cliché rock · Univers contemporain et singulier',
+      'afterall.supports': 'Identité visuelle · Affichage · Goodies',
+    },
+    en: {
+      'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact',
+      'afterall.cat': 'Visual Identity · 360 Campaign',
+      'afterall.tagline': 'Post music, without the clichés',
+      'afterall.brand': 'After All Fest — an indoor post-music festival in the heart of Bordeaux.',
+      'afterall.desc': "Create a strong visual identity and campaign for a festival that breaks the mould: absolutely no rock, metal or hard rock clichés. The challenge? Show that the post scene is a culture in its own right — contemporary, visual, and label-free.",
+      'brief.goal': 'Goal', 'brief.constraint': 'Constraint', 'brief.supports': 'Supports',
+      'afterall.goal': 'Build the identity · Launch the campaign',
+      'afterall.constraint': 'No rock clichés · Contemporary and singular universe',
+      'afterall.supports': 'Visual identity · Advertising · Goodies',
+    }
+  };
+
+  function applyLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    var toggle = document.getElementById('langToggle');
+    if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+    localStorage.setItem('vaema-lang', lang);
+  }
+
+  var currentLang = localStorage.getItem('vaema-lang') || 'fr';
+  if (currentLang === 'en') applyLang('en');
+
+  var toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+    toggle.addEventListener('click', function() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      applyLang(currentLang);
+    });
+  }
+</script>
+
+<script is:inline>
   var burger = document.getElementById('navBurger');
   var menu = document.getElementById('navMenu');
   burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
 
-  var curseur = document.getElementById('curseur');
-  document.addEventListener('mousemove', function(e) {
-    curseur.style.left = e.clientX + 'px';
-    curseur.style.top  = e.clientY + 'px';
-  });
 </script>

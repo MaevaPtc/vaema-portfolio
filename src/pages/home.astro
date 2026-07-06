@@ -20,11 +20,7 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="hero">
-    <img src="/IMAGE-HOME.jpg" alt="VAEMA — Maëva Petit" class="hero-img" />
-    <div class="hero-scroll">
-      <span>SCROLL</span>
-      <span class="hero-scroll-v">V</span>
-    </div>
+    <div class="hero-placeholder"></div>
   </section>
 
   <!-- BANDEAU DÉFILANT -->
@@ -114,6 +110,9 @@ import Layout from '../layouts/Layout.astro';
   <section class="apropos-contact">
 
     <div class="apropos" id="l-artiste">
+      <div class="vinyle-wrap" aria-hidden="true">
+        <img class="vinyle" src="/vinyle.png" alt="" />
+      </div>
       <div class="apropos-titre">
         <span data-i18n="about.pre">L'</span><span class="section-outline" data-i18n="about.title">ARTISTE</span>
       </div>
@@ -163,7 +162,6 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- CURSEUR CUSTOM -->
-  <div id="curseur"></div>
 
   <!-- BOUTON RETOUR EN HAUT -->
   <button id="btn-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -208,14 +206,14 @@ import Layout from '../layouts/Layout.astro';
     transition: color 0.2s;
   }
 
-  nav ul a:hover { color: #FFE600; }
+  nav ul a:hover { color: #D4993A; }
 
   .nav-fr {
     background: none;
     border: none;
-    border-bottom: 1px solid #7B2FFF;
+    border-bottom: 1px solid #8C2D3F;
     padding-bottom: 2px;
-    color: #fff;
+    color: #F2E4C4;
     font-family: 'Space Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
@@ -223,59 +221,57 @@ import Layout from '../layouts/Layout.astro';
     cursor: pointer;
     transition: color 0.2s;
   }
-  .nav-fr:hover { color: #FFE600; }
+  .nav-fr:hover { color: #D4993A; }
 
   /* ── HERO ── */
   .hero {
     width: 100%;
     padding-top: 80px;
-    position: relative;
   }
 
-  .hero-img {
+  .hero-placeholder {
     width: 100%;
     height: calc(100vh - 80px - 48px);
-    object-fit: cover;
-    display: block;
-  }
-
-  .hero-scroll {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    background: #1a1108;
+    border-bottom: 1px solid rgba(212,153,58,0.15);
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.2rem;
-    animation: scrollBounce 1.8s ease-in-out infinite;
+    justify-content: center;
+    overflow: hidden;
   }
 
-  .hero-scroll span {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: #FFE600;
+  @media (max-width: 768px) {
+    .hero-placeholder { height: 60vh; }
   }
 
-  .hero-scroll-v {
-    font-family: 'Bebas Neue', sans-serif !important;
-    font-size: 1.8rem !important;
-    letter-spacing: 0 !important;
-    color: #FFE600 !important;
+  /* ── VINYLE ── */
+  .vinyle-wrap {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 220px;
+    height: 220px;
+    opacity: 0.45;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 0;
   }
 
-  @keyframes scrollBounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50%       { transform: translateX(-50%) translateY(6px); }
+  .apropos:hover .vinyle-wrap {
+    opacity: 0.75;
+  }
+
+  .vinyle {
+    width: 100%;
+    height: 100%;
   }
 
   /* ── BANDEAU ── */
   .bandeau {
     overflow: hidden;
     padding: 0.9rem 0;
-    background: #7B2FFF;
+    background: #8C2D3F;
   }
 
   .bandeau-track {
@@ -295,7 +291,7 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.65rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #FFE600;
+    color: #D4993A;
     padding: 0 1.2rem;
   }
 
@@ -308,6 +304,7 @@ import Layout from '../layouts/Layout.astro';
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
   }
+
 
   /* ── TITRE SECTION ── */
   .section-titre {
@@ -322,26 +319,26 @@ import Layout from '../layouts/Layout.astro';
     font-size: 3rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #fff;
+    color: #F2E4C4;
     white-space: nowrap;
   }
 
   .section-outline {
-    -webkit-text-stroke: 1.5px #7B2FFF;
+    -webkit-text-stroke: 1.5px #8C2D3F;
     color: transparent;
   }
 
   .section-line {
     flex: 1;
     height: 1px;
-    background: #FFE600;
+    background: #D4993A;
   }
 
   .section-num {
     font-family: 'Space Mono', monospace;
     font-size: 0.6rem;
     letter-spacing: 0.25em;
-    color: #FFE600;
+    color: #D4993A;
   }
 
   /* ── PROJETS ── */
@@ -388,14 +385,14 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.6rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #7B2FFF;
+    color: #8C2D3F;
     margin-bottom: 0.4rem;
   }
 
   .titre {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
-    color: #fff;
+    color: #F2E4C4;
     line-height: 1;
     margin-bottom: 0.8rem;
   }
@@ -405,8 +402,8 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #FFE600;
-    border-bottom: 1px solid #FFE600;
+    color: #D4993A;
+    border-bottom: 1px solid #D4993A;
     padding-bottom: 2px;
     width: fit-content;
   }
@@ -431,24 +428,8 @@ import Layout from '../layouts/Layout.astro';
   .grille-petites .titre { font-size: 4rem; }
 
   /* ── CURSEUR ── */
-  * { cursor: none !important; }
 
-  #curseur {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7B2FFF;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background 0.15s, transform 0.15s;
-  }
 
-  #curseur.jaune {
-    background: #FFE600;
-    transform: translate(-50%, -50%) scale(1.4);
-  }
 
   /* ── BOUTON TOP ── */
   #btn-top {
@@ -460,7 +441,7 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.6rem;
     letter-spacing: 0.2em;
     color: #000;
-    background: #FFE600;
+    background: #D4993A;
     border: none;
     padding: 0.8rem 1.2rem;
     cursor: pointer;
@@ -468,21 +449,23 @@ import Layout from '../layouts/Layout.astro';
   }
 
   #btn-top:hover {
-    background: #7B2FFF;
-    color: #FFE600;
+    background: #8C2D3F;
+    color: #D4993A;
   }
 
   /* ── À PROPOS + CONTACT ── */
   .apropos-contact {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    border-top: 1px solid #FFE600;
+    border-top: 1px solid #D4993A;
     margin-top: 4rem;
   }
 
   .apropos {
     padding: 3rem 2.5rem;
-    border-right: 1px solid #FFE600;
+    border-right: 1px solid #D4993A;
+    position: relative;
+    overflow: hidden;
   }
 
   .contact {
@@ -493,7 +476,7 @@ import Layout from '../layouts/Layout.astro';
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
     letter-spacing: 0.1em;
-    color: #fff;
+    color: #F2E4C4;
     margin-bottom: 2rem;
   }
 
@@ -551,7 +534,7 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.5rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #7B2FFF;
+    color: #8C2D3F;
   }
 
   .outil-liste {
@@ -573,8 +556,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .outil-liste span:hover {
-    color: #FFE600;
-    border-color: #FFE600;
+    color: #D4993A;
+    border-color: #D4993A;
   }
 
   .contact-corps {
@@ -588,26 +571,26 @@ import Layout from '../layouts/Layout.astro';
     flex-direction: column;
     gap: 0.3rem;
     padding: 1.5rem 0;
-    border-bottom: 1px solid #FFE600;
+    border-bottom: 1px solid #D4993A;
     transition: padding-left 0.3s;
   }
 
   .contact-ligne:hover { padding-left: 0.5rem; }
-  .contact-ligne:hover .contact-val { color: #FFE600; }
+  .contact-ligne:hover .contact-val { color: #D4993A; }
 
   .contact-label {
     font-family: 'Space Mono', monospace;
     font-size: 0.5rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #7B2FFF;
+    color: #8C2D3F;
   }
 
   .contact-val {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
     letter-spacing: 0.05em;
-    color: #fff;
+    color: #F2E4C4;
   }
 
   /* ── HAMBURGER ── */
@@ -624,7 +607,7 @@ import Layout from '../layouts/Layout.astro';
     display: block;
     width: 24px;
     height: 2px;
-    background: #fff;
+    background: #F2E4C4;
     transition: all 0.3s;
   }
   .nav-burger.ouvert span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -634,10 +617,8 @@ import Layout from '../layouts/Layout.astro';
   /* ── MOBILE ── */
   @media (max-width: 768px) {
 
-    * { cursor: auto !important; }
-    #curseur { display: none; }
 
-    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0A0A0A; }
+    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0E0906; }
 
     .nav-burger { display: flex; }
 
@@ -645,7 +626,7 @@ import Layout from '../layouts/Layout.astro';
       display: flex;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: #0A0A0A;
+      background: #0E0906;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -656,9 +637,6 @@ import Layout from '../layouts/Layout.astro';
     }
     nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
-
-    .hero-img { height: 60vh; }
-    .hero-scroll { bottom: 1rem; }
 
     .section-titre { padding: 1.5rem 1.2rem 0; }
     .section-label { font-size: 2rem; }
@@ -683,7 +661,7 @@ import Layout from '../layouts/Layout.astro';
       grid-template-columns: 1fr;
       margin-top: 2rem;
     }
-    .apropos { border-right: none; border-bottom: 1px solid #FFE600; padding: 2rem 1.2rem; }
+    .apropos { border-right: none; border-bottom: 1px solid #D4993A; padding: 2rem 1.2rem; }
     .contact { padding: 2rem 1.2rem; }
     .apropos-titre { font-size: 2.2rem; }
 
@@ -785,15 +763,34 @@ import Layout from '../layouts/Layout.astro';
   });
 
   // Curseur custom
-  var curseur = document.getElementById('curseur');
-  document.addEventListener('mousemove', function(e) {
-    curseur.style.left = e.clientX + 'px';
-    curseur.style.top  = e.clientY + 'px';
-  });
   var ciblesViolet = document.querySelectorAll('nav, .section-outline, .section-num, .cat, .outil-label, .contact-label, #btn-top, .bandeau');
   ciblesViolet.forEach(function(el) {
     el.addEventListener('mouseenter', function() { curseur.classList.add('jaune'); });
     el.addEventListener('mouseleave', function() { curseur.classList.remove('jaune'); });
+  });
+
+  // Vinyle rotation
+  window.addEventListener('DOMContentLoaded', function() {
+    var vinyle = document.querySelector('.vinyle');
+    var aproposSection = document.getElementById('l-artiste');
+    if (!vinyle || !aproposSection) return;
+
+    var angle = 0;
+    var vitesse = 0.28;
+    var vitesseCible = 0.28;
+    var surVinyle = false;
+
+    aproposSection.addEventListener('mouseenter', function() { surVinyle = true; });
+    aproposSection.addEventListener('mouseleave', function() { surVinyle = false; });
+
+    function tournerVinyle() {
+      vitesseCible = surVinyle ? 0.45 : 0.06;
+      vitesse += (vitesseCible - vitesse) * 0.04;
+      angle += vitesse;
+      vinyle.style.transform = 'rotate(' + angle + 'deg)';
+      requestAnimationFrame(tournerVinyle);
+    }
+    tournerVinyle();
   });
 
   var content = document.getElementById('bandeauContent');

@@ -9,21 +9,21 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
     <ul id="navMenu">
-      <li><a href="/home#projets">Projets</a></li>
-      <li><a href="/home#l-artiste">À propos</a></li>
-      <li><a href="/home#on-se-capte">Contact</a></li>
-      <li><a href="#" class="nav-fr">FR</a></li>
+      <li><a href="/home#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="/home#l-artiste" data-i18n="nav.about">À propos</a></li>
+      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Contact</a></li>
+      <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
   </nav>
 
   <!-- HERO PROJET -->
   <section class="projet-hero">
     <div class="projet-meta">
-      <span class="projet-cat">Campagne 360</span>
+      <span class="projet-cat" data-i18n="cat.campaign">Campagne 360</span>
       <span class="projet-annee">2025</span>
     </div>
     <h1 class="projet-titre">FLOYD</h1>
-    <p class="projet-sous-titre">Exprimez votre style</p>
+    <p class="projet-sous-titre" data-i18n="floyd.tagline">Exprimez votre style</p>
   </section>
 
   <!-- BRIEF -->
@@ -32,20 +32,20 @@ import Layout from '../../layouts/Layout.astro';
       <span class="brief-label">Brief</span>
     </div>
     <div class="brief-droite">
-      <p class="brief-marque">Floyd — marque de bagagerie à forte identité visuelle et émotionnelle.</p>
-      <p>Avec Floyd, changez vos roues, vos couleurs, votre mood et voyagez à votre image. La campagne invite à exprimer son style jusque dans les moindres détails.</p>
+      <p class="brief-marque" data-i18n="floyd.brand">Floyd — marque de bagagerie à forte identité visuelle et émotionnelle.</p>
+      <p data-i18n="floyd.desc">Avec Floyd, changez vos roues, vos couleurs, votre mood et voyagez à votre image. La campagne invite à exprimer son style jusque dans les moindres détails.</p>
       <div class="brief-infos">
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Cible</span>
-          <span class="brief-info-val">25–45 ans · Voyageurs urbains, créatifs et indépendants</span>
+          <span class="brief-info-label" data-i18n="brief.target">Cible</span>
+          <span class="brief-info-val" data-i18n="floyd.target">25–45 ans · Voyageurs urbains, créatifs et indépendants</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Insight</span>
-          <span class="brief-info-val">Ils privilégient les marques à forte identité visuelle et à dimension émotionnelle</span>
+          <span class="brief-info-label" data-i18n="brief.insight">Insight</span>
+          <span class="brief-info-val" data-i18n="floyd.insight">Ils privilégient les marques à forte identité visuelle et à dimension émotionnelle</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Supports</span>
-          <span class="brief-info-val">Affichage · Street marketing · Motion</span>
+          <span class="brief-info-label" data-i18n="brief.supports">Supports</span>
+          <span class="brief-info-val" data-i18n="floyd.supports">Affichage · Street marketing · Motion</span>
         </div>
       </div>
     </div>
@@ -96,58 +96,43 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/portfolio/after-all-fest" class="projet-nav-suivant">After All Fest →</a>
   </nav>
 
-  <!-- CURSEUR -->
-  <div id="curseur"></div>
 
 </Layout>
 
 <style is:global>
 
-  * { cursor: none !important; }
 
-  #curseur {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7B2FFF;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background 0.15s, transform 0.15s;
-  }
-
-  #curseur.jaune { background: #FFE600; transform: translate(-50%, -50%) scale(1.4); }
 
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2.5rem; background: rgba(10,10,10,0.85); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
   nav ul { display: flex; gap: 2.5rem; list-style: none; }
   nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
-  nav ul a:hover { color: #FFE600; }
-  .nav-fr { border-bottom: 1px solid #7B2FFF; padding-bottom: 2px; color: #fff !important; }
+  nav ul a:hover { color: #D4993A; }
+  .nav-fr { background: none; border: none; border-bottom: 1px solid #8C2D3F; padding-bottom: 2px; color: #F2E4C4; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
+  .nav-fr:hover { color: #D4993A; }
 
-  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #FFE600; }
+  .projet-hero { padding: 160px 2.5rem 4rem; border-bottom: 1px solid #D4993A; }
   .projet-meta { display: flex; gap: 2rem; margin-bottom: 1.5rem; }
-  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; border: 1px solid #7B2FFF; padding: 0.3rem 0.8rem; }
+  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
   .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.3); display: flex; align-items: center; }
-  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 12vw, 12rem); line-height: 0.85; color: #fff; letter-spacing: 0.02em; }
-  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #FFE600; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
+  .projet-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 12vw, 12rem); line-height: 0.85; color: #F2E4C4; letter-spacing: 0.02em; }
+  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
 
-  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #FFE600; }
-  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #FFE600; }
+  .projet-brief { display: grid; grid-template-columns: 200px 1fr; gap: 4rem; padding: 4rem 2.5rem; border-bottom: 1px solid #D4993A; }
+  .brief-label { font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: #D4993A; }
   .brief-droite { display: flex; flex-direction: column; gap: 1.5rem; }
-  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #fff; letter-spacing: 0.05em; line-height: 1.3; }
+  .brief-marque { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: #F2E4C4; letter-spacing: 0.05em; line-height: 1.3; }
   .brief-droite p { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
   .brief-infos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
   .brief-info-bloc { display: flex; flex-direction: column; gap: 0.5rem; }
-  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #7B2FFF; }
+  .brief-info-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
   .brief-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
 
   .projet-visuels { padding: 3rem 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .visuels-titre { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 2rem; }
-  .visuels-titre span { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #fff; letter-spacing: 0.1em; white-space: nowrap; }
-  .visuels-titre span em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px #7B2FFF; }
-  .visuels-ligne { flex: 1; height: 1px; background: #FFE600; }
+  .visuels-titre span { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: #F2E4C4; letter-spacing: 0.1em; white-space: nowrap; }
+  .visuels-titre span em { font-style: normal; color: transparent; -webkit-text-stroke: 1.5px #8C2D3F; }
+  .visuels-ligne { flex: 1; height: 1px; background: #D4993A; }
   .visuels-grille { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
   .visuels-grille img { max-height: 70vh; max-width: 100%; width: auto; display: block; }
 
@@ -157,9 +142,9 @@ import Layout from '../../layouts/Layout.astro';
     display: block;
   }
 
-  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #FFE600; position: static; background: none; backdrop-filter: none; border-bottom: none; }
+  .projet-nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 2.5rem; border-top: 1px solid #D4993A; position: static; background: none; backdrop-filter: none; border-bottom: none; }
   .projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); transition: color 0.2s; }
-  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #FFE600; }
+  .projet-nav-retour:hover, .projet-nav-suivant:hover { color: #D4993A; }
 
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; z-index: 200; }
   .nav-burger span { display: block; width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
@@ -168,11 +153,9 @@ import Layout from '../../layouts/Layout.astro';
   .nav-burger.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   @media (max-width: 768px) {
-    * { cursor: auto !important; }
-    #curseur { display: none; }
-    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0A0A0A; }
+    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0E0906; }
     .nav-burger { display: flex; }
-    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0A0A0A; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
+    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0E0906; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
     nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
     .projet-hero { padding: 120px 1.2rem 2.5rem; }
@@ -192,15 +175,59 @@ import Layout from '../../layouts/Layout.astro';
 </style>
 
 <script is:inline>
+  var translations = {
+    fr: {
+      'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact',
+      'cat.campaign': 'Campagne 360',
+      'floyd.tagline': 'Exprimez votre style',
+      'floyd.brand': 'Floyd — marque de bagagerie à forte identité visuelle et émotionnelle.',
+      'floyd.desc': 'Avec Floyd, changez vos roues, vos couleurs, votre mood et voyagez à votre image. La campagne invite à exprimer son style jusque dans les moindres détails.',
+      'brief.target': 'Cible', 'brief.insight': 'Insight', 'brief.supports': 'Supports',
+      'floyd.target': '25–45 ans · Voyageurs urbains, créatifs et indépendants',
+      'floyd.insight': 'Ils privilégient les marques à forte identité visuelle et à dimension émotionnelle',
+      'floyd.supports': 'Affichage · Street marketing · Motion',
+    },
+    en: {
+      'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact',
+      'cat.campaign': '360 Campaign',
+      'floyd.tagline': 'Express your style',
+      'floyd.brand': 'Floyd — a luggage brand with a strong visual and emotional identity.',
+      'floyd.desc': 'With Floyd, change your wheels, your colours, your mood and travel in your own image. The campaign invites you to express your style down to the smallest detail.',
+      'brief.target': 'Target', 'brief.insight': 'Insight', 'brief.supports': 'Supports',
+      'floyd.target': '25–45 · Urban travellers, creative and independent',
+      'floyd.insight': 'They favour brands with a strong visual identity and emotional dimension',
+      'floyd.supports': 'Advertising · Street marketing · Motion',
+    }
+  };
+
+  function applyLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    var toggle = document.getElementById('langToggle');
+    if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+    localStorage.setItem('vaema-lang', lang);
+  }
+
+  var currentLang = localStorage.getItem('vaema-lang') || 'fr';
+  if (currentLang === 'en') applyLang('en');
+
+  var toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+    toggle.addEventListener('click', function() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      applyLang(currentLang);
+    });
+  }
+</script>
+
+<script is:inline>
   var burger = document.getElementById('navBurger');
   var menu = document.getElementById('navMenu');
   burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
 
-  var curseur = document.getElementById('curseur');
-  document.addEventListener('mousemove', function(e) {
-    curseur.style.left = e.clientX + 'px';
-    curseur.style.top  = e.clientY + 'px';
-  });
 </script>
 

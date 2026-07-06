@@ -9,21 +9,21 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
     <ul id="navMenu">
-      <li><a href="/home#projets">Projets</a></li>
-      <li><a href="/home#l-artiste">À propos</a></li>
-      <li><a href="/home#on-se-capte">Contact</a></li>
-      <li><a href="#" class="nav-fr">FR</a></li>
+      <li><a href="/home#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="/home#l-artiste" data-i18n="nav.about">À propos</a></li>
+      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Contact</a></li>
+      <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
   </nav>
 
   <!-- HERO PROJET -->
   <section class="projet-hero">
     <div class="projet-meta">
-      <span class="projet-cat">Campagne 360</span>
+      <span class="projet-cat" data-i18n="cat.campaign">Campagne 360</span>
       <span class="projet-annee">2026</span>
     </div>
     <h1 class="projet-titre">SEA SHEPHERD</h1>
-    <p class="projet-sous-titre">Leur quotidien impact le nôtre</p>
+    <p class="projet-sous-titre" data-i18n="sea.tagline">Leur quotidien impact le nôtre</p>
   </section>
 
   <!-- BRIEF -->
@@ -32,21 +32,21 @@ import Layout from '../../layouts/Layout.astro';
       <span class="brief-label">Brief</span>
     </div>
     <div class="brief-droite">
-      <p class="brief-marque">Sea Shepherd — organisation internationale de protection des océans.</p>
-      <p>Le Gouffre de Capbreton est l'un des canyons sous-marins les plus profonds d'Europe, situé à seulement quelques kilomètres des côtes landaises. Méconnu du grand public, il abrite une biodiversité exceptionnelle aujourd'hui menacée.</p>
-      <p>Cette campagne vise à faire connaître ce territoire marin unique et à mobiliser le public pour signer la pétition en faveur de sa protection. Le ton est impactant mais jamais moralisateur — l'objectif est d'éveiller, pas de culpabiliser.</p>
+      <p class="brief-marque" data-i18n="sea.brand">Sea Shepherd — organisation internationale de protection des océans.</p>
+      <p data-i18n="sea.desc1">Le Gouffre de Capbreton est l'un des canyons sous-marins les plus profonds d'Europe, situé à seulement quelques kilomètres des côtes landaises. Méconnu du grand public, il abrite une biodiversité exceptionnelle aujourd'hui menacée.</p>
+      <p data-i18n="sea.desc2">Cette campagne vise à faire connaître ce territoire marin unique et à mobiliser le public pour signer la pétition en faveur de sa protection. Le ton est impactant mais jamais moralisateur — l'objectif est d'éveiller, pas de culpabiliser.</p>
       <div class="brief-infos">
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Objectif</span>
-          <span class="brief-info-val">Sensibiliser · Mobiliser · Inciter à signer la pétition</span>
+          <span class="brief-info-label" data-i18n="brief.goal">Objectif</span>
+          <span class="brief-info-val" data-i18n="sea.goal">Sensibiliser · Mobiliser · Inciter à signer la pétition</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Territoire</span>
-          <span class="brief-info-val">Gouffre de Capbreton · Côte Atlantique</span>
+          <span class="brief-info-label" data-i18n="sea.territorylabel">Territoire</span>
+          <span class="brief-info-val" data-i18n="sea.territory">Gouffre de Capbreton · Côte Atlantique</span>
         </div>
         <div class="brief-info-bloc">
-          <span class="brief-info-label">Supports</span>
-          <span class="brief-info-val">Affichage · Réseaux sociaux · Goodies</span>
+          <span class="brief-info-label" data-i18n="brief.supports">Supports</span>
+          <span class="brief-info-val" data-i18n="sea.supports">Affichage · Réseaux sociaux · Goodies</span>
         </div>
       </div>
     </div>
@@ -55,7 +55,7 @@ import Layout from '../../layouts/Layout.astro';
   <!-- AFFICHES -->
   <section class="projet-visuels">
     <div class="visuels-titre">
-      <span>LES <em style="-webkit-text-stroke: 1.5px #7B2FFF;">AFFICHES</em></span>
+      <span>LES <em style="-webkit-text-stroke: 1.5px #8C2D3F;">AFFICHES</em></span>
       <div class="visuels-ligne"></div>
     </div>
     <div class="visuels-grille">
@@ -68,7 +68,7 @@ import Layout from '../../layouts/Layout.astro';
   <!-- RÉSEAUX SOCIAUX -->
   <section class="projet-visuels">
     <div class="visuels-titre">
-      <span>RÉSEAUX <em style="-webkit-text-stroke: 1.5px #7B2FFF;">SOCIAUX</em></span>
+      <span>RÉSEAUX <em style="-webkit-text-stroke: 1.5px #8C2D3F;">SOCIAUX</em></span>
       <div class="visuels-ligne"></div>
     </div>
     <div class="visuels-grille">
@@ -80,7 +80,7 @@ import Layout from '../../layouts/Layout.astro';
   <!-- PINS -->
   <section class="projet-visuels">
     <div class="visuels-titre">
-      <span>LES <em style="-webkit-text-stroke: 1.5px #7B2FFF;">PINS</em></span>
+      <span>LES <em style="-webkit-text-stroke: 1.5px #8C2D3F;">PINS</em></span>
       <div class="visuels-ligne"></div>
     </div>
     <div class="visuels-grille visuels-centre">
@@ -94,31 +94,12 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/portfolio/duralex" class="projet-nav-suivant">Duralex →</a>
   </nav>
 
-  <!-- CURSEUR -->
-  <div id="curseur"></div>
 
 </Layout>
 
 <style is:global>
 
-  * { cursor: none !important; }
 
-  #curseur {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #7B2FFF;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: background 0.15s, transform 0.15s;
-  }
-
-  #curseur.jaune {
-    background: #FFE600;
-    transform: translate(-50%, -50%) scale(1.4);
-  }
 
   nav {
     position: fixed;
@@ -155,17 +136,14 @@ import Layout from '../../layouts/Layout.astro';
     transition: color 0.2s;
   }
 
-  nav ul a:hover { color: #FFE600; }
+  nav ul a:hover { color: #D4993A; }
 
-  .nav-fr {
-    border-bottom: 1px solid #7B2FFF;
-    padding-bottom: 2px;
-    color: #fff !important;
-  }
+  .nav-fr { background: none; border: none; border-bottom: 1px solid #8C2D3F; padding-bottom: 2px; color: #F2E4C4; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
+  .nav-fr:hover { color: #D4993A; }
 
   .projet-hero {
     padding: 160px 2.5rem 4rem;
-    border-bottom: 1px solid #FFE600;
+    border-bottom: 1px solid #D4993A;
   }
 
   .projet-meta {
@@ -179,8 +157,8 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 0.6rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #7B2FFF;
-    border: 1px solid #7B2FFF;
+    color: #8C2D3F;
+    border: 1px solid #8C2D3F;
     padding: 0.3rem 0.8rem;
   }
 
@@ -197,18 +175,18 @@ import Layout from '../../layouts/Layout.astro';
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(5rem, 12vw, 12rem);
     line-height: 0.85;
-    color: #fff;
+    color: #F2E4C4;
     letter-spacing: 0.02em;
   }
 
-  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #FFE600; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
+  .projet-sous-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 5rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; margin-top: 0.5rem; }
 
   .projet-brief {
     display: grid;
     grid-template-columns: 200px 1fr;
     gap: 4rem;
     padding: 4rem 2.5rem;
-    border-bottom: 1px solid #FFE600;
+    border-bottom: 1px solid #D4993A;
   }
 
   .brief-label {
@@ -216,7 +194,7 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 0.6rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #FFE600;
+    color: #D4993A;
   }
 
   .brief-droite {
@@ -228,7 +206,7 @@ import Layout from '../../layouts/Layout.astro';
   .brief-marque {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.4rem;
-    color: #fff;
+    color: #F2E4C4;
     letter-spacing: 0.05em;
     line-height: 1.3;
   }
@@ -260,7 +238,7 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 0.5rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #7B2FFF;
+    color: #8C2D3F;
   }
 
   .brief-info-val {
@@ -285,21 +263,21 @@ import Layout from '../../layouts/Layout.astro';
   .visuels-titre span {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
-    color: #fff;
+    color: #F2E4C4;
     letter-spacing: 0.1em;
     white-space: nowrap;
   }
 
   .visuels-titre span em {
     font-style: normal;
-    -webkit-text-stroke: 1.5px #FFE600;
+    -webkit-text-stroke: 1.5px #D4993A;
     color: transparent;
   }
 
   .visuels-ligne {
     flex: 1;
     height: 1px;
-    background: #FFE600;
+    background: #D4993A;
   }
 
   .visuels-grille {
@@ -325,7 +303,7 @@ import Layout from '../../layouts/Layout.astro';
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2.5rem;
-    border-top: 1px solid #FFE600;
+    border-top: 1px solid #D4993A;
     position: static;
     background: none;
     backdrop-filter: none;
@@ -343,7 +321,7 @@ import Layout from '../../layouts/Layout.astro';
   }
 
   .projet-nav-retour:hover,
-  .projet-nav-suivant:hover { color: #FFE600; }
+  .projet-nav-suivant:hover { color: #D4993A; }
 
   .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 0.5rem; z-index: 200; }
   .nav-burger span { display: block; width: 24px; height: 2px; background: #fff; transition: all 0.3s; }
@@ -352,11 +330,9 @@ import Layout from '../../layouts/Layout.astro';
   .nav-burger.ouvert span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   @media (max-width: 768px) {
-    * { cursor: auto !important; }
-    #curseur { display: none; }
-    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0A0A0A; }
+    nav { padding: 1.2rem 1.5rem; backdrop-filter: none; background: #0E0906; }
     .nav-burger { display: flex; }
-    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0A0A0A; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
+    nav ul { display: flex; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #0E0906; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; z-index: 150; transform: translateX(100%); transition: transform 0.4s ease; }
     nav ul.ouvert { transform: translateX(0); }
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
     .projet-hero { padding: 120px 1.2rem 2.5rem; }
@@ -374,15 +350,61 @@ import Layout from '../../layouts/Layout.astro';
 </style>
 
 <script is:inline>
+  var translations = {
+    fr: {
+      'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact',
+      'cat.campaign': 'Campagne 360',
+      'sea.tagline': 'Leur quotidien impact le nôtre',
+      'sea.brand': 'Sea Shepherd — organisation internationale de protection des océans.',
+      'sea.desc1': "Le Gouffre de Capbreton est l'un des canyons sous-marins les plus profonds d'Europe, situé à seulement quelques kilomètres des côtes landaises. Méconnu du grand public, il abrite une biodiversité exceptionnelle aujourd'hui menacée.",
+      'sea.desc2': "Cette campagne vise à faire connaître ce territoire marin unique et à mobiliser le public pour signer la pétition en faveur de sa protection. Le ton est impactant mais jamais moralisateur — l'objectif est d'éveiller, pas de culpabiliser.",
+      'brief.goal': 'Objectif', 'sea.territorylabel': 'Territoire', 'brief.supports': 'Supports',
+      'sea.goal': 'Sensibiliser · Mobiliser · Inciter à signer la pétition',
+      'sea.territory': 'Gouffre de Capbreton · Côte Atlantique',
+      'sea.supports': 'Affichage · Réseaux sociaux · Goodies',
+    },
+    en: {
+      'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact',
+      'cat.campaign': '360 Campaign',
+      'sea.tagline': 'Their everyday life impacts ours',
+      'sea.brand': 'Sea Shepherd — an international ocean conservation organisation.',
+      'sea.desc1': 'The Capbreton Canyon is one of the deepest submarine canyons in Europe, located just a few kilometres from the Landes coastline. Little-known to the general public, it is home to exceptional biodiversity now under threat.',
+      'sea.desc2': 'This campaign aims to raise awareness of this unique marine territory and mobilise the public to sign the petition for its protection. The tone is impactful but never moralising — the goal is to awaken, not to guilt.',
+      'brief.goal': 'Goal', 'sea.territorylabel': 'Territory', 'brief.supports': 'Supports',
+      'sea.goal': 'Raise awareness · Mobilise · Encourage petition signing',
+      'sea.territory': 'Capbreton Canyon · Atlantic Coast',
+      'sea.supports': 'Advertising · Social media · Goodies',
+    }
+  };
+
+  function applyLang(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      if (translations[lang][key]) el.textContent = translations[lang][key];
+    });
+    var toggle = document.getElementById('langToggle');
+    if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+    localStorage.setItem('vaema-lang', lang);
+  }
+
+  var currentLang = localStorage.getItem('vaema-lang') || 'fr';
+  if (currentLang === 'en') applyLang('en');
+
+  var toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR';
+    toggle.addEventListener('click', function() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      applyLang(currentLang);
+    });
+  }
+</script>
+
+<script is:inline>
   var burger = document.getElementById('navBurger');
   var menu = document.getElementById('navMenu');
   burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
 
-  var curseur = document.getElementById('curseur');
-  document.addEventListener('mousemove', function(e) {
-    curseur.style.left = e.clientX + 'px';
-    curseur.style.top  = e.clientY + 'px';
-  });
 </script>
 
