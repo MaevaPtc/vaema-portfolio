@@ -27,6 +27,9 @@ pnpm-debug.log*
 *.PDF
 *.mov
 *.MOV
+*.mp4
+*.MP4
+!public/videos/video-entree.mp4
 
 # jetbrains setting folder
 .idea/
