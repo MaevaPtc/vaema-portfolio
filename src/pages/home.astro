@@ -977,19 +977,46 @@ import Layout from '../layouts/Layout.astro';
     .section-titre { padding: 1.5rem 1.2rem 0; }
     .section-label { font-size: 2rem; }
 
-    .discographie { padding: 0 1.2rem 3rem; gap: 1rem; }
+    .discographie { padding: 0 0 3rem; gap: 1.5rem; }
 
-    .disco-ligne--grande {
-      flex-direction: column;
-      height: auto;
-    }
-    .disco-ligne--grande .carte { height: 60vw; }
-    .disco-ligne--grande .track-titre { font-size: 2.5rem; }
-
+    /* Carrousel horizontal sur mobile */
+    .disco-ligne--grande,
     .disco-ligne--petite {
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: visible;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding: 80px 1.2rem 1.2rem;
+      height: auto;
+      grid-template-columns: unset;
+      scrollbar-width: none;
     }
-    .disco-ligne--petite .track-titre { font-size: 2rem; }
+    .disco-ligne--grande::-webkit-scrollbar,
+    .disco-ligne--petite::-webkit-scrollbar { display: none; }
+
+    .disco-ligne--grande .carte-wrap,
+    .disco-ligne--petite .carte-wrap {
+      flex: 0 0 65vw;
+      width: 65vw;
+      aspect-ratio: 3 / 4;
+      height: auto;
+      scroll-snap-align: start;
+    }
+
+    .disco-ligne--grande .carte-wrap--sm {
+      flex: 0 0 50vw;
+      width: 50vw;
+    }
+
+    /* Étiquette toujours visible sur mobile */
+    .carte-etiquette {
+      opacity: 1 !important;
+      transform: rotate(-2deg) translateY(0) !important;
+      pointer-events: auto;
+    }
 
     .apropos-contact {
       grid-template-columns: 1fr;
