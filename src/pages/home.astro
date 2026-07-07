@@ -1298,9 +1298,11 @@ import Layout from '../layouts/Layout.astro';
   initVinyle();
   document.addEventListener('astro:page-load', initVinyle);
 
-  var content = document.getElementById('bandeauContent');
-  var track   = document.getElementById('bandeauTrack');
-  if (content && track) {
+  function initBandeau() {
+    var content = document.getElementById('bandeauContent');
+    var track   = document.getElementById('bandeauTrack');
+    if (!content || !track) return;
+    track.innerHTML = '';
     track.appendChild(content.cloneNode(true));
     track.appendChild(content.cloneNode(true));
     track.appendChild(content.cloneNode(true));
@@ -1314,11 +1316,10 @@ import Layout from '../layouts/Layout.astro';
     }
     requestAnimationFrame(loop);
   }
-</script>
+  initBandeau();
+  document.addEventListener('astro:page-load', initBandeau);
 
-<script is:inline>
-  // VU mètres console — animation aléatoire
-  (function() {
+  function initVU() {
     var left  = document.getElementById('vuLeft');
     var right = document.getElementById('vuRight');
     if (!left || !right) return;
@@ -1329,6 +1330,8 @@ import Layout from '../layouts/Layout.astro';
       setTimeout(animate, rand(80, 220));
     }
     animate();
-  })();
+  }
+  initVU();
+  document.addEventListener('astro:page-load', initVU);
 </script>
 
