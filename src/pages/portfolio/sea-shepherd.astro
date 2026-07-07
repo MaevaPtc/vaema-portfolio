@@ -135,12 +135,19 @@ import Layout from '../../layouts/Layout.astro';
   var burger = document.getElementById('navBurger'); var menu = document.getElementById('navMenu');
   burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
-  var observer = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  function initReveal() {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
   var progressBar = document.getElementById('progressBar'); var scrollMain = document.querySelector('.scroll-main');
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
+
 
 
 

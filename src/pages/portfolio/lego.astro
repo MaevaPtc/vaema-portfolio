@@ -314,15 +314,16 @@ import Layout from '../../layouts/Layout.astro';
   menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
 
   // Reveal au scroll (IntersectionObserver)
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  function initReveal() {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
 
   // Barre de progression
   var progressBar = document.getElementById('progressBar');
@@ -340,5 +341,6 @@ import Layout from '../../layouts/Layout.astro';
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 </script>
+
 
 

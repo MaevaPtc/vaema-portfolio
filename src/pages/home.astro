@@ -1238,7 +1238,7 @@ import Layout from '../layouts/Layout.astro';
   });
 
   // Vinyle rotation
-  window.addEventListener('DOMContentLoaded', function() {
+  function initVinyle() {
     var vinyle = document.querySelector('.vinyle');
     var aproposSection = document.getElementById('l-artiste');
     if (!vinyle || !aproposSection) return;
@@ -1259,7 +1259,9 @@ import Layout from '../layouts/Layout.astro';
       requestAnimationFrame(tournerVinyle);
     }
     tournerVinyle();
-  });
+  }
+  initVinyle();
+  document.addEventListener('astro:page-load', initVinyle);
 
   var content = document.getElementById('bandeauContent');
   var track   = document.getElementById('bandeauTrack');
