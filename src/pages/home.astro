@@ -977,38 +977,35 @@ import Layout from '../layouts/Layout.astro';
     .section-titre { padding: 1.5rem 1.2rem 0; }
     .section-label { font-size: 2rem; }
 
-    .discographie { padding: 0 0 3rem; gap: 1.5rem; }
-
-    /* Carrousel horizontal sur mobile */
-    .disco-ligne--grande,
-    .disco-ligne--petite {
+    /* Carrousel unique sur mobile */
+    .discographie {
       display: flex;
       flex-direction: row;
       overflow-x: auto;
       overflow-y: visible;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      gap: 1rem;
-      padding: 80px 1.2rem 1.2rem;
-      height: auto;
-      grid-template-columns: unset;
+      gap: 0;
+      padding: 80px 0 2rem;
       scrollbar-width: none;
     }
-    .disco-ligne--grande::-webkit-scrollbar,
-    .disco-ligne--petite::-webkit-scrollbar { display: none; }
+    .discographie::-webkit-scrollbar { display: none; }
 
-    .disco-ligne--grande .carte-wrap,
-    .disco-ligne--petite .carte-wrap {
-      flex: 0 0 65vw;
-      width: 65vw;
-      aspect-ratio: 3 / 4;
-      height: auto;
-      scroll-snap-align: start;
+    /* Les deux lignes fusionnent dans le scroll */
+    .disco-ligne--grande,
+    .disco-ligne--petite {
+      display: contents;
     }
 
-    .disco-ligne--grande .carte-wrap--sm {
-      flex: 0 0 50vw;
-      width: 50vw;
+    /* Chaque carte = 1 slide = plein écran */
+    .carte-wrap,
+    .carte-wrap--sm {
+      flex: 0 0 calc(100vw - 2.4rem);
+      width: calc(100vw - 2.4rem);
+      aspect-ratio: 3 / 4;
+      height: auto;
+      scroll-snap-align: center;
+      margin-left: 1.2rem;
     }
 
     /* Étiquette toujours visible sur mobile */
@@ -1016,6 +1013,15 @@ import Layout from '../layouts/Layout.astro';
       opacity: 1 !important;
       transform: rotate(-2deg) translateY(0) !important;
       pointer-events: auto;
+    }
+
+    /* Titres longs : retour à la ligne autorisé */
+    .etiquette-titre {
+      font-size: 1.4rem;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      line-height: 1.1;
     }
 
     .apropos-contact {
