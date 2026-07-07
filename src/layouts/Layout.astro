@@ -160,5 +160,27 @@ const { title = 'Maëva PETIT — Book' } = Astro.props;
 
   initCurseur();
   document.addEventListener('astro:page-load', initCurseur);
+
+  function initBurger() {
+    var burger = document.getElementById('navBurger');
+    var menu   = document.getElementById('navMenu');
+    if (!burger || !menu) return;
+    var b2 = burger.cloneNode(true);
+    burger.parentNode.replaceChild(b2, burger);
+    var m2 = menu.cloneNode(true);
+    menu.parentNode.replaceChild(m2, menu);
+    b2.addEventListener('click', function() {
+      b2.classList.toggle('ouvert');
+      m2.classList.toggle('ouvert');
+    });
+    m2.querySelectorAll('a').forEach(function(l) {
+      l.addEventListener('click', function() {
+        b2.classList.remove('ouvert');
+        m2.classList.remove('ouvert');
+      });
+    });
+  }
+  initBurger();
+  document.addEventListener('astro:page-load', initBurger);
 </script>
 

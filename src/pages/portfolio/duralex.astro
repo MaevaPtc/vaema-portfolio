@@ -128,9 +128,7 @@ import Layout from '../../layouts/Layout.astro';
   if (toggle) { toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR'; toggle.addEventListener('click', function() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; applyLang(currentLang); }); }
 </script>
 <script is:inline>
-  var burger = document.getElementById('navBurger'); var menu = document.getElementById('navMenu');
-  burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
-  menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
+  // Burger géré dans Layout.astro
   function initReveal() {
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -143,6 +141,7 @@ import Layout from '../../layouts/Layout.astro';
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
+
 
 
 

@@ -307,11 +307,7 @@ import Layout from '../../layouts/Layout.astro';
 </script>
 
 <script is:inline>
-  // Menu burger
-  var burger = document.getElementById('navBurger');
-  var menu = document.getElementById('navMenu');
-  burger.addEventListener('click', function() { burger.classList.toggle('ouvert'); menu.classList.toggle('ouvert'); });
-  menu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { burger.classList.remove('ouvert'); menu.classList.remove('ouvert'); }); });
+  // Burger géré dans Layout.astro
 
   // Reveal au scroll (IntersectionObserver)
   function initReveal() {
@@ -341,6 +337,7 @@ import Layout from '../../layouts/Layout.astro';
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 </script>
+
 
 
 

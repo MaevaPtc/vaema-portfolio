@@ -1257,19 +1257,7 @@ import Layout from '../layouts/Layout.astro';
 </script>
 
 <script is:inline>
-  // Hamburger menu
-  var burger = document.getElementById('navBurger');
-  var menu = document.getElementById('navMenu');
-  burger.addEventListener('click', function() {
-    burger.classList.toggle('ouvert');
-    menu.classList.toggle('ouvert');
-  });
-  menu.querySelectorAll('a').forEach(function(lien) {
-    lien.addEventListener('click', function() {
-      burger.classList.remove('ouvert');
-      menu.classList.remove('ouvert');
-    });
-  });
+  // Curseur custom (burger géré dans Layout.astro)
 
   // Curseur custom
   var ciblesViolet = document.querySelectorAll('nav, .section-outline, .section-num, .cat, .outil-label, .contact-label, #btn-top, .bandeau');
