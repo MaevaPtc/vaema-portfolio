@@ -137,10 +137,9 @@ img {
   }
   nav ul a:hover { color: #D4993A !important; }
 
-  /* Le burger passe au-dessus du menu overlay */
-  .nav-burger {
-    position: relative;
-    z-index: 1200;
+  /* La nav entière passe au-dessus du menu overlay pour que le burger reste visible */
+  nav {
+    z-index: 1200 !important;
   }
 }
 
