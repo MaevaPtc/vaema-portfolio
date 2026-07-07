@@ -84,6 +84,29 @@ img {
   display: block;
 }
 
+/* ── NAV (partagé toutes pages) ── */
+nav:not(.projet-nav) {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  background: #0E0906;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
+nav ul { display: flex; gap: 2.5rem; list-style: none; }
+nav ul a { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+nav ul a:hover { color: #D4993A; }
+.nav-fr { background: none; border: none; border-bottom: 1px solid #8C2D3F; padding-bottom: 2px; color: #F2E4C4; font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: color 0.2s; }
+.nav-fr:hover { color: #D4993A; }
+
+.projet-nav { display: flex; justify-content: space-between; position: fixed; top: 72px; left: 0; right: 0; z-index: 999; background: #8C2D3F; padding: 14px 2.5rem; }
+.projet-nav-retour, .projet-nav-suivant { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.9); transition: color 0.2s; }
+.projet-nav-retour:hover, .projet-nav-suivant:hover { color: #D4993A; }
+
 /* ── BURGER MENU (partagé toutes pages) ── */
 .nav-burger {
   display: none;
@@ -108,39 +131,28 @@ img {
 @media (max-width: 768px) {
   .nav-burger { display: flex; }
 
-  /* Menu overlay mobile — identique sur toutes les pages */
+  /* Menu overlay mobile */
   nav ul {
-    display: flex !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: #0E0906 !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 3rem !important;
-    z-index: 1100 !important;
-    transform: translateX(100%) !important;
-    transition: transform 0.4s ease !important;
-    padding: 0 !important;
-    list-style: none !important;
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #0E0906;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    z-index: 1100;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    padding: 0;
+    list-style: none;
   }
-  nav ul.ouvert {
-    transform: translateX(0) !important;
-  }
-  nav ul a {
-    font-size: 1rem !important;
-    letter-spacing: 0.3em !important;
-    color: #F2E4C4 !important;
-  }
-  nav ul a:hover { color: #D4993A !important; }
+  nav ul.ouvert { transform: translateX(0); }
+  nav ul a { font-size: 1rem; letter-spacing: 0.3em; color: #F2E4C4; }
+  nav ul a:hover { color: #D4993A; }
 
-  /* La nav entière passe au-dessus du menu overlay pour que le burger reste visible */
-  nav {
-    z-index: 1200 !important;
-  }
+  /* Nav bar au-dessus de l'overlay pour que le burger reste cliquable */
+  nav:not(.projet-nav) { z-index: 1200; padding: 1.2rem 1.5rem; }
 }
 
 /* ── CATALOG CARD (fiches techniques pages projet) ── */
