@@ -23,9 +23,9 @@ import Layout from '../../layouts/Layout.astro';
           <span class="projet-annee">2026</span>
         </div>
         <h1 class="aside-titre">NIKE</h1>
-        <p class="aside-tagline" data-i18n="nike.tagline">Tout le monde a débuté quelque part</p>
+        <p class="aside-tagline" data-i18n="nike.tagline">Les meilleurs aussi ont commencé comme ça.</p>
         <div class="aside-brief">
-          <p data-i18n="nike.desc">Nike n'est pas réservé aux pros. Cette campagne rappelle que les plus grands champions ont tous été débutants — et que chaque premier pas mérite d'être équipé.</p>
+          <p data-i18n="nike.desc">Nike ne s'adresse pas qu'aux champions. Cette campagne met en scène les petits ratés du sport amateur — le ballon perdu dans les herbes, le volant massacré, le tir hors du terrain — avec les phrases qu'on dit tous dans ces moments-là. Parce que même Mbappé a déjà foiré un tir.</p>
           <div class="catalog-card">
             <div class="catalog-header">CATALOG</div>
             <div class="catalog-field"><span class="catalog-label">Artist</span><span class="catalog-val">Maëva PETIT</span></div>
@@ -39,13 +39,13 @@ import Layout from '../../layouts/Layout.astro';
     </aside>
 
     <main class="scroll-main">
-      <div class="visuel-block reveal" data-label="AFFICHES — 01">
+      <div class="visuel-block reveal" data-label="T'AS PAS UN BÂTON ?">
         <img src="/projects/nike/panier-basket.jpg" alt="Nike — Basket" />
       </div>
-      <div class="visuel-block reveal" data-label="AFFICHES — 02">
+      <div class="visuel-block reveal" data-label="T'AS TROUVÉ LE BALLON ?">
         <img src="/projects/nike/foot.jpg" alt="Nike — Football" />
       </div>
-      <div class="visuel-block reveal" data-label="AFFICHES — 03">
+      <div class="visuel-block reveal" data-label="IL EST NEUF EN PLUS...">
         <img src="/projects/nike/badminton.jpg" alt="Nike — Badminton" />
       </div>
     </main>
@@ -91,7 +91,7 @@ import Layout from '../../layouts/Layout.astro';
 <script is:inline>
   var translations = {
     fr: { 'nav.projects': 'Tracklist', 'nav.about': 'Crédits', 'nav.contact': 'Booking', 'cat.display': 'Affichage', 'nike.tagline': 'Tout le monde a débuté quelque part', 'nike.desc': "Nike n'est pas réservé aux pros. Cette campagne rappelle que les plus grands champions ont tous été débutants — et que chaque premier pas mérite d'être équipé." },
-    en: { 'nav.projects': 'Tracklist', 'nav.about': 'Credits', 'nav.contact': 'Booking', 'cat.display': 'Advertising', 'nike.tagline': 'Everyone started somewhere', 'nike.desc': "Nike isn't just for pros. This campaign reminds us that the greatest champions were all beginners once — and that every first step deserves the right gear." }
+    en: { 'nav.projects': 'Tracklist', 'nav.about': 'Credits', 'nav.contact': 'Booking', 'cat.display': 'Advertising', 'nike.tagline': 'Even the best started like this.', 'nike.desc': "Nike isn't just for champions. This campaign captures the little fails of amateur sport — the ball lost in the grass, the smashed shuttlecock, the shot way off target — with the things we all say when it happens. Because even Mbappé has missed a shot." }
   };
   function applyLang(lang) { document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (translations[lang][k]) el.textContent = translations[lang][k]; }); var t = document.getElementById('langToggle'); if (t) t.textContent = lang === 'fr' ? 'EN' : 'FR'; localStorage.setItem('vaema-lang', lang); }
   var currentLang = localStorage.getItem('vaema-lang') || 'fr';
