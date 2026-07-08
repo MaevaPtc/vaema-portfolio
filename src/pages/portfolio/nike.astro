@@ -1,8 +1,8 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Duralex — VAEMA">
+<Layout title="Nike — VAEMA">
 
   <nav>
     <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
@@ -19,19 +19,19 @@ import Layout from '../../layouts/Layout.astro';
     <aside class="scroll-aside">
       <div class="aside-inner">
         <div class="aside-meta">
-          <span class="projet-cat" data-i18n="cat.campaign">Campagne 360</span>
+          <span class="projet-cat" data-i18n="cat.display">Affichage</span>
           <span class="projet-annee">2026</span>
         </div>
-        <h1 class="aside-titre">DURALEX</h1>
-        <p class="aside-tagline" data-i18n="duralex.tagline">On fait tous pareil</p>
+        <h1 class="aside-titre">NIKE</h1>
+        <p class="aside-tagline" data-i18n="nike.tagline">Tout le monde a débuté quelque part</p>
         <div class="aside-brief">
-          <p data-i18n="duralex.desc">Rachetée par ses salariés après liquidation judiciaire, Duralex renait en coopérative. Cette campagne mobilise le grand public pour soutenir ce modèle porté par les travailleurs eux-mêmes.</p>
+          <p data-i18n="nike.desc">Nike n'est pas réservé aux pros. Cette campagne rappelle que les plus grands champions ont tous été débutants — et que chaque premier pas mérite d'être équipé.</p>
           <div class="catalog-card">
             <div class="catalog-header">CATALOG</div>
             <div class="catalog-field"><span class="catalog-label">Artist</span><span class="catalog-val">Maëva PETIT</span></div>
-            <div class="catalog-field"><span class="catalog-label">Genre</span><span class="catalog-val">Campagne 360</span></div>
+            <div class="catalog-field"><span class="catalog-label">Genre</span><span class="catalog-val">Affichage</span></div>
             <div class="catalog-field"><span class="catalog-label">Release</span><span class="catalog-val">2026</span></div>
-            <div class="catalog-field"><span class="catalog-label">Format</span><span class="catalog-val">Print · Digital</span></div>
+            <div class="catalog-field"><span class="catalog-label">Format</span><span class="catalog-val">Print</span></div>
           </div>
         </div>
         <div class="aside-progress"><div class="progress-bar" id="progressBar"></div></div>
@@ -40,23 +40,20 @@ import Layout from '../../layouts/Layout.astro';
 
     <main class="scroll-main">
       <div class="visuel-block reveal" data-label="AFFICHES — 01">
-        <img src="/projects/duralex/affiche-1.PNG" alt="Duralex — Affiche 1" />
+        <img src="/projects/nike/panier-basket.jpg" alt="Nike — Basket" />
       </div>
       <div class="visuel-block reveal" data-label="AFFICHES — 02">
-        <img src="/projects/duralex/affiche-2.PNG" alt="Duralex — Affiche 2" />
+        <img src="/projects/nike/foot.jpg" alt="Nike — Football" />
       </div>
       <div class="visuel-block reveal" data-label="AFFICHES — 03">
-        <img src="/projects/duralex/affiche-3.PNG" alt="Duralex — Affiche 3" />
-      </div>
-      <div class="visuel-block reveal" data-label="RÉSEAUX SOCIAUX">
-        <img src="/projects/duralex/rs.PNG" alt="Duralex — Réseaux sociaux" />
+        <img src="/projects/nike/badminton.jpg" alt="Nike — Badminton" />
       </div>
     </main>
   </div>
 
   <div class="projet-nav">
-    <a href="/portfolio/nike" class="projet-nav-retour">← Nike</a>
-    <a href="/portfolio/floyd" class="projet-nav-suivant">Floyd →</a>
+    <a href="/portfolio/sea-shepherd" class="projet-nav-retour">← Sea Shepherd</a>
+    <a href="/portfolio/duralex" class="projet-nav-suivant">Duralex →</a>
   </div>
 
 </Layout>
@@ -72,10 +69,6 @@ import Layout from '../../layouts/Layout.astro';
   .aside-tagline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.5rem, 2.5vw, 3rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; }
   .aside-brief { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
   .aside-brief p { font-family: 'Space Grotesk', sans-serif; font-size: 0.82rem; line-height: 1.8; color: rgba(242,228,196,0.5); }
-  .aside-infos { display: flex; flex-direction: column; gap: 1rem; }
-  .aside-info-bloc { display: flex; flex-direction: column; gap: 0.3rem; }
-  .aside-info-label { font-family: 'Space Mono', monospace; font-size: 0.48rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
-  .aside-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; color: rgba(242,228,196,0.6); line-height: 1.5; }
   .aside-progress { position: relative; height: 16px; background: rgba(242,228,196,0.04); border: 1px solid rgba(212,174,88,0.18); overflow: hidden; margin-top: 0.4rem; }
   .aside-progress::before { content: 'VU'; position: absolute; top: -1.3rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.42rem; letter-spacing: 0.45em; color: rgba(212,174,88,0.45); }
   .aside-progress::after { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: repeating-linear-gradient(to right, transparent 0px, transparent 8px, rgba(14,9,6,0.85) 8px, rgba(14,9,6,0.85) 10px); }
@@ -97,8 +90,8 @@ import Layout from '../../layouts/Layout.astro';
 
 <script is:inline>
   var translations = {
-    fr: { 'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact', 'cat.campaign': 'Campagne 360', 'duralex.tagline': 'On fait tous pareil', 'duralex.desc': "Rachetée par ses salariés après liquidation judiciaire, Duralex renait en coopérative. Cette campagne mobilise le grand public pour soutenir ce modèle porté par les travailleurs eux-mêmes.", 'brief.goal': 'Objectif', 'brief.target': 'Cible', 'brief.supports': 'Supports', 'duralex.goal': 'Sensibiliser · Inciter aux dons pour la SCOP', 'duralex.target': 'Grand public · Consommateurs engagés · Nostalgiques', 'duralex.supports': 'Affichage · Réseaux sociaux' },
-    en: { 'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact', 'cat.campaign': '360 Campaign', 'duralex.tagline': 'We all do the same', 'duralex.desc': 'Bought back by its employees after liquidation, Duralex was reborn as a cooperative. This campaign mobilises the public to support this worker-driven model.', 'brief.goal': 'Goal', 'brief.target': 'Target', 'brief.supports': 'Supports', 'duralex.goal': 'Raise awareness · Encourage donations for the cooperative', 'duralex.target': 'General public · Engaged consumers · Nostalgics', 'duralex.supports': 'Advertising · Social media' }
+    fr: { 'nav.projects': 'Tracklist', 'nav.about': 'Crédits', 'nav.contact': 'Booking', 'cat.display': 'Affichage', 'nike.tagline': 'Tout le monde a débuté quelque part', 'nike.desc': "Nike n'est pas réservé aux pros. Cette campagne rappelle que les plus grands champions ont tous été débutants — et que chaque premier pas mérite d'être équipé." },
+    en: { 'nav.projects': 'Tracklist', 'nav.about': 'Credits', 'nav.contact': 'Booking', 'cat.display': 'Advertising', 'nike.tagline': 'Everyone started somewhere', 'nike.desc': "Nike isn't just for pros. This campaign reminds us that the greatest champions were all beginners once — and that every first step deserves the right gear." }
   };
   function applyLang(lang) { document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (translations[lang][k]) el.textContent = translations[lang][k]; }); var t = document.getElementById('langToggle'); if (t) t.textContent = lang === 'fr' ? 'EN' : 'FR'; localStorage.setItem('vaema-lang', lang); }
   var currentLang = localStorage.getItem('vaema-lang') || 'fr';
@@ -107,7 +100,6 @@ import Layout from '../../layouts/Layout.astro';
   if (toggle) { toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR'; toggle.addEventListener('click', function() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; applyLang(currentLang); }); }
 </script>
 <script is:inline>
-  // Burger géré dans Layout.astro
   function initReveal() {
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
@@ -120,8 +112,3 @@ import Layout from '../../layouts/Layout.astro';
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
 </script>
-
-
-
-
-
