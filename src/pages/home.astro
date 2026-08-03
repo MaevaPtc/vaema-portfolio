@@ -254,9 +254,7 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Photo façon "band photo" -->
         <div class="sleeve-photo">
-          <div class="apropos-photo-placeholder">
-            <span>TA PHOTO ICI</span>
-          </div>
+          <img src="/maeva.jpg" alt="Maëva PETIT" class="apropos-photo" />
           <p class="sleeve-photo-legende" data-i18n="about.photo">Maëva PETIT — Bordeaux, 2026</p>
         </div>
 
@@ -265,8 +263,8 @@ import Layout from '../layouts/Layout.astro';
           <h2 class="sleeve-titre" data-i18n="about.title">MAËVA PETIT</h2>
 
           <div class="sleeve-bio">
-            <p data-i18n="about.p1">Directrice Artistique freelance en formation à SUP DE PUB Bordeaux. Navigue entre deux univers en apparence opposés : le brutalisme streetwear — brut, affirmé, sans compromis — et l'enfance — colorée, poétique, pleine de douceur.</p>
-            <p data-i18n="about.p2">Cette dualité, c'est la signature. Chaque projet est une nouvelle façon d'explorer ces deux territoires — et de prouver qu'ils n'ont jamais été si loin l'un de l'autre.</p>
+            <p data-i18n="about.p1">Tout a commencé sur un projet de bachelor où j'ai pris en charge la direction artistique et je n'ai plus voulu lâcher. C'est là que j'ai compris que c'était ça, mon truc : partir d'une idée et la pousser jusqu'à ce qu'elle devienne quelque chose de fort.</p>
+            <p data-i18n="about.p2">Ce que j'aime par-dessus tout, c'est l'idéation et la créa, ce moment où rien n'existe encore et où tout est possible. Mon objectif : travailler dans la musique, parce que c'est l'univers qui me touche le plus. En dehors des projets, je dessine, une autre façon de voir et de construire des images.</p>
           </div>
 
           <div class="sleeve-credits">
@@ -819,25 +817,14 @@ import Layout from '../layouts/Layout.astro';
     gap: 0.6rem;
   }
 
-  .apropos-photo-placeholder {
+  .apropos-photo {
     width: 180px;
-    min-height: 230px;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 260px;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
     border: 1px solid rgba(212,174,88,0.12);
-    filter: grayscale(0.3) sepia(0.15);
-  }
-
-  .apropos-photo-placeholder span {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.42rem;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.12);
-    border: 1px dashed rgba(255,255,255,0.08);
-    padding: 0.5rem 0.8rem;
-    text-align: center;
+    filter: grayscale(0.2) sepia(0.1);
   }
 
   .sleeve-photo-legende {
