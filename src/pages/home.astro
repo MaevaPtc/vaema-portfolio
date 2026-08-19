@@ -509,14 +509,15 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 768px) {
     .hero-placeholder { height: 60vh; }
-    .hero-fondu { display: none; }
+    .hero-fondu {
+      background: radial-gradient(ellipse at top left, rgba(14,9,6,1) 0%, rgba(14,9,6,0.4) 40%, transparent 70%);
+    }
     .hero-nom {
       top: 1.2rem;
       bottom: auto;
       left: 1.2rem;
-      background: linear-gradient(135deg, rgba(14,9,6,0.6) 0%, transparent 80%);
-      padding: 1rem 2rem 1.5rem 0;
-      border-radius: 4px;
+      background: none;
+      padding: 0;
     }
     .hero-prenom {
       font-size: 3.5rem;
