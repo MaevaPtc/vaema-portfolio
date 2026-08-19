@@ -32,8 +32,11 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- BANDEAU DÉFILANT -->
   <div class="bandeau">
-    <div class="bandeau-track" id="bandeauTrack">
-      <div class="bandeau-inner" id="bandeauContent">
+    <div class="bandeau-track">
+      <div class="bandeau-inner">
+        <span data-i18n="band.da">Direction Artistique</span><span class="sep"> ●</span><span data-i18n="band.design">Design Graphique</span><span class="sep"> ●</span><span data-i18n="band.print">Print & Digital</span><span class="sep"> ●</span><span data-i18n="band.identity">Identité Visuelle</span><span class="sep"> ●</span><span data-i18n="band.sign">Signalétique</span><span class="sep"> ●</span>
+      </div>
+      <div class="bandeau-inner" aria-hidden="true">
         <span data-i18n="band.da">Direction Artistique</span><span class="sep"> ●</span><span data-i18n="band.design">Design Graphique</span><span class="sep"> ●</span><span data-i18n="band.print">Print & Digital</span><span class="sep"> ●</span><span data-i18n="band.identity">Identité Visuelle</span><span class="sep"> ●</span><span data-i18n="band.sign">Signalétique</span><span class="sep"> ●</span>
       </div>
     </div>
@@ -560,7 +563,13 @@ import Layout from '../layouts/Layout.astro';
 
   .bandeau-track {
     display: flex;
-    will-change: transform;
+    width: max-content;
+    animation: defileBandeau 18s linear infinite;
+  }
+
+  @keyframes defileBandeau {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 
   .bandeau-inner {
@@ -1407,31 +1416,6 @@ import Layout from '../layouts/Layout.astro';
   initVinyle();
   document.addEventListener('astro:page-load', initVinyle);
 
-  var bandeauInited = false;
-  function initBandeau() {
-    if (bandeauInited) return;
-    var content = document.getElementById('bandeauContent');
-    var track   = document.getElementById('bandeauTrack');
-    if (!content || !track) return;
-    var w = content.getBoundingClientRect().width;
-    if (w === 0) { setTimeout(initBandeau, 100); return; }
-    bandeauInited = true;
-    var original = content.cloneNode(true);
-    track.innerHTML = '';
-    for (var i = 0; i < 8; i++) {
-      track.appendChild(original.cloneNode(true));
-    }
-    var x = 0;
-    function loop() {
-      x -= 0.8;
-      if (x <= -w) x += w;
-      track.style.transform = 'translateX(' + x + 'px)';
-      requestAnimationFrame(loop);
-    }
-    requestAnimationFrame(loop);
-  }
-  initBandeau();
-  document.addEventListener('astro:page-load', initBandeau);
 
   function initVU() {
     var left  = document.getElementById('vuLeft');
