@@ -20,7 +20,14 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-placeholder"></div>
+    <div class="hero-placeholder">
+      <img src="/photo-maeva - rogne.jpg" alt="Maëva PETIT" class="hero-photo" />
+      <div class="hero-fondu"></div>
+      <div class="hero-nom">
+        <span class="hero-prenom">Maëva</span>
+        <span class="hero-nom-famille">PETIT</span>
+      </div>
+    </div>
   </section>
 
   <!-- BANDEAU DÉFILANT -->
@@ -44,47 +51,22 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="disco-ligne disco-ligne--grande">
 
-      <div class="carte-wrap">
-        <div class="carte-etiquette">
-          <div class="etiquette-gauche">
-            <span class="etiquette-titre">LEGO</span>
-            <span class="etiquette-cat" data-i18n="cat.display">Affichage</span>
-          </div>
-          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
-        </div>
-        <a href="/portfolio/lego" class="carte">
-          <div class="carte-image">
-            <img src="/projects/lego.JPG" alt="LEGO" />
-            <div class="reflet"></div>
-          </div>
-          <div class="cartouche">
-            <span class="track-num">TRACK 01</span>
-            <h3 class="track-titre">LEGO</h3>
-            <div class="track-barre"></div>
-            <div class="track-meta">
-              <span class="track-cat" data-i18n="cat.display">Affichage</span>
-              <span class="track-annee">2026</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
       <div class="carte-wrap carte-wrap--sm">
         <div class="carte-etiquette">
           <div class="etiquette-gauche">
-            <span class="etiquette-titre">SEA SHEPHERD</span>
+            <span class="etiquette-titre">FLOYD</span>
             <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
           </div>
           <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
-        <a href="/portfolio/sea-shepherd" class="carte">
+        <a href="/portfolio/floyd" class="carte">
           <div class="carte-image">
-            <img src="/projects/seasheperd.JPG" alt="Sea Shepherd" />
+            <img src="/projects/floyd.png" alt="Floyd" />
             <div class="reflet"></div>
           </div>
           <div class="cartouche">
-            <span class="track-num">TRACK 02</span>
-            <h3 class="track-titre">SEA SHEPHERD</h3>
+            <span class="track-num">TRACK 01</span>
+            <h3 class="track-titre">FLOYD</h3>
             <div class="track-barre"></div>
             <div class="track-meta">
               <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
@@ -108,8 +90,33 @@ import Layout from '../layouts/Layout.astro';
             <div class="reflet"></div>
           </div>
           <div class="cartouche">
-            <span class="track-num">TRACK 03</span>
+            <span class="track-num">TRACK 02</span>
             <h3 class="track-titre">NIKE</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.display">Affichage</span>
+              <span class="track-annee">2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">LEGO</span>
+            <span class="etiquette-cat" data-i18n="cat.display">Affichage</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
+        </div>
+        <a href="/portfolio/lego" class="carte">
+          <div class="carte-image">
+            <img src="/projects/lego.JPG" alt="LEGO" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 03</span>
+            <h3 class="track-titre">LEGO</h3>
             <div class="track-barre"></div>
             <div class="track-meta">
               <span class="track-cat" data-i18n="cat.display">Affichage</span>
@@ -126,19 +133,44 @@ import Layout from '../layouts/Layout.astro';
       <div class="carte-wrap">
         <div class="carte-etiquette">
           <div class="etiquette-gauche">
-            <span class="etiquette-titre">DURALEX</span>
-            <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
+            <span class="etiquette-titre">AFTER ALL FEST</span>
+            <span class="etiquette-cat" data-i18n="cat.identity">Identité · Campagne</span>
           </div>
           <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
-        <a href="/portfolio/duralex" class="carte">
+        <a href="/portfolio/after-all-fest" class="carte">
           <div class="carte-image">
-            <img src="/projects/duralex.PNG" alt="Duralex" />
+            <img src="/projects/after-all-fest.JPG" alt="After All Fest" />
             <div class="reflet"></div>
           </div>
           <div class="cartouche">
             <span class="track-num">TRACK 04</span>
-            <h3 class="track-titre">DURALEX</h3>
+            <h3 class="track-titre">AFTER ALL FEST</h3>
+            <div class="track-barre"></div>
+            <div class="track-meta">
+              <span class="track-cat" data-i18n="cat.identity">Identité · Campagne</span>
+              <span class="track-annee">2026</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="carte-wrap">
+        <div class="carte-etiquette">
+          <div class="etiquette-gauche">
+            <span class="etiquette-titre">SEA SHEPHERD</span>
+            <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
+          </div>
+          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
+        </div>
+        <a href="/portfolio/sea-shepherd" class="carte">
+          <div class="carte-image">
+            <img src="/projects/seasheperd.JPG" alt="Sea Shepherd" />
+            <div class="reflet"></div>
+          </div>
+          <div class="cartouche">
+            <span class="track-num">TRACK 05</span>
+            <h3 class="track-titre">SEA SHEPHERD</h3>
             <div class="track-barre"></div>
             <div class="track-meta">
               <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
@@ -151,47 +183,22 @@ import Layout from '../layouts/Layout.astro';
       <div class="carte-wrap">
         <div class="carte-etiquette">
           <div class="etiquette-gauche">
-            <span class="etiquette-titre">FLOYD</span>
+            <span class="etiquette-titre">DURALEX</span>
             <span class="etiquette-cat" data-i18n="cat.campaign">Campagne 360</span>
           </div>
           <span class="etiquette-lien" data-i18n="see">▶ Play</span>
         </div>
-        <a href="/portfolio/floyd" class="carte">
+        <a href="/portfolio/duralex" class="carte">
           <div class="carte-image">
-            <img src="/projects/floyd.png" alt="Floyd" />
-            <div class="reflet"></div>
-          </div>
-          <div class="cartouche">
-            <span class="track-num">TRACK 05</span>
-            <h3 class="track-titre">FLOYD</h3>
-            <div class="track-barre"></div>
-            <div class="track-meta">
-              <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
-              <span class="track-annee">2025</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="carte-wrap">
-        <div class="carte-etiquette">
-          <div class="etiquette-gauche">
-            <span class="etiquette-titre">AFTER ALL FEST</span>
-            <span class="etiquette-cat" data-i18n="cat.identity">Identité · Campagne</span>
-          </div>
-          <span class="etiquette-lien" data-i18n="see">▶ Play</span>
-        </div>
-        <a href="/portfolio/after-all-fest" class="carte">
-          <div class="carte-image">
-            <img src="/projects/after-all-fest.JPG" alt="After All Fest" />
+            <img src="/projects/duralex.PNG" alt="Duralex" />
             <div class="reflet"></div>
           </div>
           <div class="cartouche">
             <span class="track-num">TRACK 06</span>
-            <h3 class="track-titre">AFTER ALL FEST</h3>
+            <h3 class="track-titre">DURALEX</h3>
             <div class="track-barre"></div>
             <div class="track-meta">
-              <span class="track-cat" data-i18n="cat.identity">Identité · Campagne</span>
+              <span class="track-cat" data-i18n="cat.campaign">Campagne 360</span>
               <span class="track-annee">2026</span>
             </div>
           </div>
@@ -282,7 +289,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <p class="sleeve-copyright">℗ & © 2026 VAEMA — Tous droits réservés.<br/>Toute reproduction interdite sans autorisation écrite.</p>
+          <p class="sleeve-copyright">℗ & © 2026 MAEVA — Tous droits réservés.<br/>Toute reproduction interdite sans autorisation écrite.</p>
         </div>
 
       </div>
@@ -426,6 +433,78 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
     justify-content: center;
     overflow: hidden;
+  }
+
+  .hero-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    opacity: 0.85;
+  }
+
+  .hero-fondu {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #0E0906 25%, rgba(14,9,6,0.6) 55%, transparent 80%);
+    pointer-events: none;
+  }
+
+  .hero-nom {
+    position: absolute;
+    left: 3rem;
+    bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+  }
+
+  .hero-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: rgba(242,228,196,0.75);
+    margin-top: 1.5rem;
+    margin-left: 8.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    animation: pulseText 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulseText {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  .hero-badge-dot {
+    color: #D4993A;
+    animation: pulseLED 1.5s ease-in-out infinite;
+  }
+
+  .hero-prenom {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(6rem, 15vw, 14rem);
+    letter-spacing: 0.04em;
+    color: #F2E4C4;
+    line-height: 1;
+  }
+
+  .hero-nom-famille {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(6rem, 15vw, 14rem);
+    letter-spacing: 0.04em;
+    color: transparent;
+    -webkit-text-stroke: 2px #F2E4C4;
+    line-height: 1;
+    transform: rotate(180deg);
+    margin-top: -5.5rem;
+    align-self: flex-start;
+    margin-left: 8.1rem;
   }
 
   @media (max-width: 768px) {
