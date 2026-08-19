@@ -1411,10 +1411,10 @@ import Layout from '../layouts/Layout.astro';
     var track   = document.getElementById('bandeauTrack');
     if (!content || !track) return;
     track.innerHTML = '';
-    track.appendChild(content.cloneNode(true));
-    track.appendChild(content.cloneNode(true));
-    track.appendChild(content.cloneNode(true));
-    var w = content.getBoundingClientRect().width;
+    for (var i = 0; i < 8; i++) {
+      track.appendChild(content.cloneNode(true));
+    }
+    var w = track.children[0].getBoundingClientRect().width;
     var x = 0;
     function loop() {
       x -= 0.8;
