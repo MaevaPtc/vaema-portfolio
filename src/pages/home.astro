@@ -1407,15 +1407,19 @@ import Layout from '../layouts/Layout.astro';
   initVinyle();
   document.addEventListener('astro:page-load', initVinyle);
 
+  var bandeauInited = false;
   function initBandeau() {
+    if (bandeauInited) return;
     var content = document.getElementById('bandeauContent');
     var track   = document.getElementById('bandeauTrack');
     if (!content || !track) return;
     var w = content.getBoundingClientRect().width;
     if (w === 0) { setTimeout(initBandeau, 100); return; }
+    bandeauInited = true;
+    var original = content.cloneNode(true);
     track.innerHTML = '';
     for (var i = 0; i < 8; i++) {
-      track.appendChild(content.cloneNode(true));
+      track.appendChild(original.cloneNode(true));
     }
     var x = 0;
     function loop() {
