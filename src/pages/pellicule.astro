@@ -2,26 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 
 const photos = [
-  { src: '/Photos/AGEN-13-09-2026.jpg',    alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-2.jpg',  alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-4.jpg',  alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-5.jpg',  alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-6.jpg',  alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-11.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-12.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-13.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-14.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-17.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-25.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-26.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-27.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-28.jpg', alt: 'Agen' },
-  { src: '/Photos/AGEN-13-09-2026-29.jpg', alt: 'Agen' },
-  { src: '/Photos/Bulle-12-09-2026.jpg',   alt: 'Bulle' },
-  { src: '/Photos/Bulle-12-09-2026-3.jpg', alt: 'Bulle' },
-  { src: '/Photos/Bulle-12-09-2026-4.jpg', alt: 'Bulle' },
-  { src: '/Photos/Bulle-12-09-2026-5.jpg', alt: 'Bulle' },
-  { src: '/Photos/Bulle-12-09-2026-6.jpg', alt: 'Bulle' },
+  { src: '/Photos/AGEN-13-09-2026.jpg',    alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-2.jpg',  alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-4.jpg',  alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-5.jpg',  alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-6.jpg',  alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-11.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-12.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-13.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-14.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-17.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-25.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-26.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-27.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-28.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/AGEN-13-09-2026-29.jpg', alt: 'Agen',  landscape: false },
+  { src: '/Photos/Bulle-12-09-2026.jpg',   alt: 'Bulle', landscape: true  },
+  { src: '/Photos/Bulle-12-09-2026-3.jpg', alt: 'Bulle', landscape: true  },
+  { src: '/Photos/Bulle-12-09-2026-4.jpg', alt: 'Bulle', landscape: false },
+  { src: '/Photos/Bulle-12-09-2026-5.jpg', alt: 'Bulle', landscape: true  },
+  { src: '/Photos/Bulle-12-09-2026-6.jpg', alt: 'Bulle', landscape: true  },
 ];
 ---
 
@@ -46,7 +46,7 @@ const photos = [
       <div class="pellicule-header-inner">
         <span class="pellicule-label">FACE B — BONUS TRACK</span>
         <h1 class="pellicule-titre">PELLICULE</h1>
-        <p class="pellicule-sous-titre">Captures hors-studio — Agen · Bulle · 2026</p>
+        <p class="pellicule-sous-titre">Paysage · Portrait · Animaux — 2026</p>
       </div>
     </header>
 
@@ -70,6 +70,7 @@ const photos = [
 <style is:global>
 
   body { background: #0E0906; overflow-x: hidden; }
+  #scanner-overlay { display: none; }
 
   /* ── NAV (reprise du style global) ── */
   nav {
@@ -136,32 +137,21 @@ const photos = [
     text-transform: uppercase;
   }
 
-  /* ── GRILLE PLANCHE CONTACT ── */
+  /* ── GRILLE COLONNES ── */
   .pellicule-grille {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    padding: 2px;
-    background: #1a1208;
+    columns: 3;
+    column-gap: 4px;
+    padding: 4px;
   }
 
   .pellicule-cadre {
     position: relative;
     overflow: hidden;
     background: #0a0805;
-    aspect-ratio: 2 / 3;
+    break-inside: avoid;
+    margin-bottom: 4px;
     cursor: pointer;
   }
-
-  .pellicule-cadre::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(14,9,6,0.3);
-    z-index: 1;
-    transition: opacity 0.3s;
-  }
-  .pellicule-cadre:hover::before { opacity: 0; }
 
   .pellicule-num {
     position: absolute;
@@ -170,22 +160,19 @@ const photos = [
     font-family: 'Space Mono', monospace;
     font-size: 0.38rem;
     letter-spacing: 0.15em;
-    color: rgba(212,153,58,0.6);
+    color: rgba(212,153,58,0.5);
     z-index: 2;
     line-height: 1;
   }
 
   .pellicule-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
-    transition: transform 0.5s ease, filter 0.3s ease;
-    filter: sepia(0.15) contrast(1.05);
+    transition: transform 0.5s ease;
   }
   .pellicule-cadre:hover .pellicule-img {
-    transform: scale(1.04);
-    filter: sepia(0) contrast(1.1);
+    transform: scale(1.02);
   }
 
   /* ── RETOUR ── */
@@ -225,7 +212,7 @@ const photos = [
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
 
     .pellicule-header { padding: 2.5rem 1.2rem 1.5rem; }
-    .pellicule-grille { grid-template-columns: repeat(2, 1fr); }
+    .pellicule-grille { columns: 2; }
     .pellicule-retour { padding: 1.5rem 1.2rem; }
   }
 
