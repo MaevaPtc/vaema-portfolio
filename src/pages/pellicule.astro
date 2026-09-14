@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const photos = [
+  { src: '/Photos/AGEN-13-09-2026.jpg',    alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-2.jpg',  alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-4.jpg',  alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-5.jpg',  alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-6.jpg',  alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-11.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-12.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-13.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-14.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-17.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-25.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-26.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-27.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-28.jpg', alt: 'Agen' },
+  { src: '/Photos/AGEN-13-09-2026-29.jpg', alt: 'Agen' },
+  { src: '/Photos/Bulle-12-09-2026.jpg',   alt: 'Bulle' },
+  { src: '/Photos/Bulle-12-09-2026-3.jpg', alt: 'Bulle' },
+  { src: '/Photos/Bulle-12-09-2026-4.jpg', alt: 'Bulle' },
+  { src: '/Photos/Bulle-12-09-2026-5.jpg', alt: 'Bulle' },
+  { src: '/Photos/Bulle-12-09-2026-6.jpg', alt: 'Bulle' },
+];
+---
+
+<Layout title="Pellicule — Maëva PETIT">
+
+  <nav>
+    <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul id="navMenu">
+      <li><a href="/home#projets">Tracklist</a></li>
+      <li><a href="/home#l-artiste">Crédits</a></li>
+      <li><a href="/pellicule" class="nav-active">Pellicule</a></li>
+      <li><a href="/home#on-se-capte">Booking</a></li>
+    </ul>
+  </nav>
+
+  <main class="pellicule-page">
+
+    <header class="pellicule-header">
+      <div class="pellicule-header-inner">
+        <span class="pellicule-label">FACE B — BONUS TRACK</span>
+        <h1 class="pellicule-titre">PELLICULE</h1>
+        <p class="pellicule-sous-titre">Captures hors-studio — Agen · Bulle · 2026</p>
+      </div>
+    </header>
+
+    <div class="pellicule-grille">
+      {photos.map((photo, i) => (
+        <div class="pellicule-cadre" data-index={i}>
+          <div class="pellicule-num">{ String(i + 1).padStart(2, '0') }</div>
+          <img src={photo.src} alt={photo.alt} class="pellicule-img" loading="lazy" />
+        </div>
+      ))}
+    </div>
+
+    <div class="pellicule-retour">
+      <a href="/home">← Retour à la tracklist</a>
+    </div>
+
+  </main>
+
+</Layout>
+
+<style is:global>
+
+  body { background: #0E0906; overflow-x: hidden; }
+
+  /* ── NAV (reprise du style global) ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    background: rgba(10,10,10,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-logo img { height: 36px; width: auto; display: block; filter: brightness(0) invert(1); }
+  nav ul { display: flex; gap: 2.5rem; list-style: none; }
+  nav ul a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  nav ul a:hover, nav ul a.nav-active { color: #D4993A; }
+  .nav-burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-burger span { display: block; width: 24px; height: 2px; background: #F2E4C4; transition: all 0.3s; }
+
+  /* ── PAGE ── */
+  .pellicule-page {
+    padding-top: 80px;
+    min-height: 100vh;
+    color: #F2E4C4;
+  }
+
+  /* ── HEADER ── */
+  .pellicule-header {
+    padding: 4rem 3rem 2.5rem;
+    border-bottom: 1px solid rgba(212,153,58,0.15);
+  }
+  .pellicule-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(212,153,58,0.5);
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+  .pellicule-titre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    letter-spacing: 0.05em;
+    color: #F2E4C4;
+    line-height: 1;
+    margin: 0 0 0.6rem;
+  }
+  .pellicule-sous-titre {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: rgba(242,228,196,0.35);
+    text-transform: uppercase;
+  }
+
+  /* ── GRILLE PLANCHE CONTACT ── */
+  .pellicule-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 2px;
+    background: #1a1208;
+  }
+
+  .pellicule-cadre {
+    position: relative;
+    overflow: hidden;
+    background: #0a0805;
+    aspect-ratio: 2 / 3;
+    cursor: pointer;
+  }
+
+  .pellicule-cadre::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(14,9,6,0.3);
+    z-index: 1;
+    transition: opacity 0.3s;
+  }
+  .pellicule-cadre:hover::before { opacity: 0; }
+
+  .pellicule-num {
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.5rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.38rem;
+    letter-spacing: 0.15em;
+    color: rgba(212,153,58,0.6);
+    z-index: 2;
+    line-height: 1;
+  }
+
+  .pellicule-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: sepia(0.15) contrast(1.05);
+  }
+  .pellicule-cadre:hover .pellicule-img {
+    transform: scale(1.04);
+    filter: sepia(0) contrast(1.1);
+  }
+
+  /* ── RETOUR ── */
+  .pellicule-retour {
+    padding: 2.5rem 3rem;
+    border-top: 1px solid rgba(212,153,58,0.1);
+  }
+  .pellicule-retour a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(242,228,196,0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .pellicule-retour a:hover { color: #D4993A; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; background: #0E0906; }
+    .nav-burger { display: flex; }
+    nav ul {
+      display: flex;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0E0906;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      z-index: 150;
+      transform: translateX(100%);
+      transition: transform 0.4s ease;
+    }
+    nav ul.ouvert { transform: translateX(0); }
+    nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
+
+    .pellicule-header { padding: 2.5rem 1.2rem 1.5rem; }
+    .pellicule-grille { grid-template-columns: repeat(2, 1fr); }
+    .pellicule-retour { padding: 1.5rem 1.2rem; }
+  }
+
+</style>
+
+<script is:inline>
+  var burger = document.getElementById('navBurger');
+  var menu   = document.getElementById('navMenu');
+  if (burger && menu) {
+    burger.addEventListener('click', function() {
+      burger.classList.toggle('ouvert');
+      menu.classList.toggle('ouvert');
+    });
+    menu.querySelectorAll('a').forEach(function(l) {
+      l.addEventListener('click', function() {
+        burger.classList.remove('ouvert');
+        menu.classList.remove('ouvert');
+      });
+    });
+  }
+</script>

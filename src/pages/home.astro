@@ -13,6 +13,7 @@ import Layout from '../layouts/Layout.astro';
     <ul id="navMenu">
       <li><a href="#projets" data-i18n="nav.projects">Tracklist</a></li>
       <li><a href="#l-artiste" data-i18n="nav.about">Crédits</a></li>
+      <li><a href="/pellicule">Pellicule</a></li>
       <li><a href="#on-se-capte" data-i18n="nav.contact">Booking</a></li>
       <li><button id="langToggle" class="nav-fr">FR</button></li>
     </ul>
@@ -295,6 +296,23 @@ import Layout from '../layouts/Layout.astro';
           <p class="sleeve-copyright">℗ & © 2026 MAEVA — Tous droits réservés.<br/>Toute reproduction interdite sans autorisation écrite.</p>
         </div>
 
+      </div>
+    </div>
+
+    <!-- APERÇU PELLICULE -->
+    <div class="pellicule-apercu">
+      <div class="pellicule-apercu-header">
+        <div>
+          <span class="pellicule-apercu-label">BONUS TRACK</span>
+          <h2 class="pellicule-apercu-titre">PELLICULE</h2>
+        </div>
+        <a href="/pellicule" class="pellicule-apercu-lien">Voir tout →</a>
+      </div>
+      <div class="pellicule-apercu-grille">
+        <img src="/Photos/AGEN-13-09-2026.jpg"    alt="Photo" class="pellicule-apercu-img" loading="lazy" />
+        <img src="/Photos/Bulle-12-09-2026.jpg"   alt="Photo" class="pellicule-apercu-img" loading="lazy" />
+        <img src="/Photos/AGEN-13-09-2026-11.jpg" alt="Photo" class="pellicule-apercu-img" loading="lazy" />
+        <img src="/Photos/Bulle-12-09-2026-4.jpg" alt="Photo" class="pellicule-apercu-img" loading="lazy" />
       </div>
     </div>
 
@@ -1302,6 +1320,68 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 0.4em;
     color: rgba(140,45,63,0.8);
     text-transform: uppercase;
+  }
+
+  /* ── APERÇU PELLICULE ── */
+  .pellicule-apercu {
+    padding: 3rem 3rem 3.5rem;
+    border-top: 1px solid rgba(212,153,58,0.12);
+  }
+  .pellicule-apercu-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .pellicule-apercu-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.45rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: rgba(212,153,58,0.45);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .pellicule-apercu-titre {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    letter-spacing: 0.05em;
+    color: #F2E4C4;
+    line-height: 1;
+    margin: 0;
+  }
+  .pellicule-apercu-lien {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(242,228,196,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+    padding-bottom: 0.3rem;
+  }
+  .pellicule-apercu-lien:hover { color: #D4993A; }
+  .pellicule-apercu-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+  }
+  .pellicule-apercu-img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.15) contrast(1.05);
+    transition: filter 0.3s, transform 0.4s;
+  }
+  .pellicule-apercu-img:hover {
+    filter: sepia(0) contrast(1.1);
+    transform: scale(1.02);
+  }
+
+  @media (max-width: 768px) {
+    .pellicule-apercu { padding: 2rem 1.2rem; }
+    .pellicule-apercu-grille { grid-template-columns: repeat(2, 1fr); gap: 2px; }
   }
 
 </style>
