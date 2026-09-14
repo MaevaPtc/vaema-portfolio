@@ -241,17 +241,17 @@ import Layout from '../layouts/Layout.astro';
   <!-- APERÇU PELLICULE -->
   <div class="pellicule-apercu">
     <div class="pellicule-apercu-header">
-      <div>
-        <span class="pellicule-apercu-label">BONUS TRACK</span>
-        <h2 class="pellicule-apercu-titre">PELLICULE</h2>
-      </div>
-      <a href="/pellicule" class="pellicule-apercu-lien">Voir tout →</a>
+      <span class="pellicule-apercu-label">BONUS TRACK</span>
+      <h2 class="pellicule-apercu-titre">PELLICULE</h2>
     </div>
     <div class="pellicule-apercu-grille">
       <img src="/Photos/AGEN-13-09-2026.jpg"    alt="Photo" class="pellicule-apercu-img" loading="lazy" />
       <img src="/Photos/Bulle-12-09-2026.jpg"   alt="Photo" class="pellicule-apercu-img" loading="lazy" />
       <img src="/Photos/AGEN-13-09-2026-11.jpg" alt="Photo" class="pellicule-apercu-img" loading="lazy" />
       <img src="/Photos/Bulle-12-09-2026-4.jpg" alt="Photo" class="pellicule-apercu-img" loading="lazy" />
+    </div>
+    <div class="pellicule-apercu-footer">
+      <a href="/pellicule" class="pellicule-apercu-btn">Voir plus</a>
     </div>
   </div>
 
@@ -1363,12 +1363,12 @@ import Layout from '../layouts/Layout.astro';
   .pellicule-apercu-lien:hover { color: #D4993A; }
   .pellicule-apercu-grille {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 3px;
   }
   .pellicule-apercu-img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 3;
     object-fit: cover;
     display: block;
     filter: sepia(0.15) contrast(1.05);
@@ -1376,11 +1376,32 @@ import Layout from '../layouts/Layout.astro';
   }
   .pellicule-apercu-img:hover {
     filter: sepia(0) contrast(1.1);
-    transform: scale(1.01);
+    transform: scale(1.02);
+  }
+  .pellicule-apercu-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .pellicule-apercu-btn {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #F2E4C4;
+    border: 1px solid rgba(242,228,196,0.3);
+    padding: 0.9rem 2.5rem;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .pellicule-apercu-btn:hover {
+    border-color: #D4993A;
+    color: #D4993A;
   }
 
   @media (max-width: 768px) {
     .pellicule-apercu { padding: 2rem 1.2rem; }
+    .pellicule-apercu-grille { grid-template-columns: repeat(2, 1fr); }
   }
 
 </style>
