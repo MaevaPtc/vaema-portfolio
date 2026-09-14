@@ -240,9 +240,10 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- APERÇU PELLICULE -->
   <div class="pellicule-apercu">
-    <div class="pellicule-apercu-header">
-      <span class="pellicule-apercu-label">BONUS TRACK</span>
-      <h2 class="pellicule-apercu-titre">PELLICULE</h2>
+    <div class="section-titre">
+      <span class="section-label">MA <span class="section-outline">PELLICULE</span></span>
+      <div class="section-line"></div>
+      <span class="section-num">20</span>
     </div>
     <div class="pellicule-apercu-grille">
       <img src="/Photos/AGEN-13-09-2026.jpg"    alt="Photo" class="pellicule-apercu-img" loading="lazy" />
@@ -1333,34 +1334,6 @@ import Layout from '../layouts/Layout.astro';
     justify-content: space-between;
     margin-bottom: 1.5rem;
   }
-  .pellicule-apercu-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.45rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: rgba(212,153,58,0.45);
-    display: block;
-    margin-bottom: 0.4rem;
-  }
-  .pellicule-apercu-titre {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    letter-spacing: 0.05em;
-    color: #F2E4C4;
-    line-height: 1;
-    margin: 0;
-  }
-  .pellicule-apercu-lien {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.5rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(242,228,196,0.4);
-    text-decoration: none;
-    transition: color 0.2s;
-    padding-bottom: 0.3rem;
-  }
-  .pellicule-apercu-lien:hover { color: #D4993A; }
   .pellicule-apercu-grille {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
