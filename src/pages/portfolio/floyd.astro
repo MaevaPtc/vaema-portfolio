@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 ---
 
@@ -25,13 +25,35 @@ import Layout from '../../layouts/Layout.astro';
         <h1 class="aside-titre">FLOYD</h1>
         <p class="aside-tagline" data-i18n="floyd.tagline">Exprimez votre style</p>
         <div class="aside-brief">
-          <p data-i18n="floyd.desc">Avec Floyd, changez vos roues, vos couleurs, votre mood et voyagez à votre image. La campagne invite à exprimer son style jusque dans les moindres détails.</p>
+          <div class="projet-intro">
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.brief.label">Le brief</span>
+              <p data-i18n="intro.brief">Floyd, marque munichoise de bagagerie premium inspirée de la skate culture californienne, veut valoriser ce qui la distingue : des roues interchangeables et une infinité de couleurs. L'objectif est de renforcer sa notoriété et son image lifestyle.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.concept.label">Le concept</span>
+              <p data-i18n="intro.concept">Floyd a brisé les codes de la valise grise. Nous célébrons donc ceux qui brisent les codes de leur existence.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.casting.label">Le casting</span>
+              <p data-i18n="intro.casting">Des égéries qui ont refusé le compromis : Michèle Mouton, première femme à gagner une manche du championnat du monde des rallyes ; Tommie Smith, poing levé aux JO de 1968 ; Ann Meyers, première femme à signer un contrat en NBA.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.cible.label">La cible</span>
+              <p data-i18n="intro.cible">Des voyageurs urbains, créatifs et indépendants de 25 à 45 ans, qui cherchent des produits à leur image.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.promesse.label">La promesse</span>
+              <p data-i18n="intro.promesse">Exprimez votre style jusque dans les moindres détails.</p>
+            </div>
+          </div>
           <div class="catalog-card">
             <div class="catalog-header">CATALOG</div>
-            <div class="catalog-field"><span class="catalog-label">Artist</span><span class="catalog-val">Maëva PETIT</span></div>
+            <div class="catalog-field"><span class="catalog-label">Artist</span><span class="catalog-val">Maëva PETIT · Léa Paul</span></div>
             <div class="catalog-field"><span class="catalog-label">Genre</span><span class="catalog-val">Campagne 360</span></div>
             <div class="catalog-field"><span class="catalog-label">Release</span><span class="catalog-val">2025</span></div>
-            <div class="catalog-field"><span class="catalog-label">Format</span><span class="catalog-val">Print · Digital</span></div>
+            <div class="catalog-field"><span class="catalog-label">Format</span><span class="catalog-val">Print · Street marketing</span></div>
+            <div class="catalog-field"><span class="catalog-label">Label</span><span class="catalog-val">Projet d'étude SUP DE PUB</span></div>
           </div>
         </div>
         <div class="aside-progress"><div class="progress-bar" id="progressBar"></div></div>
@@ -39,32 +61,28 @@ import Layout from '../../layouts/Layout.astro';
     </aside>
 
     <main class="scroll-main">
-      <div class="visuel-block reveal" data-label="AFFICHES — 01">
-        <img src="/projects/Floyd/michele-mouton.png" alt="Floyd — Michèle Mouton" />
-      </div>
-      <div class="visuel-block reveal" data-label="AFFICHES — 02">
-        <img src="/projects/Floyd/Tommy Smith.png" alt="Floyd — Tommy Smith" />
-      </div>
-      <div class="visuel-block reveal" data-label="AFFICHES — 03">
-        <img src="/projects/Floyd/Ann Meyers NBA.png" alt="Floyd — Ann Meyers" />
+      <div class="visuel-block visuel-grille visuel-grille--3 reveal" data-label="AFFICHES — CLIQUER POUR AGRANDIR">
+        <img class="zoomable" src="/projects/Floyd/web/michele-mouton.webp" alt="Floyd — Michèle Mouton" />
+        <img class="zoomable" src="/projects/Floyd/web/tommy-smith.webp" alt="Floyd — Tommie Smith" />
+        <img class="zoomable" src="/projects/Floyd/web/ann-meyers-nba.webp" alt="Floyd — Ann Meyers" />
       </div>
       <div class="visuel-block reveal" data-label="MOCKUPS — 01">
-        <img src="/projects/Floyd/mockup affiche tommie.png" alt="Floyd — Mockup Tommie" />
+        <img src="/projects/Floyd/web/mockup-affiche-tommie.webp" alt="Floyd — Mockup Tommie" />
       </div>
       <div class="visuel-block reveal" data-label="MOCKUPS — 02">
-        <img src="/projects/Floyd/mockup affiche ann.png" alt="Floyd — Mockup Ann" />
+        <img src="/projects/Floyd/web/mockup-affiche-ann.webp" alt="Floyd — Mockup Ann" />
       </div>
       <div class="visuel-block reveal" data-label="MOCKUPS — 03">
-        <img src="/projects/Floyd/mockup affiche .png" alt="Floyd — Mockup" />
+        <img src="/projects/Floyd/web/mockup-affiche.webp" alt="Floyd — Mockup" />
       </div>
       <div class="visuel-block reveal" data-label="STREET MARKETING — 01">
-        <img src="/projects/Floyd/street-marketing tommie smith.png" alt="Floyd — Street Tommie" />
+        <img src="/projects/Floyd/web/street-marketing-tommie-smith.webp" alt="Floyd — Street Tommie" />
       </div>
       <div class="visuel-block reveal" data-label="STREET MARKETING — 02">
-        <img src="/projects/Floyd/street-marketing ann meyers.png" alt="Floyd — Street Ann" />
+        <img src="/projects/Floyd/web/street-marketing-ann-meyers.webp" alt="Floyd — Street Ann" />
       </div>
       <div class="visuel-block reveal" data-label="STREET MARKETING — 03">
-        <img src="/projects/Floyd/street-marketing michele mouton.png" alt="Floyd — Street Michèle" />
+        <img src="/projects/Floyd/web/street-marketing-michele-mouton.webp" alt="Floyd — Street Michèle" />
       </div>
     </main>
   </div>
@@ -74,12 +92,20 @@ import Layout from '../../layouts/Layout.astro';
     <a href="/portfolio/after-all-fest" class="projet-nav-suivant">After All Fest →</a>
   </div>
 
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-fermer" aria-label="Fermer">FERMER ✕</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
 </Layout>
 
 <style is:global>
+  /* Pas de texture (grain + lignes scanner) sur cette page, pour voir les visuels nets — comme sur Pellicule */
+  #scanner-overlay { display: none; }
+  body::after { display: none; }
   .scroll-layout { display: grid; grid-template-columns: 38% 62%; min-height: 100vh; padding-top: 132px; }
-  .scroll-aside { position: sticky; top: 132px; height: calc(100vh - 132px); border-right: 1px solid rgba(212,153,58,0.25); overflow: hidden; }
-  .aside-inner { height: 100%; padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+  .scroll-aside { position: sticky; top: 132px; height: calc(100vh - 132px); border-right: 1px solid rgba(212,153,58,0.25); }
+  .aside-inner { padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
   .aside-meta { display: flex; gap: 1.2rem; align-items: center; }
   .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
   .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.25); }
@@ -87,29 +113,48 @@ import Layout from '../../layouts/Layout.astro';
   .aside-tagline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.5rem, 2.5vw, 3rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; }
   .aside-brief { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
   .aside-brief p { font-family: 'Space Grotesk', sans-serif; font-size: 0.82rem; line-height: 1.8; color: rgba(242,228,196,0.5); }
-  .aside-infos { display: flex; flex-direction: column; gap: 1rem; }
-  .aside-info-bloc { display: flex; flex-direction: column; gap: 0.3rem; }
-  .aside-info-label { font-family: 'Space Mono', monospace; font-size: 0.48rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
-  .aside-info-val { font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; color: rgba(242,228,196,0.6); line-height: 1.5; }
+  .aside-progress { position: relative; height: 16px; background: rgba(242,228,196,0.04); border: 1px solid rgba(212,174,88,0.18); overflow: hidden; margin-top: 0.4rem; }
+  .aside-progress::before { content: 'VU'; position: absolute; top: -1.3rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.42rem; letter-spacing: 0.45em; color: rgba(212,174,88,0.45); }
+  .aside-progress::after { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: repeating-linear-gradient(to right, transparent 0px, transparent 8px, rgba(14,9,6,0.85) 8px, rgba(14,9,6,0.85) 10px); }
+  .progress-bar { height: 100%; width: 0%; background: linear-gradient(to right, #F2E4C4 0%, #D4993A 65%, #8C2D3F 100%); transition: width 0.1s linear; }
   .scroll-main { padding: 4rem 3rem 6rem; display: flex; flex-direction: column; gap: 6rem; }
   .visuel-block { position: relative; }
   .visuel-block::before { content: attr(data-label); position: absolute; top: -1.5rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.4em; color: #D4993A; }
   .visuel-block img { width: 100%; height: auto; display: block; }
+  /* Colonne gauche : elle défile si le texte dépasse l'écran */
+  .scroll-aside { overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(212,153,58,0.3) transparent; }
+  .aside-inner { height: auto; min-height: 100%; }
+  /* "Le projet" : brief, concept, casting, cible, promesse */
+  .projet-intro { display: flex; flex-direction: column; gap: 1.1rem; }
+  .intro-bloc { display: flex; flex-direction: column; gap: 0.35rem; }
+  .intro-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
+  .aside-brief .intro-bloc p { font-size: 0.8rem; line-height: 1.7; color: rgba(242,228,196,0.6); }
+  /* Affiches : 3 côte à côte, clic pour agrandir */
+  .visuel-grille { display: grid; gap: 1rem; }
+  .visuel-grille--3 { grid-template-columns: repeat(3, 1fr); }
+  .zoomable { cursor: zoom-in; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .zoomable:hover { transform: translateY(-4px); opacity: 0.9; }
+  .lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(14,9,6,0.94); display: none; align-items: center; justify-content: center; padding: 2rem; cursor: zoom-out; }
+  .lightbox.ouverte { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+  .lightbox-fermer { position: absolute; top: 1.2rem; right: 1.5rem; font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: #D4993A; background: none; border: none; cursor: pointer; }
   .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
   @media (max-width: 768px) {
     .scroll-layout { grid-template-columns: 1fr; }
-    .scroll-aside { position: static; height: auto; border-right: none; border-bottom: 1px solid rgba(212,153,58,0.25); }
+    .scroll-aside { position: static; height: auto; border-right: none; border-bottom: 1px solid rgba(212,153,58,0.25); overflow: visible; }
     .aside-inner { padding: 2rem 1.2rem; }
     .scroll-main { padding: 2rem 1.2rem 4rem; gap: 3rem; }
     .aside-progress { display: none; }
+    .visuel-grille { gap: 0.6rem; }
+    .lightbox { padding: 1rem; }
   }
 </style>
 
 <script is:inline>
   var translations = {
-    fr: { 'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact', 'cat.campaign': 'Campagne 360', 'floyd.tagline': 'Exprimez votre style', 'floyd.desc': 'Avec Floyd, changez vos roues, vos couleurs, votre mood et voyagez à votre image. La campagne invite à exprimer son style jusque dans les moindres détails.', 'brief.target': 'Cible', 'brief.insight': 'Insight', 'brief.supports': 'Supports', 'floyd.target': '25–45 ans · Voyageurs urbains, créatifs et indépendants', 'floyd.insight': 'Ils privilégient les marques à forte identité visuelle et à dimension émotionnelle', 'floyd.supports': 'Affichage · Street marketing · Motion' },
-    en: { 'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact', 'cat.campaign': '360 Campaign', 'floyd.tagline': 'Express your style', 'floyd.desc': 'With Floyd, change your wheels, your colours, your mood and travel in your own image. The campaign invites you to express your style down to the smallest detail.', 'brief.target': 'Target', 'brief.insight': 'Insight', 'brief.supports': 'Supports', 'floyd.target': '25–45 · Urban travellers, creative and independent', 'floyd.insight': 'They favour brands with a strong visual identity and emotional dimension', 'floyd.supports': 'Advertising · Street marketing · Motion' }
+    fr: { 'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact', 'cat.campaign': 'Campagne 360', 'floyd.tagline': 'Exprimez votre style', 'intro.brief.label': 'Le brief', 'intro.brief': "Floyd, marque munichoise de bagagerie premium inspirée de la skate culture californienne, veut valoriser ce qui la distingue : des roues interchangeables et une infinité de couleurs. L'objectif est de renforcer sa notoriété et son image lifestyle.", 'intro.concept.label': 'Le concept', 'intro.concept': "Floyd a brisé les codes de la valise grise. Nous célébrons donc ceux qui brisent les codes de leur existence.", 'intro.casting.label': 'Le casting', 'intro.casting': "Des égéries qui ont refusé le compromis : Michèle Mouton, première femme à gagner une manche du championnat du monde des rallyes ; Tommie Smith, poing levé aux JO de 1968 ; Ann Meyers, première femme à signer un contrat en NBA.", 'intro.cible.label': 'La cible', 'intro.cible': "Des voyageurs urbains, créatifs et indépendants de 25 à 45 ans, qui cherchent des produits à leur image.", 'intro.promesse.label': 'La promesse', 'intro.promesse': "Exprimez votre style jusque dans les moindres détails." },
+    en: { 'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact', 'cat.campaign': '360 Campaign', 'floyd.tagline': 'Express your style', 'intro.brief.label': 'The brief', 'intro.brief': 'Floyd, a Munich-based premium luggage brand inspired by Californian skate culture, wants to showcase what sets it apart: interchangeable wheels and endless colours. The goal is to boost its awareness and lifestyle image.', 'intro.concept.label': 'The concept', 'intro.concept': 'Floyd broke the codes of the grey suitcase. So we celebrate those who break the codes of their own lives.', 'intro.casting.label': 'The casting', 'intro.casting': 'Icons who refused to compromise: Michèle Mouton, first woman to win a round of the World Rally Championship; Tommie Smith, fist raised at the 1968 Olympics; Ann Meyers, first woman to sign an NBA contract.', 'intro.cible.label': 'The target', 'intro.cible': 'Urban, creative and independent travellers aged 25 to 45, looking for products that reflect who they are.', 'intro.promesse.label': 'The promise', 'intro.promesse': 'Express your style down to the smallest detail.' }
   };
   function applyLang(lang) { document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (translations[lang][k]) el.textContent = translations[lang][k]; }); var t = document.getElementById('langToggle'); if (t) t.textContent = lang === 'fr' ? 'EN' : 'FR'; localStorage.setItem('vaema-lang', lang); }
   var currentLang = localStorage.getItem('vaema-lang') || 'fr';
@@ -130,10 +175,36 @@ import Layout from '../../layouts/Layout.astro';
   var progressBar = document.getElementById('progressBar'); var scrollMain = document.querySelector('.scroll-main');
   function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
   window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
+
+  // Agrandissement des affiches : clic pour ouvrir, clic / Échap pour fermer, flèches pour naviguer
+  // Écouteurs posés une seule fois sur la page entière : ils fonctionnent même après les transitions entre pages
+  if (!window.zoomInit) {
+    window.zoomInit = true;
+    var zoomables = []; var zoomIndex = 0;
+    function ouvrir(i) {
+      var lb = document.getElementById('lightbox'); var lbImg = document.getElementById('lightboxImg');
+      zoomIndex = (i + zoomables.length) % zoomables.length;
+      lbImg.src = zoomables[zoomIndex].src; lbImg.alt = zoomables[zoomIndex].alt;
+      lb.classList.add('ouverte'); document.body.style.overflow = 'hidden';
+    }
+    function fermer() { var lb = document.getElementById('lightbox'); if (lb) lb.classList.remove('ouverte'); document.body.style.overflow = ''; }
+    function estOuverte() { var lb = document.getElementById('lightbox'); return lb && lb.classList.contains('ouverte'); }
+    document.addEventListener('click', function(e) {
+      var img = e.target.closest ? e.target.closest('.zoomable') : null;
+      if (img) {
+        // Les flèches restent dans le groupe de l'image cliquée
+        zoomables = Array.prototype.slice.call(img.parentElement.querySelectorAll('.zoomable'));
+        ouvrir(zoomables.indexOf(img));
+      } else if (e.target.closest && e.target.closest('#lightbox')) {
+        fermer();
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (!estOuverte()) return;
+      if (e.key === 'Escape') fermer();
+      if (e.key === 'ArrowRight') ouvrir(zoomIndex + 1);
+      if (e.key === 'ArrowLeft') ouvrir(zoomIndex - 1);
+    });
+    document.addEventListener('astro:before-swap', fermer);
+  }
 </script>
-
-
-
-
-
-

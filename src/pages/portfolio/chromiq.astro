@@ -1,0 +1,230 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Chromiq — VAEMA">
+
+  <nav>
+    <a href="/home" class="nav-logo"><img src="/logo-vaema.svg" alt="VAEMA" /></a>
+    <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+    <ul id="navMenu">
+      <li><a href="/home#projets" data-i18n="nav.projects">Tracklist</a></li>
+      <li><a href="/home#l-artiste" data-i18n="nav.about">Crédits</a></li>
+      <li><a href="/home#on-se-capte" data-i18n="nav.contact">Booking</a></li>
+      <li><button id="langToggle" class="nav-fr">FR</button></li>
+    </ul>
+  </nav>
+
+  <div class="scroll-layout">
+    <aside class="scroll-aside">
+      <div class="aside-inner">
+        <div class="aside-meta">
+          <span class="projet-cat" data-i18n="cat.brand">Identité de marque</span>
+          <span class="projet-annee">2026</span>
+        </div>
+        <h1 class="aside-titre">CHROMIQ.</h1>
+        <p class="aside-tagline" data-i18n="chromiq.tagline">Faites rayonner votre style</p>
+        <div class="aside-brief">
+          <div class="projet-intro">
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.brief.label">Le brief</span>
+              <p data-i18n="intro.brief">Une marque existante se diversifie sur un nouveau marché. Notre sujet : Typology se lance dans le sportswear. Il fallait créer l'offre, le naming, le logotype, la charte graphique et la campagne. Projet SUP DE PUB réalisé en duo.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.idee.label">L'idée</span>
+              <p data-i18n="intro.idee">Typology, c'est le « moins, mais mieux » : des soins épurés, transparents et exigeants. Chromiq transpose cet ADN au vêtement de sport. Les coupes sont minimalistes et sublimées par une seule matière signature : le chrome, en écho aux emballages chrome et acier des crèmes Typology.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.nom.label">Le nom</span>
+              <p data-i18n="intro.nom">Chromiq. vient de « chromique », le terme chimique qui désigne les composés du chrome. Un nom qui porte la matière de la marque jusque dans ses lettres.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.cible.label">La cible</span>
+              <p data-i18n="intro.cible">Des jeunes femmes urbaines de 25 à 30 ans, actives, entre running, mode et skincare. Elles sont attentives à leur image, exigeantes sur la qualité et méfiantes envers les promesses marketing.</p>
+            </div>
+            <div class="intro-bloc">
+              <span class="intro-label" data-i18n="intro.posi.label">Le positionnement</span>
+              <p data-i18n="intro.posi">Un sportswear premium entre wellness, mode et luxe discret.</p>
+            </div>
+          </div>
+          <div class="catalog-card">
+            <div class="catalog-header">CATALOG</div>
+            <div class="catalog-field"><span class="catalog-label">Artist</span><span class="catalog-val">Maëva PETIT · Manon Peroteau</span></div>
+            <div class="catalog-field"><span class="catalog-label">Genre</span><span class="catalog-val">Identité de marque</span></div>
+            <div class="catalog-field"><span class="catalog-label">Release</span><span class="catalog-val">2026</span></div>
+            <div class="catalog-field"><span class="catalog-label">Format</span><span class="catalog-val">Print · Digital · Packaging</span></div>
+            <div class="catalog-field"><span class="catalog-label">Label</span><span class="catalog-val">Projet d'étude SUP DE PUB</span></div>
+          </div>
+        </div>
+        <div class="aside-progress"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+    </aside>
+
+    <main class="scroll-main">
+      <div class="visuel-block visuel-block--logo reveal" data-label="LOGOTYPE">
+        <img src="/projects/Chromiq/web/logo.webp" alt="Chromiq — Logotype" />
+      </div>
+      <div class="visuel-block reveal" data-label="CAMPAGNE">
+        <img src="/projects/Chromiq/web/vetements.webp" alt="Chromiq — Campagne" />
+      </div>
+      <div class="visuel-block reveal" data-label="AFFICHAGE">
+        <img src="/projects/Chromiq/web/mockup-affiches.webp" alt="Chromiq — Affichage" />
+      </div>
+      <div class="visuel-block visuel-grille reveal" data-label="AFFICHES PRESSE — CLIQUER POUR AGRANDIR">
+        <img class="zoomable" src="/projects/Chromiq/web/affiche-presse-1.webp" alt="Chromiq — Affiche presse 1" />
+        <img class="zoomable" src="/projects/Chromiq/web/affiche-presse-4.webp" alt="Chromiq — Affiche presse 2" />
+        <img class="zoomable" src="/projects/Chromiq/web/affiche-presse-3.webp" alt="Chromiq — Affiche presse 3" />
+        <img class="zoomable" src="/projects/Chromiq/web/affiche-presse-2.webp" alt="Chromiq — Affiche presse 4" />
+      </div>
+      <div class="visuel-block reveal" data-label="PRODUIT">
+        <img src="/projects/Chromiq/web/veste-etiquette.webp" alt="Chromiq — Veste" />
+      </div>
+      <div class="visuel-block reveal" data-label="ÉTIQUETTE">
+        <img src="/projects/Chromiq/web/etiquette.webp" alt="Chromiq — Étiquette" />
+      </div>
+      <div class="visuel-block reveal" data-label="PACKAGING">
+        <img src="/projects/Chromiq/web/packaging.webp" alt="Chromiq — Packaging" />
+      </div>
+      <div class="visuel-block visuel-grille visuel-grille--3 reveal" data-label="RÉSEAUX SOCIAUX — CLIQUER POUR AGRANDIR">
+        <img class="zoomable" src="/projects/Chromiq/web/rs-1.webp" alt="Chromiq — Réseaux sociaux 1" />
+        <img class="zoomable" src="/projects/Chromiq/web/rs-2.webp" alt="Chromiq — Réseaux sociaux 2" />
+        <img class="zoomable" src="/projects/Chromiq/web/rs-3.webp" alt="Chromiq — Réseaux sociaux 3" />
+      </div>
+      <div class="visuel-block visuel-block--phone reveal" data-label="INSTAGRAM">
+        <img src="/projects/Chromiq/web/instagram-profile-generator-mockup.webp" alt="Chromiq — Profil Instagram" />
+      </div>
+      <div class="visuel-block reveal" data-label="ACTIVATION">
+        <img src="/projects/Chromiq/web/activation.webp" alt="Chromiq — Activation : cadres Instagram en vitrine et dans la rue" />
+      </div>
+    </main>
+  </div>
+
+  <div class="projet-nav">
+    <a href="/portfolio/sea-shepherd" class="projet-nav-retour">← Sea Shepherd</a>
+    <a href="/portfolio/duralex" class="projet-nav-suivant">Duralex →</a>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-fermer" aria-label="Fermer">FERMER ✕</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+</Layout>
+
+<style is:global>
+  /* Pas de texture (grain + lignes scanner) sur cette page, pour voir les visuels nets — comme sur Pellicule */
+  #scanner-overlay { display: none; }
+  body::after { display: none; }
+  .scroll-layout { display: grid; grid-template-columns: 38% 62%; min-height: 100vh; padding-top: 132px; }
+  .scroll-aside { position: sticky; top: 132px; height: calc(100vh - 132px); border-right: 1px solid rgba(212,153,58,0.25); overflow: hidden; }
+  .aside-inner { height: 100%; padding: 3rem 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+  .aside-meta { display: flex; gap: 1.2rem; align-items: center; }
+  .projet-cat { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; border: 1px solid #8C2D3F; padding: 0.3rem 0.8rem; }
+  .projet-annee { font-family: 'Space Mono', monospace; font-size: 0.55rem; letter-spacing: 0.3em; color: rgba(255,255,255,0.25); }
+  .aside-titre { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 7vw, 8rem); line-height: 0.85; color: #F2E4C4; letter-spacing: 0.02em; }
+  .aside-tagline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.5rem, 2.5vw, 3rem); -webkit-text-stroke: 1.5px #D4993A; color: transparent; letter-spacing: 0.05em; }
+  .aside-brief { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .aside-brief p { font-family: 'Space Grotesk', sans-serif; font-size: 0.82rem; line-height: 1.8; color: rgba(242,228,196,0.5); }
+  .aside-progress { position: relative; height: 16px; background: rgba(242,228,196,0.04); border: 1px solid rgba(212,174,88,0.18); overflow: hidden; margin-top: 0.4rem; }
+  .aside-progress::before { content: 'VU'; position: absolute; top: -1.3rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.42rem; letter-spacing: 0.45em; color: rgba(212,174,88,0.45); }
+  .aside-progress::after { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: repeating-linear-gradient(to right, transparent 0px, transparent 8px, rgba(14,9,6,0.85) 8px, rgba(14,9,6,0.85) 10px); }
+  .progress-bar { height: 100%; width: 0%; background: linear-gradient(to right, #F2E4C4 0%, #D4993A 65%, #8C2D3F 100%); transition: width 0.1s linear; }
+  .scroll-main { padding: 4rem 3rem 6rem; display: flex; flex-direction: column; gap: 6rem; }
+  .visuel-block { position: relative; }
+  .visuel-block::before { content: attr(data-label); position: absolute; top: -1.5rem; left: 0; font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.4em; color: #D4993A; }
+  .visuel-block img { width: 100%; height: auto; display: block; }
+  /* Le fichier du logo a un fond blanc : on étend ce blanc à tout le bloc */
+  .visuel-block--logo { background: #ffffff; padding: 5rem 12%; }
+  .visuel-block--phone img { max-width: 420px; margin: 0 auto; }
+  /* Colonne gauche plus longue que sur les autres projets : elle défile si elle dépasse l'écran */
+  .scroll-aside { overflow-y: auto; scrollbar-width: thin; scrollbar-color: rgba(212,153,58,0.3) transparent; }
+  .aside-inner { height: auto; min-height: 100%; }
+  /* "Le projet" : brief, idée, nom, cible, positionnement */
+  .projet-intro { display: flex; flex-direction: column; gap: 1.1rem; }
+  .intro-bloc { display: flex; flex-direction: column; gap: 0.35rem; }
+  .intro-label { font-family: 'Space Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: #8C2D3F; }
+  .aside-brief .intro-bloc p { font-size: 0.8rem; line-height: 1.7; color: rgba(242,228,196,0.6); }
+  /* Affiches : 4 côte à côte, clic pour agrandir */
+  .visuel-grille { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  /* Réseaux sociaux : 3 côte à côte, recadrés au même format pour une ligne régulière (l'image entière s'affiche au clic) */
+  .visuel-grille--3 { grid-template-columns: repeat(3, 1fr); }
+  .visuel-grille--3 img { aspect-ratio: 5 / 7; object-fit: cover; }
+  .zoomable { cursor: zoom-in; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .zoomable:hover { transform: translateY(-4px); opacity: 0.9; }
+  .lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(14,9,6,0.94); display: none; align-items: center; justify-content: center; padding: 2rem; cursor: zoom-out; }
+  .lightbox.ouverte { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+  .lightbox-fermer { position: absolute; top: 1.2rem; right: 1.5rem; font-family: 'Space Mono', monospace; font-size: 0.6rem; letter-spacing: 0.3em; color: #D4993A; background: none; border: none; cursor: pointer; }
+  .reveal { opacity: 0; transform: translateY(50px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  @media (max-width: 768px) {
+    .scroll-layout { grid-template-columns: 1fr; }
+    .scroll-aside { position: static; height: auto; border-right: none; border-bottom: 1px solid rgba(212,153,58,0.25); }
+    .aside-inner { padding: 2rem 1.2rem; }
+    .scroll-main { padding: 2rem 1.2rem 4rem; gap: 3rem; }
+    .aside-progress { display: none; }
+    .visuel-block--logo { padding: 3rem 10%; }
+    .scroll-aside { overflow: visible; }
+    .visuel-grille { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
+    .visuel-grille--3 { grid-template-columns: repeat(3, 1fr); }
+    .lightbox { padding: 1rem; }
+  }
+</style>
+
+<script is:inline>
+  var translations = {
+    fr: { 'nav.projects': 'Projets', 'nav.about': 'À propos', 'nav.contact': 'Contact', 'nav.allprojects': 'Tous les projets →', 'cat.brand': 'Identité de marque', 'chromiq.tagline': 'Faites rayonner votre style', 'chromiq.desc': "Et si le minimalisme de Typology rencontrait le sportswear ? Chromiq Paris prolonge la marque de skincare vers un sportswear premium, entre wellness, mode et luxe discret. Naming, logotype, charte graphique et campagne.", 'intro.brief.label': 'Le brief', 'intro.brief': "Une marque existante se diversifie sur un nouveau marché. Notre sujet : Typology se lance dans le sportswear. Il fallait créer l'offre, le naming, le logotype, la charte graphique et la campagne. Projet SUP DE PUB réalisé en duo.", 'intro.idee.label': "L'idée", 'intro.idee': "Typology, c'est le « moins, mais mieux » : des soins épurés, transparents et exigeants. Chromiq transpose cet ADN au vêtement de sport. Les coupes sont minimalistes et sublimées par une seule matière signature : le chrome, en écho aux emballages chrome et acier des crèmes Typology.", 'intro.nom.label': 'Le nom', 'intro.nom': "Chromiq. vient de « chromique », le terme chimique qui désigne les composés du chrome. Un nom qui porte la matière de la marque jusque dans ses lettres.", 'intro.cible.label': 'La cible', 'intro.cible': "Des jeunes femmes urbaines de 25 à 30 ans, actives, entre running, mode et skincare. Elles sont attentives à leur image, exigeantes sur la qualité et méfiantes envers les promesses marketing.", 'intro.posi.label': 'Le positionnement', 'intro.posi': "Un sportswear premium entre wellness, mode et luxe discret." },
+    en: { 'nav.projects': 'Projects', 'nav.about': 'About', 'nav.contact': 'Contact', 'nav.allprojects': 'All projects →', 'cat.brand': 'Brand identity', 'chromiq.tagline': 'Let your style shine', 'chromiq.desc': 'What if Typology’s minimalism met sportswear? Chromiq Paris extends the skincare brand into premium sportswear, blending wellness, fashion and quiet luxury. Naming, logotype, brand guidelines and campaign.', 'intro.brief.label': 'The brief', 'intro.brief': 'An existing brand diversifies into a new market. Our subject: Typology launches into sportswear. We had to create the offer, naming, logotype, brand guidelines and campaign. SUP DE PUB project made as a duo.', 'intro.idee.label': 'The idea', 'intro.idee': 'Typology stands for “less, but better”: clean, transparent, demanding skincare. Chromiq carries this DNA into sportswear. Minimalist cuts, elevated by a single signature material: chrome, echoing the chrome and steel packaging of Typology’s creams.', 'intro.nom.label': 'The name', 'intro.nom': 'Chromiq. comes from the French “chromique”, the chemical term for chromium compounds. A name that carries the brand’s material right into its letters.', 'intro.cible.label': 'The target', 'intro.cible': 'Young urban women aged 25 to 30, active, into running, fashion and skincare. Image-conscious, demanding on quality and wary of marketing promises.', 'intro.posi.label': 'Positioning', 'intro.posi': 'Premium sportswear between wellness, fashion and quiet luxury.' }
+  };
+  function applyLang(lang) { document.querySelectorAll('[data-i18n]').forEach(function(el) { var k = el.getAttribute('data-i18n'); if (translations[lang][k]) el.textContent = translations[lang][k]; }); var t = document.getElementById('langToggle'); if (t) t.textContent = lang === 'fr' ? 'EN' : 'FR'; localStorage.setItem('vaema-lang', lang); }
+  var currentLang = localStorage.getItem('vaema-lang') || 'fr';
+  if (currentLang === 'en') applyLang('en');
+  var toggle = document.getElementById('langToggle');
+  if (toggle) { toggle.textContent = currentLang === 'fr' ? 'EN' : 'FR'; toggle.addEventListener('click', function() { currentLang = currentLang === 'fr' ? 'en' : 'fr'; applyLang(currentLang); }); }
+</script>
+<script is:inline>
+  // Burger géré dans Layout.astro
+  function initReveal() {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+  }
+  initReveal();
+  document.addEventListener('astro:page-load', initReveal);
+  var progressBar = document.getElementById('progressBar'); var scrollMain = document.querySelector('.scroll-main');
+  function updateProgress() { if (!progressBar || !scrollMain) return; var rect = scrollMain.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (-rect.top / (scrollMain.offsetHeight - window.innerHeight)) * 100)); progressBar.style.width = pct + '%'; }
+  window.addEventListener('scroll', updateProgress, { passive: true }); updateProgress();
+
+  // Agrandissement des affiches : clic pour ouvrir, clic / Échap pour fermer, flèches pour naviguer
+  // Écouteurs posés une seule fois sur la page entière : ils fonctionnent même après les transitions entre pages
+  if (!window.zoomInit) {
+    window.zoomInit = true;
+    var zoomables = []; var zoomIndex = 0;
+    function ouvrir(i) {
+      var lb = document.getElementById('lightbox'); var lbImg = document.getElementById('lightboxImg');
+      zoomIndex = (i + zoomables.length) % zoomables.length;
+      lbImg.src = zoomables[zoomIndex].src; lbImg.alt = zoomables[zoomIndex].alt;
+      lb.classList.add('ouverte'); document.body.style.overflow = 'hidden';
+    }
+    function fermer() { var lb = document.getElementById('lightbox'); if (lb) lb.classList.remove('ouverte'); document.body.style.overflow = ''; }
+    function estOuverte() { var lb = document.getElementById('lightbox'); return lb && lb.classList.contains('ouverte'); }
+    document.addEventListener('click', function(e) {
+      var img = e.target.closest ? e.target.closest('.zoomable') : null;
+      if (img) {
+        // Les flèches restent dans le groupe de l'image cliquée (affiches ou réseaux sociaux)
+        zoomables = Array.prototype.slice.call(img.parentElement.querySelectorAll('.zoomable'));
+        ouvrir(zoomables.indexOf(img));
+      } else if (e.target.closest && e.target.closest('#lightbox')) {
+        fermer();
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (!estOuverte()) return;
+      if (e.key === 'Escape') fermer();
+      if (e.key === 'ArrowRight') ouvrir(zoomIndex + 1);
+      if (e.key === 'ArrowLeft') ouvrir(zoomIndex - 1);
+    });
+    document.addEventListener('astro:before-swap', fermer);
+  }
+</script>
