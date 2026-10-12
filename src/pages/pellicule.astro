@@ -335,19 +335,3 @@ const categories = [
 
 </style>
 
-<script is:inline>
-  var burger = document.getElementById('navBurger');
-  var menu   = document.getElementById('navMenu');
-  if (burger && menu) {
-    burger.addEventListener('click', function() {
-      burger.classList.toggle('ouvert');
-      menu.classList.toggle('ouvert');
-    });
-    menu.querySelectorAll('a').forEach(function(l) {
-      l.addEventListener('click', function() {
-        burger.classList.remove('ouvert');
-        menu.classList.remove('ouvert');
-      });
-    });
-  }
-</script>
