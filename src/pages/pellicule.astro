@@ -1,27 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const photos = [
-  { src: '/Photos/AGEN-13-09-2026.jpg',    alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-2.jpg',  alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-4.jpg',  alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-5.jpg',  alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-6.jpg',  alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-11.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-12.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-13.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-14.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-17.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-25.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-26.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-27.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-28.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/AGEN-13-09-2026-29.jpg', alt: 'Agen',  landscape: false },
-  { src: '/Photos/Bulle-12-09-2026.jpg',   alt: 'Bulle', landscape: true  },
-  { src: '/Photos/Bulle-12-09-2026-3.jpg', alt: 'Bulle', landscape: true  },
-  { src: '/Photos/Bulle-12-09-2026-4.jpg', alt: 'Bulle', landscape: false },
-  { src: '/Photos/Bulle-12-09-2026-5.jpg', alt: 'Bulle', landscape: true  },
-  { src: '/Photos/Bulle-12-09-2026-6.jpg', alt: 'Bulle', landscape: true  },
+const categories = [
+  {
+    id: 'sport',
+    label: 'SPORT',
+    count: 13,
+    photos: [
+      { src: '/Photos/F18-cadettes-elite-10092026-5.jpg',  landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-6.jpg',  landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-7.jpg',  landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-8.jpg',  landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-26.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-27.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-29.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-30.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-31.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-41.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-46.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-47.jpg', landscape: true  },
+      { src: '/Photos/F18-cadettes-elite-10092026-49.jpg', landscape: true  },
+    ]
+  },
+  {
+    id: 'animaux',
+    label: 'ANIMAUX',
+    count: 9,
+    photos: [
+      { src: '/Photos/Bulle-01.jpg',           landscape: false },
+      { src: '/Photos/Bulle-03.jpg',           landscape: false },
+      { src: '/Photos/Bulle-05.jpg',           landscape: false },
+      { src: '/Photos/Bulle-06.jpg',           landscape: false },
+      { src: '/Photos/Bulle-12-09-2026.jpg',   landscape: true  },
+      { src: '/Photos/Bulle-12-09-2026-3.jpg', landscape: true  },
+      { src: '/Photos/Bulle-12-09-2026-4.jpg', landscape: false },
+      { src: '/Photos/Bulle-12-09-2026-5.jpg', landscape: true  },
+      { src: '/Photos/Bulle-12-09-2026-6.jpg', landscape: true  },
+    ]
+  },
+  {
+    id: 'paysage',
+    label: 'PAYSAGE',
+    count: 15,
+    photos: [
+      { src: '/Photos/AGEN-13-09-2026.jpg',    landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-2.jpg',  landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-4.jpg',  landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-5.jpg',  landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-6.jpg',  landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-11.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-12.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-13.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-14.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-17.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-25.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-26.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-27.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-28.jpg', landscape: false },
+      { src: '/Photos/AGEN-13-09-2026-29.jpg', landscape: false },
+    ]
+  },
 ];
 ---
 
@@ -46,18 +84,33 @@ const photos = [
       <div class="pellicule-header-inner">
         <span class="pellicule-label">FACE B — BONUS TRACK</span>
         <h1 class="pellicule-titre">PELLICULE</h1>
-        <p class="pellicule-sous-titre">Paysage · Portrait · Animaux — 2026</p>
+        <p class="pellicule-sous-titre">Sport · Animaux · Paysage — 2026</p>
       </div>
+
+      <nav class="pellicule-nav-cats">
+        <a href="#sport"   class="pellicule-cat-link">Sport <span>13</span></a>
+        <a href="#animaux" class="pellicule-cat-link">Animaux <span>9</span></a>
+        <a href="#paysage" class="pellicule-cat-link">Paysage <span>15</span></a>
+      </nav>
     </header>
 
-    <div class="pellicule-grille">
-      {photos.map((photo, i) => (
-        <div class="pellicule-cadre" data-index={i}>
-          <div class="pellicule-num">{ String(i + 1).padStart(2, '0') }</div>
-          <img src={photo.src} alt={photo.alt} class="pellicule-img" loading="lazy" />
+    {categories.map((cat) => (
+      <section class="pellicule-section" id={cat.id}>
+        <div class="pellicule-section-header">
+          <span class="pellicule-section-label">{cat.label}</span>
+          <div class="pellicule-section-line"></div>
+          <span class="pellicule-section-count">{String(cat.count).padStart(2, '0')}</span>
         </div>
-      ))}
-    </div>
+        <div class="pellicule-grille">
+          {cat.photos.map((photo, i) => (
+            <div class="pellicule-cadre" data-index={i}>
+              <div class="pellicule-num">{ String(i + 1).padStart(2, '0') }</div>
+              <img src={photo.src} alt={cat.label} class="pellicule-img" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
 
     <div class="pellicule-retour">
       <a href="/home">← Retour à la tracklist</a>
@@ -72,7 +125,7 @@ const photos = [
   body { background: #0E0906; overflow-x: hidden; }
   #scanner-overlay { display: none; }
 
-  /* ── NAV (reprise du style global) ── */
+  /* ── NAV ── */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -135,13 +188,74 @@ const photos = [
     letter-spacing: 0.2em;
     color: rgba(242,228,196,0.35);
     text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  /* ── NAV CATÉGORIES ── */
+  .pellicule-nav-cats {
+    position: static;
+    display: flex;
+    gap: 2rem;
+    border: none;
+    background: none;
+    backdrop-filter: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  .pellicule-cat-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(242,228,196,0.4);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pellicule-cat-link span {
+    font-size: 0.45rem;
+    color: rgba(212,153,58,0.5);
+  }
+  .pellicule-cat-link:hover { color: #D4993A; }
+
+  /* ── SECTION CATÉGORIE ── */
+  .pellicule-section {
+    padding-top: 3rem;
+  }
+
+  .pellicule-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0 3rem 1.5rem;
+  }
+  .pellicule-section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    color: #F2E4C4;
+    white-space: nowrap;
+  }
+  .pellicule-section-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(212,153,58,0.2);
+  }
+  .pellicule-section-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    color: rgba(212,153,58,0.45);
+    white-space: nowrap;
   }
 
   /* ── GRILLE COLONNES ── */
   .pellicule-grille {
-    columns: 3;
+    columns: 4;
     column-gap: 4px;
-    padding: 4px;
+    padding: 0 4px 4px;
   }
 
   .pellicule-cadre {
@@ -179,6 +293,7 @@ const photos = [
   .pellicule-retour {
     padding: 2.5rem 3rem;
     border-top: 1px solid rgba(212,153,58,0.1);
+    margin-top: 3rem;
   }
   .pellicule-retour a {
     font-family: 'Space Mono', monospace;
@@ -212,7 +327,9 @@ const photos = [
     nav ul a { font-size: 1rem; letter-spacing: 0.3em; }
 
     .pellicule-header { padding: 2.5rem 1.2rem 1.5rem; }
-    .pellicule-grille { columns: 2; }
+    .pellicule-nav-cats { gap: 1.2rem; flex-wrap: wrap; }
+    .pellicule-section-header { padding: 0 1.2rem 1.2rem; }
+    .pellicule-grille { columns: 3; }
     .pellicule-retour { padding: 1.5rem 1.2rem; }
   }
 
